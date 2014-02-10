@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+  <id>16001</id>
+  <defaultcontrol>50</defaultcontrol>
+  <allowoverlay>yes</allowoverlay>
+  <controls>
+
+    <control>
+      <description>background image</description>
+      <type>image</type>
+      <id>1</id>
+      <width>1920</width>
+      <height>1080</height>
+	  <texture>background_02.jpg</texture>
+    </control>
+    <control>
+      <type>image</type>
+      <id>1</id>
+      <posX>1809</posX>
+      <posY>15</posY>
+      <width>60</width>
+      <height>60</height>
+      <texture>hover_my news.png</texture>
+      <visible>false</visible>
+    </control>
+	
+	<control>
+      <description>Backdrop</description>
+      <type>image</type>
+      <id>0</id>
+      <posX>40</posX>
+      <posY>135</posY>
+      <width>1832</width>
+      <height>943</height>
+      <texture>0011.png</texture>
+    </control>	
+	
+	<control>
+      <description>Current window</description>
+      <type>label</type>
+      <id>0</id>
+      <posX>1810</posX>
+      <posY>33</posY>
+      <align>right</align>
+      <width>1800</width>
+      <font>fontL</font>		  
+      <label>#(iif(and(neq(L(102012), #currentmodule), neq(L(102002), #currentmodule), neq(L(100100), #currentmodule), neq(L(102015), #currentmodule)), #currentmodule, ' '))</label>
+      <textcolor>eaeaea</textcolor>		  
+      <animation effect="fade" time="250">WindowOpen</animation>
+      <animation effect="fade" time="250">WindowClose</animation>
+    </control>
+		
+    <control>
+      <description>Date / Time</description>
+      <type>label</type>
+      <id>0</id>
+      <posX>1810</posX>
+      <posY>113</posY>
+      <label>#time #date #infoservice.feed.itemcount #infoservice.feed.itemtype</label>
+      <align>right</align>
+      <font>fontL2</font>
+      <textcolor>eaeaea</textcolor>
+      <animation effect="fade" time="250">WindowOpen</animation>
+      <animation effect="fade" time="250">WindowClose</animation>
+    </control>
+	
+    <control>
+      <description>Channel name label</description>
+      <type>label</type>
+      <id>12</id>
+      <posX>52</posX>
+      <posY>15</posY>
+      <label></label>
+      <font>font14</font>
+      <textcolor>FF666666</textcolor>
+    </control>
+
+    <control>
+      <description>Site Logo</description>
+      <type>image</type>
+      <id>101</id>
+      <posX>145</posX>
+      <posY>30</posY>
+      <width>128</width>
+      <height>128</height>
+      <texture>#infoservice.feed.img</texture>
+      <centered>yes</centered>
+      <keepaspectratio>yes</keepaspectratio>
+    </control>
+    <control>
+      <type>actiongroup</type>
+      <description>action menu</description>
+      <defaultcontrol>2</defaultcontrol>
+      <onexit>50</onexit>
+     <buttonX>-15</buttonX>
+      <buttonY>96</buttonY>
+      <buttonwidth>600</buttonwidth>
+      <buttonheight>772</buttonheight> 
+      <textureFocus>-</textureFocus>
+      <textureNoFocus>-</textureNoFocus>
+      <posX>0</posX>
+      <posY>0</posY>
+      <width>150</width>
+      <height>852</height>
+      <dimColor>00ffffff</dimColor>
+      <control>
+        <type>image</type>
+        <posY>50</posY>
+        <width>455</width>
+        <height>700</height>
+        <texture>backslide.png</texture>
+        <colorDiffuse>fffffffff</colorDiffuse>
+        <visible>!Control.HasFocus(50)</visible>
+        <animation effect="slide" time="10" start="-450,0">visible</animation>
+        <animation effect="slide" time="10" end="-450,0">hidden</animation>
+      </control>
+      <control>
+        <type>group</type>
+        <description>group element</description>
+        <visible>!Control.HasFocus(50)</visible>
+        <animation effect="slide" time="10" end="-450,0">hidden</animation>
+        <animation effect="slide" time="10" start="-450,0">visible</animation>
+        <posX>30</posX>
+        <posY>120</posY>
+        <layout>StackLayout</layout>
+        <control>
+          <description>Refresh Button</description>
+          <type>button</type>
+          <id>2</id>
+          <label>184</label>
+          <onleft>2</onleft>
+          <onright>50</onright>
+          <onup>17</onup>
+          <ondown>4</ondown>
+        </control>
+        <control>
+          <description>RSS feed select</description>
+          <type>button</type>
+          <id>4</id>
+          <label>706</label>
+          <onleft>4</onleft>
+          <onright>50</onright>
+          <onup>2</onup>
+          <ondown>5</ondown>
+        </control>
+		<control>
+          <description>All feeds</description>
+          <type>button</type>
+          <id>5</id>
+          <label>Show all feeds on home</label>
+          <onleft>5</onleft>
+          <onright>50</onright>
+          <onup>4</onup>
+          <ondown>2</ondown>
+        </control>
+      </control>
+    </control>
+    <control>
+      <type>group</type>
+      <description>group element</description>
+      <control>
+        <description>listcontrol</description>
+        <type>listcontrol</type>
+        <id>50</id>
+		<font>font12</font>
+					<onleft>4</onleft>
+					<onright>4</onright>
+					<width>878</width>
+					<posX>850</posX>
+					<posY>230</posY>
+					<height>530</height>
+					<textureFocus>0012_btn.png</textureFocus>
+					<textXOff>-15</textXOff>
+					<textXOff2>2820</textXOff2>
+					<textXOff3>15</textXOff3>
+					<IconXOff>820</IconXOff> 
+					<IconYOff>8</IconYOff> 
+                    <textureHeight>50</textureHeight>					
+					<spinWidth>45</spinWidth>
+					<spinHeight>42</spinHeight>
+					<spinPosX>2760</spinPosX>
+					<spinPosY>380</spinPosY>
+					<spinAlign>right</spinAlign>
+					<spinColor>99ffffff</spinColor>
+					<spinCanFocus>no</spinCanFocus>
+					<!-- group headers -->
+					<textcolor>ffffffff</textcolor>
+					<textcolorNoFocus>ff666666</textcolorNoFocus>
+					<playedColor>FFB2D4F5</playedColor>
+					<textcolor2>ff666666</textcolor2>
+					<textcolor3>ffffffff</textcolor3>
+      </control>
+
+      <control>
+        <description>Chosen Story description</description>
+        <type>textboxscrollup</type>
+        <id>506</id>
+        <posX>150</posX>
+        <posY>230</posY>
+        <width>630</width>
+        <height>732</height>
+        <label>-</label>
+        <font>font11</font>
+		<textcolor>ff666666</textcolor>
+      </control>
+    </control>
+  </controls>
+</window>
+

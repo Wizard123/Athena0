@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>31415</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<define>#itemtext:#selectedindex / #itemcount #(L(496))</define>
+	<controls>
+		<!--<import>common.time.xml</import>-->
+		<control>
+			<description>BackGround</description>
+			<type>image</type>
+			<id>1</id>
+			<width>1920</width>
+			<height>1080</height>
+			<colordiffuse>ffffffff</colordiffuse>
+			<texture>background_02.jpg</texture>
+		</control>
+		
+		<control>
+      <description>Backdrop Overlay - thumbs View</description>
+      <type>image</type>
+      <id>0</id>
+      <posX>40</posX>
+      <posY>135</posY>
+      <width>1832</width>
+      <height>943</height>
+      <texture>0011.png</texture>
+    </control>	
+	
+    <control>
+      <description>Current window</description>
+      <type>label</type>
+      <id>0</id>
+      <posX>1810</posX>
+      <posY>33</posY>
+      <align>right</align>
+      <width>1800</width>
+      <font>fontL</font>		  
+      <label>#IMDb.Translation.ScraperOptionsTitle.Label</label>
+      <textcolor>eaeaea</textcolor>		  
+      <animation effect="fade" time="250">WindowOpen</animation>
+      <animation effect="fade" time="250">WindowClose</animation>
+    </control>
+		
+    <control>
+      <description>Date / Time</description>
+      <type>label</type>
+      <id>0</id>
+      <posX>1810</posX>
+      <posY>113</posY>
+      <label>#time #date #itemcount Files</label>
+      <align>right</align>
+      <font>fontL2</font>
+      <textcolor>eaeaea</textcolor>
+      <animation effect="fade" time="250">WindowOpen</animation>
+      <animation effect="fade" time="250">WindowClose</animation>
+    </control>
+
+		<control>
+			<description>Plugin Logo</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>0</posX>
+			<posY>750</posY>
+			<width>345</width>
+			<height>412</height>
+			<texture>hover_imdb+.png</texture>
+		</control>
+		<control>
+			<description>group element</description>
+			<type>group</type>
+			<animation effect="fade" time="150">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="slide" time="150" start="1800,0">WindowOpen</animation>
+			<animation effect="slide" time="250" end="1800,0">WindowClose</animation>
+			<control>
+				<type>facadeview</type>
+				<id>50</id>
+				<animation effect="fade" time="250" delay="0">WindowClose</animation>
+				<control>
+					<description>listcontrol</description>
+					<type>listcontrol</type>
+					<id>50</id>
+					<posX>175</posX>
+					<posY>227</posY>
+					<height>420</height>
+					<width>1095</width>
+					<onleft>96742</onleft>
+					<onright>50</onright>
+					<scrollOffset>5</scrollOffset>
+					<textureHeight>45</textureHeight>
+					<itemWidth>30</itemWidth>
+					<itemHeight>30</itemHeight>
+					<IconXOff>30</IconXOff>
+					<IconYOff>5</IconYOff>
+					<textXOff>37</textXOff>
+					<textYOff>0</textYOff>
+					<textXOff2>0</textXOff2>
+					<textYOff2>0</textYOff2>
+					<textXOff3>112</textXOff3>
+					<textYOff3>0</textYOff3>
+					<font>font12</font>
+					<font2>font11</font2>
+					<font3>font10</font3>
+					<keepaspectratio>yes</keepaspectratio>
+					<spinPosX>16732</spinPosX>
+					<spinPosY>1987</spinPosY>
+					<spinCanFocus>no</spinCanFocus>
+					<spinColor>00ffffff</spinColor>
+					<suffix>|</suffix>
+				</control>
+			</control>
+		</control>
+		<control>
+			<description>Settings Counter</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>1710</posX>
+			<posY>230</posY>
+			<label>#itemtext</label>
+			<font>font10</font>
+			<align>right</align>
+			<textcolor>ff888888</textcolor>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			<animation effect="fade" time="250" delay="0">WindowOpen</animation>
+		</control>
+		<control>
+			<description>List Option Description</description>
+			<type>textboxscrollup</type>
+			<id>500</id>
+			<posX>260</posX>
+			<posY>647</posY>
+			<width>1500</width>
+			<height>310</height>
+			<font>font11</font>
+			<textcolor>eaeaea</textcolor>
+			<label>#IMDb.Option.Description</label>
+			<scrollStartDelaySec>4</scrollStartDelaySec>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			<animation effect="fade" time="250" delay="0">WindowOpen</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>96742</defaultcontrol>
+			<onexit>50</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>45</buttonwidth>
+			<buttonheight>525</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>Action_nofocus.png</textureNoFocus>
+			<width>595</width>
+			<height>1350</height>
+			<dimColor>00ffffff</dimColor>
+			<animation effect="slide" time="70" end="-450,0" reversible="false">windowclose</animation>
+			<control>
+				<type>image</type>
+				<posX>39</posX>
+				<posY>37</posY>
+				<width>550</width>
+				<height>975</height>
+				<texture>Backslide.png</texture>
+				<colorDiffuse>fffffffff</colorDiffuse>
+				<visible>!Control.HasFocus(50)</visible>
+				<animation effect="slide" time="70" start="-450,0" reversible="false">visible</animation>
+				<animation effect="slide" time="70" end="-450,0" reversible="false">hidden</animation>
+			</control>
+			<control>
+				<description>group element</description>
+				<type>group</type>
+				<animation effect="slide" time="70" start="-450,0" reversible="false">visible</animation>
+				<animation effect="slide" time="70" end="-450,0" reversible="false">hidden</animation>
+				<visible>!Control.HasFocus(50)</visible>
+				<control>
+					<description>button group</description>
+					<type>group</type>
+					<posX>75</posX>
+					<posY>105</posY>
+					<width>450</width>
+					<layout>StackLayout(0, Vertical, true)</layout>
+					<visible>!Control.HasFocus(50)</visible>
+					<animation effect="slide" time="70" start="-450,0" reversible="false">visible</animation>
+					<animation effect="slide" time="70" end="-450,0" reversible="false">hidden</animation>
+					<control>
+						<description>MovingPictures</description>
+						<id>96742</id>
+						<type>button</type>
+						<label>Moving Pictures</label>
+						<hyperlink>96742</hyperlink>
+						<onleft>50</onleft>
+						<onright>50</onright>
+						<onup>99999</onup>
+						<ondown>2</ondown>
+						<width>450</width>
+					</control>
+					<control>
+						<description>Force IMDb+</description>
+						<type>button</type>
+						<id>2</id>
+						<label>#IMDb.Translation.ForceIMDbPlus.Label...</label>
+						<onleft>50</onleft>
+						<onright>50</onright>
+						<onup>96742</onup>
+						<ondown>3</ondown>
+						<width>450</width>
+						<visible>string.equals(#IMDb.ForceIMDbPlus.Visible,true)</visible>
+					</control>
+					<control>
+						<description>Refresh Movies</description>
+						<type>button</type>
+						<id>3</id>
+						<label>-</label>
+						<onleft>50</onleft>
+						<onright>50</onright>
+						<onup>2</onup>
+						<ondown>4</ondown>
+						<width>450</width>
+					</control>
+					<control>
+						<description>IMDb+ Info</description>
+						<type>button</type>
+						<id>4</id>
+						<label>#IMDb.Translation.IMDbInfo.Label...</label>
+						<onleft>50</onleft>
+						<onright>50</onright>
+						<onup>3</onup>
+						<ondown>99998</ondown>
+						<width>450</width>
+					</control>
+					<control>
+						<description>MPEICONFIGURE:9d064213_0b4d_4cee_96a5_405812422b58</description>
+						<type>button</type>
+						<id>99998</id>
+						<label>#MPEI.Translation.Settings.Label</label>
+						<onup>4</onup>
+						<ondown>99999</ondown>
+						<onleft>50</onleft>
+						<width>450</width>
+						<visible>string.equals(#mpei.9d064213_0b4d_4cee_96a5_405812422b58.isinstalled,true)</visible>
+					</control>
+					<control>
+						<description>MPEIUPDATE:9d064213_0b4d_4cee_96a5_405812422b58</description>
+						<type>button</type>
+						<id>99999</id>
+						<label>#MPEI.Translation.UpdateAvailable.Label</label>
+						<onup>99998</onup>
+						<ondown>96742</ondown>
+						<onleft>50</onleft>
+						<width>450</width>
+						<visible>string.equals(#mpei.9d064213_0b4d_4cee_96a5_405812422b58.haveupdate,true)</visible>
+					</control>
+				</control>
+				<control>
+					<id>0</id>
+					<description>Last Scraper Update Time Label</description>
+					<label>#IMDb.Translation.LastScraperUpdate.Label</label>
+					<type>label</type>
+					<font>font10</font>
+					<posX>106</posX>
+					<posY>902</posY>
+					<textcolor>ff808080</textcolor>
+					<textcolorNoFocus>ff808080</textcolorNoFocus>
+				</control>
+				<control>
+					<id>0</id>
+					<description>Last Scraper Update Time</description>
+					<label>#IMDb.Scraper.LastUpdated</label>
+					<type>label</type>
+					<font>font10</font>
+					<posX>106</posX>
+					<posY>940</posY>
+					<textcolor>ff808080</textcolor>
+					<textcolorNoFocus>ff808080</textcolorNoFocus>
+				</control>
+			</control>
+		</control>
+		<control>
+			<description>Item Count Label</description>
+			<type>label</type>
+			<label>#IMDb.Movie.Refresh.Status</label>
+			<id>0</id>
+			<width>450</width>
+			<posX>1866</posX>
+			<posY>3</posY>
+			<align>right</align>
+			<font>font10</font>
+			<textcolor>ff666666</textcolor>
+			<textcolorNoFocus>ff808080</textcolorNoFocus>
+			<visible>string.equals(#IMDb.Movie.Refresh.Active,true)</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+		</control>
+		<control>
+			<description>Progress Indicator Animation</description>
+			<type>animation</type>
+			<id>13</id>
+			<posX>96</posX>
+			<posY>543</posY>
+			<width>144</width>
+			<height>144</height>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<visible>string.equals(#IMDb.Movie.Refresh.Active,true)</visible>
+			<textures>common.waiting.1.png;common.waiting.2.png;common.waiting.3.png;common.waiting.4.png;common.waiting.5.png;common.waiting.6.png;common.waiting.7.png;common.waiting.8.png</textures>
+			<Duration>0:0:01.5</Duration>
+			<keepaspectratio>yes</keepaspectratio>
+		</control>
+		<control>
+			<description>MPEIUPDATE:9d064213_0b4d_4cee_96a5_405812422b58</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>90</posX>
+			<posY>540</posY>
+			<width>172</width>
+			<height>183</height>
+			<texture>extension_update.png</texture>
+			<visible>string.equals(#mpei.9d064213_0b4d_4cee_96a5_405812422b58.haveupdate,true)</visible>
+		</control>
+	</controls>
+</window>

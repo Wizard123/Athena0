@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Note to skinner:
+ The two main controls are the listcontrol (ID = 10) and the textboxscrollup (ID = 20).
+ The score result itself is created dynamically with labels. the textboxscrollup is used to define
+ the area (posX, posY, width and height) where to create the control
+ and how to format them (font and color).
+-->
+<window>
+    <id>42000</id>
+    <defaultcontrol>10</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
+    <controls>
+        
+        <control>
+            <description>BackGround</description>
+            <type>image</type>
+            <posX>0</posX>
+            <posY>0</posY>
+            <width>1920</width>
+            <height>1080</height>
+            <texture>backgroundshadow3.png</texture>
+        </control>
+        <!-- backdrop matching current sport -->
+        <control>
+            <id>30</id>
+            <description>backdrop</description>
+            <type>image</type>
+            <colordiffuse>500000ff</colordiffuse>
+            <posX>0</posX>
+            <posY>0</posY>
+            <width>1920</width>
+            <height>1080</height>
+            <texture>#ScoreCenter.bd.jpg</texture>
+            <animation effect="Fade" time="400">WindowClose</animation>
+            <animation effect="Fade" time="400">WindowOpen</animation>
+        </control>
+        <control>
+            <description>Title</description>
+            <type>fadelabel</type>
+            <posX>1866</posX>
+            <posY>7</posY>
+            <width>750</width>
+            <font>font14</font>
+            <textcolor>90ffffff</textcolor>
+            <align>RIGHT</align>
+            <label>#ScoreCenter.Title</label>
+            <texture>ScoreCenter\Football.png</texture>
+        </control>
+        <control>
+            <id>60</id>
+            <description>Live Status</description>
+            <type>label</type>
+            <posX>63</posX>
+            <posY>15</posY>
+            <width>300</width>
+            <font>font12</font>
+			<textcolor>90ffffff</textcolor>
+            <label>#ScoreCenter.Live</label>
+        </control>
+        <control>
+            <description>live icon</description>
+            <type>image</type>
+            <visible>yes</visible>
+            <posX>12</posX>
+            <posY>15</posY>
+            <width>48</width>
+            <height>45</height>
+            <texture>#ScoreCenter.LiveIcon</texture>
+            <animation condition="string.equals(#ScoreCenter.LiveOn,1)" effect="Fade" end="100" pulse="TRUE" reversible="FALSE" start="0" time="2000" tween="Linear">Conditional</animation>
+        </control>
+        <control>
+            <description>Current Image1</description>
+            <type>image</type>
+            <posX>15</posX>
+            <posY>75</posY>
+            <width>75</width>
+            <height>75</height>
+            <texture>#ScoreCenter.Ico1</texture>
+            <keepaspectratio>yes</keepaspectratio>
+            <centered>yes</centered>
+        </control>
+        <control>
+            <description>Current Image2</description>
+            <type>image</type>
+            <posX>105</posX>
+            <posY>75</posY>
+            <width>75</width>
+            <height>75</height>
+            <texture>#ScoreCenter.Ico2</texture>
+            <keepaspectratio>yes</keepaspectratio>
+            <centered>yes</centered>
+        </control>
+        <control>
+            <description>Current Image3</description>
+            <type>image</type>
+            <posX>195</posX>
+            <posY>75</posY>
+            <width>75</width>
+            <height>75</height>
+            <texture>#ScoreCenter.Ico3</texture>
+            <keepaspectratio>yes</keepaspectratio>
+            <centered>yes</centered>
+        </control>
+        <control>
+            <description>Current Image4</description>
+            <type>image</type>
+            <posX>285</posX>
+            <posY>75</posY>
+            <width>75</width>
+            <height>75</height>
+            <texture>#ScoreCenter.Ico4</texture>
+            <keepaspectratio>yes</keepaspectratio>
+            <centered>yes</centered>
+        </control>
+        <control>
+            <description>Current Results</description>
+            <type>label</type>
+            <posX>472</posX>
+            <posY>75</posY>
+            <width>1350</width>
+            <font>font14</font>
+            <textcolor>90ffffff</textcolor>
+            <align>LEFT</align>
+            <label>#ScoreCenter.Results</label>
+        </control>
+        <control>
+            <description>source</description>
+            <type>fadelabel</type>
+            <posX>472</posX>
+            <posY>112</posY>
+            <width>1350</width>
+            <font>font10</font>
+            <textcolor>90ffffff</textcolor>
+            <align>LEFT</align>
+            <label>#ScoreCenter.Source</label>
+        </control>
+        <control>
+            <id>10</id>
+            <description>Scores</description>
+            <type>listcontrol</type>
+            <onright>70</onright>
+            <ondown>40</ondown>
+            <posX>15</posX>
+            <posY>150</posY>
+            <width>450</width>
+            <height>900</height>
+            <textXOff>15</textXOff>
+            <textYOff>3</textYOff>
+            <IconXOff>7</IconXOff>
+            <IconYOff>7</IconYOff>
+            <textvisible2>no</textvisible2>
+            <textvisible3>no</textvisible3>
+            <spaceBetweenItems>2</spaceBetweenItems>
+            <textureHeight>52</textureHeight>
+            <keepaspectratio>yes</keepaspectratio>
+            <spinPosX>15</spinPosX>
+            <spinPosY>990</spinPosY>
+            <PinIconWidth>37</PinIconWidth>
+            <PinIconHeight>37</PinIconHeight>
+            <PinIconXOff>405</PinIconXOff>
+            <PinIconYOff>4</PinIconYOff>
+            <font>font10</font>
+        </control>
+
+    <!-- This control defines the area and the format (font and color)
+    in which the score will be displayed -->
+        <control>
+            <id>20</id>
+            <description>Results</description>
+            <type>textboxscrollup</type>
+            <visible>yes</visible>
+			<textcolor>90ffffff</textcolor>
+			<colordiffuse>90ffffff</colordiffuse>
+            <posX>472</posX>
+            <posY>202</posY>
+            <width>1400</width>
+            <height>700</height>
+            <font>font10</font>
+        </control>
+        <control>
+            <id>40</id>
+            <description>Next Button</description>
+            <type>button</type>
+            <onleft>10</onleft>
+            <onup>10</onup>
+            <ondown>10</ondown>
+            <posX>472</posX>
+            <posY>982</posY>
+            <width>150</width>
+            <label>Next</label>
+        </control>
+
+    <!-- Uncomment this control to make the list 
+    disapear when a score is displayed -->
+    <!--
+    <control>
+      <description>Dummy Label</description>
+      <type>label</type>
+      <id>50</id>
+      <posX>-150</posX>
+      <posY>15</posY>
+      <width>15</width>
+      <label>dummy</label>
+      <font>font12</font>
+    </control>
+    -->
+
+        <control>
+            <id>70</id>
+            <description>Prev Score Button</description>
+            <type>button</type>
+            <onleft>10</onleft>
+            <onright>80</onright>
+            <onup>10</onup>
+            <ondown>10</ondown>
+            <visible>no</visible>
+            <posX>472</posX>
+            <posY>150</posY>
+            <width>34</width>
+            <height>45</height>
+            <textureFocus>arrow_round_left_focus.png</textureFocus>
+            <textureNoFocus>arrow_round_left_nofocus.png</textureNoFocus>
+            <textalign>LEFT</textalign>
+        </control>
+        <control>
+            <id>80</id>
+            <description>Next Score Button</description>
+            <type>button</type>
+            <onleft>70</onleft>
+            <onright>10</onright>
+            <onup>10</onup>
+            <ondown>10</ondown>
+            <visible>no</visible>
+            <posX>506</posX>
+            <posY>150</posY>
+            <width>34</width>
+            <height>45</height>
+            <textureFocus>arrow_round_right_focus.png</textureFocus>
+            <textureNoFocus>arrow_round_right_nofocus.png</textureNoFocus>
+        </control>
+        <control>
+            <description>round</description>
+            <type>fadelabel</type>
+            <posX>543</posX>
+            <posY>153</posY>
+            <width>750</width>
+            <font>font10</font>
+            <align>LEFT</align>
+            <label>#ScoreCenter.Round</label>
+        </control>
+    </controls>
+</window>

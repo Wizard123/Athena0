@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+  <controls>
+    <control>
+      <description>group element</description>
+      <type>group</type>
+      <animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+      <visible>!skin.hassetting(#skin.no.latestmedia)</visible>
+     <!--     *******************************************************************************************  -->
+      <!--     *************************   RECENTLY ADDED - TV RECORDINGS  *******************************  -->
+      <!--     *******************************************************************************************  -->
+   
+   <!--Now recording info on home-->
+   
+	  <control>
+        <description>active recording label</description>
+        <type>label</type>
+        <id>0</id>
+        <posX>1503</posX>
+        <posY>560</posY>
+        <width>650</width>
+        <height>45</height>
+		<align>left</align>
+        <label>#latestMediaHandler.tvrecordings.active1.title on #latestMediaHandler.tvrecordings.active1.channel</label>
+		<textcolor>99ffffff</textcolor>
+        <font>font10</font>
+        <visible>[control.hastext(1090)+control.isVisible(41)]+skin.hassetting(#skin.record.info)</visible>
+		<animation effect="rotate" delay="0" end="90" time="0" loop="false" condition="true">Conditional</animation>
+    </control>
+	<control>
+        <description>active recording label dummy</description>
+        <type>label</type>
+        <id>1090</id>
+        <posX>3300</posX>
+        <posY>850</posY>
+        <width>675</width>
+        <height>45</height>
+		<align>right</align>
+        <label>#latestMediaHandler.tvrecordings.active1.title#latestMediaHandler.tvrecordings.active1.channel</label>
+		<textcolor>ffffffff</textcolor>
+        <font>font9</font>
+    </control>
+	
+	<!-- Recording space indicator -->
+	
+	<control>
+        <description>TV SPACE label</description>
+        <type>label</type>
+        <textcolor>ffffffff</textcolor>
+        <align>center</align>
+        <id>37483</id>
+        <posX>350</posX>
+        <posY>845</posY>
+        <width>800</width>
+        <height>60</height>
+        <font>font9</font>
+        <label>#DriveFreeSpace.AvailableSpace.Data.Total                                          #DriveFreeSpace.AvailableSpace.Percentage% Remaining</label>
+        <visible>control.isvisible(37484)+[control.hasfocus(4) | control.hasfocus(77774) | control.hasfocus(91919984) | control.hasfocus(42) | control.hasfocus(41) | control.hasfocus(43) | control.hasfocus(91919985)+plugin.isenabled(DriveFreeSpace)]</visible>
+		<animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
+        <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
+	    <animation effect="fade" delay="0" time="700">visible</animation>
+        <animation effect="fade" time="100" delay="0">hidden</animation>
+      </control>
+
+      <control>
+        <description>Progress Bar overlay</description>
+        <type>label</type>
+        <textcolor>FF666666</textcolor>
+        <align>right</align>
+        <id>37484</id>
+        <posX>20000</posX>
+        <posY>20</posY>
+        <width>300</width>
+        <height>300</height>
+        <font>font9</font>
+        <label>#DriveFreeSpace.AvailableSpace.Percentage</label>
+        <visible>[control.hastext(37484)+plugin.isenabled(DriveFreeSpace)]+!skin.hassetting(#skin.tv.enable)</visible>
+      </control>
+	
+	
+      <control Style="BasicHomeFade">
+        <description>TVRecordings Updates</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>185</posX>
+        <posY>145</posY>
+        <width>230</width>
+        <height>400</height>
+        <texture>side_tile.png</texture>
+		<keepaspectratio>yes</keepaspectratio>
+		<zoomfromtop>yes</zoomfromtop>
+        <align>left</align>
+        <font>font10</font>
+        <visible>[control.hasfocus(77774) | control.hasfocus(91919985) | control.hasfocus(91919984) | control.hasfocus(42) | control.hasfocus(41) | control.hasfocus(43) | control.hasfocus(4)]+!skin.hassetting(#skin.tv.enable)</visible>
+        <textcolor>ffffffff</textcolor>
+      </control>
+
+	  <control Style="BasicHomeFade">
+        <description>cover1 art overlay</description>
+        <type>button</type>
+        <id>91919984</id>
+		<posX>165</posX>
+        <posY>250</posY>
+		<height>165</height>
+		<width>204</width>
+		<onup>4</onup>
+		<onleft>30</onleft>
+		<onright>42</onright>
+		<ondown>91919985</ondown>
+		<textureFocus>artoverlay.png</textureFocus>
+		<textureNoFocus>artoverlay.png</textureNoFocus>
+		<label></label>
+		<visible>[control.hasfocus(77774) | control.hasfocus(91919985) | control.hasfocus(91919984) | control.hasfocus(42) | control.hasfocus(41) | control.hasfocus(43) | control.hasfocus(4)]+!skin.hassetting(#skin.tv.enable)</visible>
+		<animation effect="zoom" end="110,110" center="0,0" time="200">Focus</animation>
+		<animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
+        <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
+	    <animation effect="fade" delay="0" time="700">visible</animation>
+        <animation effect="fade" time="100" delay="0">hidden</animation>
+      </control>
+
+      <control Style="BasicHomeFade">
+        <description>TVRecordings Updates2</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>185</posX>
+        <posY>567</posY>
+        <width>230</width>
+        <height>400</height>
+        <texture>side_tile.png</texture>
+		<keepaspectratio>yes</keepaspectratio>
+		<zoomfromtop>yes</zoomfromtop>
+        <align>left</align>
+        <font>font10</font>
+        <visible>[control.hasfocus(77774) | control.hasfocus(91919985) | control.hasfocus(91919984) | control.hasfocus(42) | control.hasfocus(41) | control.hasfocus(43) | control.hasfocus(4)]+!skin.hassetting(#skin.tv.enable)</visible>
+        <textcolor>ffffffff</textcolor>
+      </control>
+
+	  <control Style="BasicHomeFade">
+        <description>overlay tile</description>
+        <type>button</type>
+        <id>91919985</id>
+		<posX>165</posX>
+        <posY>670</posY>
+		<height>165</height>
+		<width>204</width>
+		<onup>91919984</onup>
+		<onleft>30</onleft>
+		<onright>41</onright>
+		<ondown>91919985</ondown>
+		<textureFocus>artoverlay.png</textureFocus>
+		<textureNoFocus>artoverlay.png</textureNoFocus>
+		<label></label>
+		<visible>[control.hasfocus(77774) | control.hasfocus(91919985) | control.hasfocus(91919984) | control.hasfocus(42) | control.hasfocus(41) | control.hasfocus(43) | control.hasfocus(4)]+!skin.hassetting(#skin.tv.enable)</visible>
+		<animation effect="zoom" end="110,110" center="0,0" time="200">Focus</animation>
+		<animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
+        <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
+	    <animation effect="fade" delay="0" time="700">visible</animation>
+        <animation effect="fade" time="100" delay="0">hidden</animation>
+      </control>
+	  
+	  <!-- tv recordings 1 info-->
+	  
+	  <control>
+        <description>Cover1</description>
+        <type>textbox</type>
+        <id>1</id>
+        <posX>210</posX>
+        <posY>340</posY>
+		<height>15</height>
+		<width>300</width>
+		<font>font10</font>
+		<label>#latestMediaHandler.tvrecordings.latest1.title</label>
+		<textcolor>ff999999</textcolor>
+		<textalign>center</textalign>
+        <visible>[control.isVisible(42)]+!skin.hassetting(#skin.tv.enable)</visible>        
+      <animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
+    <animation effect="slide" start="0,0" end="3000,0" time="0">hidden</animation>
+	<animation effect="fade" delay="0" time="100">visible</animation>
+    <animation effect="fade" time="100" delay="0">hidden</animation>
+		<animation effect="rotate" delay="0" end="90" time="0" loop="false" condition="true">Conditional</animation>
+	  </control>
+	  
+	  <!-- tv recordings 2 info-->
+		  
+	  <control>
+        <description>Cover1</description>
+        <type>textbox</type>
+        <id>1</id>
+        <posX>210</posX>
+        <posY>760</posY>
+		<height>15</height>
+		<width>300</width>
+		<font>font10</font>
+		<label>#latestMediaHandler.tvrecordings.latest2.title</label>
+		<textcolor>ff999999</textcolor>
+		<textalign>center</textalign>
+		<visible>[control.isVisible(42)]+!skin.hassetting(#skin.tv.enable)</visible>
+              <animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
+    <animation effect="slide" start="0,0" end="3000,0" time="0">hidden</animation>
+	<animation effect="fade" delay="0" time="100">visible</animation>
+    <animation effect="fade" time="100" delay="0">hidden</animation>
+		<animation effect="rotate" delay="0" end="90" time="0" loop="false" condition="true">Conditional</animation>
+	  </control>
+	  
+
+	  <!--Menu items in hub start-->
+	  
+
+      <control Style="BasicHomeFade">
+        <description>recorded tv overlay button</description>
+        <type>button</type>
+        <id>41</id>
+        <posX>440</posX>
+        <posY>567</posY>
+        <width>630</width>
+        <height>400</height>
+		<hyperlink>603</hyperlink>
+        <textureFocus mask="series_tile_mask.png">recordtv_focus.jpg</textureFocus>
+		<textureNoFocus mask="series_tile_mask.png">recordtv.jpg</textureNoFocus>
+        <label></label>
+		<align>left</align>
+		<textYOff>240</textYOff>
+		<textcolorNoFocus>ffffffff</textcolorNoFocus>
+		<textcolor>ffffffff</textcolor>
+        <font></font>
+		<onup>42</onup>
+		<onleft>91919985</onleft>
+		<onright>77774</onright>
+		<ondown>41</ondown>
+        <visible>[control.hasfocus(77774) | control.hasfocus(91919985) | control.hasfocus(91919984) | control.hasfocus(42) | control.hasfocus(41) | control.hasfocus(43) | control.hasfocus(4)]+!skin.hassetting(#skin.tv.enable)</visible>
+        <textcolor>ffffffff</textcolor>
+		<animation effect="zoom" end="102,102" center="0,0" time="200">Focus</animation>
+		<animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
+        <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
+	    <animation effect="fade" delay="0" time="700">visible</animation>
+        <animation effect="fade" time="100" delay="0">hidden</animation>
+      </control>
+
+      <control Style="BasicHomeFade">
+        <description>guide tv overlay button</description>
+        <type>button</type>
+        <id>42</id>
+        <posX>440</posX>
+        <posY>145</posY>
+        <width>630</width>
+        <height>400</height>
+		<hyperlink>600</hyperlink>
+        <textureFocus mask="series_tile_mask.png">guide_focus.png</textureFocus>
+		<textureNoFocus mask="series_tile_mask.png">guide.png</textureNoFocus>
+        <align>left</align>
+		<label></label>
+		<textYOff>240</textYOff>
+		<textcolorNoFocus>ffffffff</textcolorNoFocus>
+		<textcolor>ffffffff</textcolor>
+        <font></font>
+		<onup>4</onup>
+		<onleft>91919984</onleft>
+		<onright>43</onright>
+		<ondown>41</ondown>
+        <visible>[control.hasfocus(77774) | control.hasfocus(91919985) | control.hasfocus(91919984) | control.hasfocus(42) | control.hasfocus(41) | control.hasfocus(43) | control.hasfocus(4)]+!skin.hassetting(#skin.tv.enable)</visible>
+        <textcolor>ffffffff</textcolor>
+		<animation effect="zoom" end="102,102" center="0,0" time="200">Focus</animation>
+		<animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
+        <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
+	    <animation effect="fade" delay="0" time="700">visible</animation>
+        <animation effect="fade" time="100" delay="0">hidden</animation>
+      </control>
+
+      <control Style="BasicHomeFade">
+        <description>MY tv overlay button</description>
+        <type>button</type>
+        <id>43</id>
+        <posX>1090</posX>
+        <posY>145</posY>
+        <width>630</width>
+        <height>400</height>
+		<hyperlink>1</hyperlink>
+        <textureFocus mask="series_tile_mask.png">tvhome_focus.jpg</textureFocus>
+		<textureNoFocus mask="series_tile_mask.png">tvhome.jpg</textureNoFocus>
+        <label></label>
+		<align>left</align>
+		<textYOff>240</textYOff>
+		<textcolorNoFocus>ffffffff</textcolorNoFocus>
+		<textcolor>ffffffff</textcolor>
+        <font></font>
+		<onup>4</onup>
+		<onleft>42</onleft>
+		<onright>5</onright>
+		<ondown>77774</ondown>
+        <visible>[control.hasfocus(77774) | control.hasfocus(91919985) | control.hasfocus(91919984) | control.hasfocus(42) | control.hasfocus(41) | control.hasfocus(43) | control.hasfocus(4)]+!skin.hassetting(#skin.tv.enable)</visible>
+        <textcolor>ffffffff</textcolor>
+		<animation effect="zoom" end="102,102" center="0,0" time="200">Focus</animation>
+		<animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
+        <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
+	    <animation effect="fade" delay="0" time="700">visible</animation>
+        <animation effect="fade" time="100" delay="0">hidden</animation>
+      </control>
+	  
+
+      <control Style="BasicHomeFade">
+        <description>sheduled tv overlay button</description>
+        <type>button</type>
+        <id>77774</id>
+        <posX>1090</posX>
+        <posY>567</posY>
+        <width>630</width>
+        <height>400</height>
+		<hyperlink>601</hyperlink>
+        <textureFocus mask="series_tile_mask.png">sheduled_focus.jpg</textureFocus>
+		<textureNoFocus mask="series_tile_mask.png">sheduled.jpg</textureNoFocus>
+        <label></label>
+		<align>left</align>
+		<textYOff>240</textYOff>
+		<textcolorNoFocus>ffffffff</textcolorNoFocus>
+		<textcolor>ffffffff</textcolor>
+        <font></font>
+		<onup>43</onup>
+		<onleft>41</onleft>
+		<onright>5</onright>
+		<ondown>77774</ondown>
+        <visible>[control.hasfocus(77774) | control.hasfocus(91919985) | control.hasfocus(91919984) | control.hasfocus(42) | control.hasfocus(41) | control.hasfocus(43) | control.hasfocus(4)]+!skin.hassetting(#skin.tv.enable)</visible>
+        <textcolor>ffffffff</textcolor>
+		<animation effect="zoom" end="102,102" center="0,0" time="200">Focus</animation>
+		<animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
+        <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
+	    <animation effect="fade" delay="0" time="700">visible</animation>
+        <animation effect="fade" time="100" delay="0">hidden</animation>
+      </control>
+	  </control>
+  </controls>
+</window>

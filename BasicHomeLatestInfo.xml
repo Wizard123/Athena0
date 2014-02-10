@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+<controls>	
+	    
+ 	<!--            :: Movies Latest ::            -->
+	
+	
+	<control Style="BasicHomeFade">
+        <description>Info background</description>
+        <type>image</type>
+        <id>0</id>
+		<posX>168</posX>
+        <posY>134</posY>
+		<height>423</height>
+		<width>1580</width>
+		<texture>info_screen.png</texture>
+		<label>Latest Additions</label>
+		<visible>[control.hasfocus(91919991)|control.hasfocus(91919992)|control.hasfocus(91919993)]+string.equals(#latestMediaHandler.movingpicture.latest.enabled,true)</visible>
+		<animation effect="fade" delay="300" time="700">visible</animation>
+        <animation effect="fade" time="300" delay="200">hidden</animation>
+      </control>
+	  
+	 
+	  <control Style="BasicHomeFade">
+        <description>Cover1</description>
+        <type>textbox</type>
+        <id>1</id>
+        <posX>210</posX>
+        <posY>155</posY>
+		<height>15</height>
+		<width>1460</width>
+		<font>fontL2</font>
+		<textcolor>eaeaea</textcolor>
+        <label>#latestMediaHandler.movingpicture.latest1.title</label>
+        <visible>control.hasfocus(91919991)+string.equals(#latestMediaHandler.movingpicture.latest.enabled,true)</visible>
+        <animation effect="fade" delay="300" time="700">visible</animation>
+        <animation effect="fade" time="300" delay="200">hidden</animation>
+	  </control>
+	  
+	  <control Style="BasicHomeFade">
+        <description>Cover1</description>
+        <type>textbox</type>
+        <id>1</id>
+        <posX>210</posX>
+        <posY>205</posY>
+		<height>15</height>
+		<width>1460</width>
+		<font>font12</font>
+		<textcolor>eaeaea</textcolor>
+        <label>#latestMediaHandler.movingpicture.latest1.genre | Added #latestMediaHandler.movingpicture.latest1.dateAdded | Rated #latestMediaHandler.movingpicture.latest1.rating / 10 </label>
+        <visible>control.hasfocus(91919991)+string.equals(#latestMediaHandler.movingpicture.latest.enabled,true)</visible>
+        <animation effect="fade" delay="300" time="700">visible</animation>
+        <animation effect="fade" time="300" delay="200">hidden</animation>
+	  </control>
+	  
+	  
+	  <control Style="BasicHomeFade">
+        <description>Cover1</description>
+        <type>textboxscrollup</type>
+        <id>1</id>
+        <posX>210</posX>
+        <posY>270</posY>
+		<height>260</height>
+		<width>1460</width>
+		<font>font12</font>
+		<textcolor>eaeaea</textcolor>
+        <label>#latestMediaHandler.movingpicture.latest1.plot</label>
+        <visible>control.hasfocus(91919991)+string.equals(#latestMediaHandler.movingpicture.latest.enabled,true)</visible>
+        <animation effect="fade" delay="300" time="700">visible</animation>
+        <animation effect="fade" time="300" delay="200">hidden</animation>
+	  </control>
+	  
+	  <control Style="BasicHomeFade">
+        <description>Cover1</description>
+        <type>textbox</type>
+        <id>1</id>
+        <posX>210</posX>
+        <posY>155</posY>
+		<height>15</height>
+		<width>1460</width>
+		<font>fontL2</font>
+		<textcolor>eaeaea</textcolor>
+        <label>#latestMediaHandler.movingpicture.latest2.title</label>
+        <visible>control.hasfocus(91919992)+string.equals(#latestMediaHandler.movingpicture.latest.enabled,true)</visible>
+        <animation effect="fade" delay="300" time="700">visible</animation>
+        <animation effect="fade" time="300" delay="200">hidden</animation>
+	  </control>
+	  
+	  <control Style="BasicHomeFade">
+        <description>Cover1</description>
+        <type>textbox</type>
+        <id>1</id>
+        <posX>210</posX>
+        <posY>205</posY>
+		<height>15</height>
+		<width>1460</width>
+		<font>font12</font>
+		<textcolor>eaeaea</textcolor>
+        <label>#latestMediaHandler.movingpicture.latest2.genre | Added #latestMediaHandler.movingpicture.latest2.dateAdded | Rated #latestMediaHandler.movingpicture.latest2.rating / 10 </label>
+        <visible>control.hasfocus(91919992)+string.equals(#latestMediaHandler.movingpicture.latest.enabled,true)</visible>
+        <animation effect="fade" delay="300" time="700">visible</animation>
+        <animation effect="fade" time="300" delay="200">hidden</animation>
+	  </control>
+	  
+	  
+	  <control Style="BasicHomeFade">
+        <description>Cover1</description>
+        <type>textboxscrollup</type>
+        <id>1</id>
+        <posX>210</posX>
+        <posY>270</posY>
+		<height>260</height>
+		<width>1460</width>
+		<font>font12</font>
+		<textcolor>eaeaea</textcolor>
+        <label>#latestMediaHandler.movingpicture.latest2.plot</label>
+        <visible>control.hasfocus(91919992)+string.equals(#latestMediaHandler.movingpicture.latest.enabled,true)</visible>
+        <animation effect="fade" delay="300" time="700">visible</animation>
+        <animation effect="fade" time="300" delay="200">hidden</animation>
+	  </control>
+	  
+	  <control Style="BasicHomeFade">
+        <description>Cover1</description>
+        <type>textbox</type>
+        <id>1</id>
+        <posX>210</posX>
+        <posY>155</posY>
+		<height>15</height>
+		<width>1460</width>
+		<font>fontL2</font>
+		<textcolor>eaeaea</textcolor>
+        <label>#latestMediaHandler.movingpicture.latest3.title</label>
+        <visible>control.hasfocus(91919993)+string.equals(#latestMediaHandler.movingpicture.latest.enabled,true)</visible>
+        <animation effect="fade" delay="300" time="700">visible</animation>
+        <animation effect="fade" time="300" delay="200">hidden</animation>
+	  </control>
+	  
+	  <control Style="BasicHomeFade">
+        <description>Cover1</description>
+        <type>textbox</type>
+        <id>1</id>
+        <posX>210</posX>
+        <posY>205</posY>
+		<height>15</height>
+		<width>1460</width>
+		<font>font12</font>
+		<textcolor>eaeaea</textcolor>
+        <label>#latestMediaHandler.movingpicture.latest3.genre | Added #latestMediaHandler.movingpicture.latest3.dateAdded | Rated #latestMediaHandler.movingpicture.latest3.rating / 10 </label>
+        <visible>control.hasfocus(91919993)+string.equals(#latestMediaHandler.movingpicture.latest.enabled,true)</visible>
+        <animation effect="fade" delay="300" time="700">visible</animation>
+        <animation effect="fade" time="300" delay="200">hidden</animation>
+	  </control>
+	  
+	  
+	  <control Style="BasicHomeFade">
+        <description>Cover1</description>
+        <type>textboxscrollup</type>
+        <id>1</id>
+        <posX>210</posX>
+        <posY>270</posY>
+		<height>260</height>
+		<width>1460</width>
+		<font>font12</font>
+		<textcolor>eaeaea</textcolor>
+        <label>#latestMediaHandler.movingpicture.latest3.plot</label>
+        <visible>control.hasfocus(91919993)+string.equals(#latestMediaHandler.movingpicture.latest.enabled,true)</visible>
+        <animation effect="fade" delay="300" time="700">visible</animation>
+        <animation effect="fade" time="300" delay="200">hidden</animation>
+	  </control>
+	  
+	  <!-- TVSeries info-->
+	  
+	  <control Style="BasicHomeFade">
+        <description>Info background</description>
+        <type>image</type>
+        <id>0</id>
+		<posX>168</posX>
+        <posY>556</posY>
+		<height>423</height>
+		<width>1580</width>
+		<texture>info_screen.png</texture>
+		<label>Latest Additions</label>
+		<visible>control.hasfocus(91919994)|control.hasfocus(91919995)|control.hasfocus(91919996)+string.equals(#latestMediaHandler.tvseries.latest.enabled,true)</visible>
+		<animation effect="fade" delay="300" time="700">visible</animation>
+        <animation effect="fade" time="300" delay="200">hidden</animation>
+      </control>
+	  
+	  
+	  <control Style="BasicHomeFade">
+        <description>Cover1</description>
+        <type>textbox</type>
+        <id>1</id>
+        <posX>210</posX>
+        <posY>580</posY>
+		<height>15</height>
+		<width>1460</width>
+		<font>fontL2</font>
+		<textcolor>eaeaea</textcolor>
+        <label>#latestMediaHandler.tvseries.latest1.serieName | S#latestMediaHandler.tvseries.latest1.seasonIndexE#latestMediaHandler.tvseries.latest1.episodeIndex</label>
+        <visible>control.hasfocus(91919994)+string.equals(#latestMediaHandler.tvseries.latest.enabled,true)</visible>
+        <animation effect="fade" delay="300" time="700">visible</animation>
+        <animation effect="fade" time="300" delay="200">hidden</animation>
+	  </control>
+	  
+	   <control Style="BasicHomeFade">
+        <description>Cover1</description>
+        <type>textbox</type>
+        <id>1</id>
+        <posX>210</posX>
+        <posY>635</posY>
+		<height>15</height>
+		<width>1460</width>
+		<font>font12</font>
+		<textcolor>eaeaea</textcolor>
+        <label>#latestMediaHandler.tvseries.latest1.episodeName</label>
+        <visible>control.hasfocus(91919994)+string.equals(#latestMediaHandler.tvseries.latest.enabled,true)</visible>
+        <animation effect="fade" delay="300" time="700">visible</animation>
+        <animation effect="fade" time="300" delay="200">hidden</animation>
+	  </control>
+	  
+	  
+	  <control Style="BasicHomeFade">
+        <description>Cover1</description>
+        <type>textboxscrollup</type>
+        <id>1</id>
+        <posX>210</posX>
+        <posY>685</posY>
+		<height>260</height>
+		<width>1460</width>
+		<font>font12</font>
+		<textcolor>eaeaea</textcolor>
+        <label>#latestMediaHandler.tvseries.latest1.plot</label>
+        <visible>control.hasfocus(91919994)+string.equals(#latestMediaHandler.tvseries.latest.enabled,true)</visible>
+        <animation effect="fade" delay="300" time="700">visible</animation>
+        <animation effect="fade" time="300" delay="200">hidden</animation>
+	  </control>
+	  
+	  <control Style="BasicHomeFade">
+        <description>Cover1</description>
+        <type>textbox</type>
+        <id>1</id>
+        <posX>210</posX>
+        <posY>580</posY>
+		<height>15</height>
+		<width>1460</width>
+		<font>fontL2</font>
+		<textcolor>eaeaea</textcolor>
+        <label>#latestMediaHandler.tvseries.latest2.serieName | S#latestMediaHandler.tvseries.latest2.seasonIndexE#latestMediaHandler.tvseries.latest2.episodeIndex</label>
+        <visible>control.hasfocus(91919995)+string.equals(#latestMediaHandler.tvseries.latest.enabled,true)</visible>
+        <animation effect="fade" delay="300" time="700">visible</animation>
+        <animation effect="fade" time="300" delay="200">hidden</animation>
+	  </control>
+	  
+	   <control Style="BasicHomeFade">
+        <description>Cover1</description>
+        <type>textbox</type>
+        <id>1</id>
+        <posX>210</posX>
+        <posY>635</posY>
+		<height>15</height>
+		<width>1460</width>
+		<font>font12</font>
+		<textcolor>eaeaea</textcolor>
+        <label>#latestMediaHandler.tvseries.latest2.episodeName</label>
+        <visible>control.hasfocus(91919995)+string.equals(#latestMediaHandler.tvseries.latest.enabled,true)</visible>
+        <animation effect="fade" delay="300" time="700">visible</animation>
+        <animation effect="fade" time="300" delay="200">hidden</animation>
+	  </control>
+	  
+	  
+	  <control Style="BasicHomeFade">
+        <description>Cover1</description>
+        <type>textboxscrollup</type>
+        <id>1</id>
+        <posX>210</posX>
+        <posY>685</posY>
+		<height>260</height>
+		<width>1460</width>
+		<font>font12</font>
+		<textcolor>eaeaea</textcolor>
+        <label>#latestMediaHandler.tvseries.latest2.plot</label>
+        <visible>control.hasfocus(91919995)+string.equals(#latestMediaHandler.tvseries.latest.enabled,true)</visible>
+        <animation effect="fade" delay="300" time="700">visible</animation>
+        <animation effect="fade" time="300" delay="200">hidden</animation>
+	  </control>
+	  
+	  <control Style="BasicHomeFade">
+        <description>Cover1</description>
+        <type>textbox</type>
+        <id>1</id>
+        <posX>210</posX>
+        <posY>580</posY>
+		<height>15</height>
+		<width>1460</width>
+		<font>fontL2</font>
+		<textcolor>eaeaea</textcolor>
+        <label>#latestMediaHandler.tvseries.latest3.serieName | S#latestMediaHandler.tvseries.latest3.seasonIndexE#latestMediaHandler.tvseries.latest3.episodeIndex</label>
+        <visible>control.hasfocus(91919996)+string.equals(#latestMediaHandler.tvseries.latest.enabled,true)</visible>
+        <animation effect="fade" delay="300" time="700">visible</animation>
+        <animation effect="fade" time="300" delay="200">hidden</animation>
+	  </control>
+	  
+	   <control Style="BasicHomeFade">
+        <description>Cover1</description>
+        <type>textbox</type>
+        <id>1</id>
+        <posX>210</posX>
+        <posY>635</posY>
+		<height>15</height>
+		<width>1460</width>
+		<font>font12</font>
+		<textcolor>eaeaea</textcolor>
+        <label>#latestMediaHandler.tvseries.latest3.episodeName</label>
+        <visible>control.hasfocus(91919996)+string.equals(#latestMediaHandler.tvseries.latest.enabled,true)</visible>
+        <animation effect="fade" delay="300" time="700">visible</animation>
+        <animation effect="fade" time="300" delay="200">hidden</animation>
+	  </control>
+	  
+	  
+	  <control Style="BasicHomeFade">
+        <description>Cover1</description>
+        <type>textboxscrollup</type>
+        <id>1</id>
+        <posX>210</posX>
+        <posY>685</posY>
+		<height>260</height>
+		<width>1460</width>
+		<font>font12</font>
+		<textcolor>eaeaea</textcolor>
+        <label>#latestMediaHandler.tvseries.latest3.plot</label>
+        <visible>control.hasfocus(91919996)+string.equals(#latestMediaHandler.tvseries.latest.enabled,true)</visible>
+        <animation effect="fade" delay="300" time="700">visible</animation>
+        <animation effect="fade" time="300" delay="200">hidden</animation>
+	  </control>
+	  
+	  <!-- MyVideo latest info-->
+	  
+	  <control Style="BasicHomeFade">
+        <description>Info background</description>
+        <type>image</type>
+        <id>0</id>
+		<posX>168</posX>
+        <posY>134</posY>
+		<height>423</height>
+		<width>1580</width>
+		<texture>info_screen.png</texture>
+		<label>Latest Additions</label>
+		<visible>control.hasfocus(15991)|control.hasfocus(15992)|control.hasfocus(15993)+string.equals(#myvideos.latest1.enabled,true)</visible>
+		<animation effect="fade" delay="300" time="700">visible</animation>
+        <animation effect="fade" time="300" delay="200">hidden</animation>
+      </control>
+	  
+	  <control Style="BasicHomeFade">
+        <description>Cover1</description>
+        <type>textbox</type>
+        <id>1</id>
+        <posX>210</posX>
+        <posY>155</posY>
+		<height>15</height>
+		<width>1460</width>
+		<font>fontL2</font>
+		<textcolor>eaeaea</textcolor>
+        <label>#myvideos.latest1.title</label>
+        <visible>control.hasfocus(15991)+string.equals(#myvideos.latest1.enabled,true)</visible>
+        <animation effect="fade" delay="300" time="700">visible</animation>
+        <animation effect="fade" time="300" delay="200">hidden</animation>
+	  </control>
+	  
+	   <control Style="BasicHomeFade">
+        <description>Cover1</description>
+        <type>textbox</type>
+        <id>1</id>
+        <posX>210</posX>
+        <posY>205</posY>
+		<height>15</height>
+		<width>1460</width>
+		<font>font12</font>
+		<textcolor>eaeaea</textcolor>
+        <label>#myvideos.latest1.genre #myvideos.latest1.dateAdded</label>
+        <visible>control.hasfocus(15991)+string.equals(#myvideos.latest1.enabled,true)</visible>
+        <animation effect="fade" delay="300" time="700">visible</animation>
+        <animation effect="fade" time="300" delay="200">hidden</animation>
+	  </control>
+	  
+	  
+	  <control Style="BasicHomeFade">
+        <description>Cover1</description>
+        <type>textboxscrollup</type>
+        <id>1</id>
+        <posX>210</posX>
+        <posY>270</posY>
+		<height>260</height>
+		<width>1460</width>
+		<font>font12</font>
+		<textcolor>eaeaea</textcolor>
+        <label>#myvideos.latest1.year - #myvideos.latest1.runtime</label>
+        <visible>control.hasfocus(15991)+string.equals(#myvideos.latest1.enabled,true)</visible>
+        <animation effect="fade" delay="300" time="700">visible</animation>
+        <animation effect="fade" time="300" delay="200">hidden</animation>
+	  </control>
+	  
+	  <control Style="BasicHomeFade">
+        <description>Cover1</description>
+        <type>textbox</type>
+        <id>1</id>
+        <posX>210</posX>
+        <posY>155</posY>
+		<height>15</height>
+		<width>1460</width>
+		<font>fontL2</font>
+		<textcolor>eaeaea</textcolor>
+        <label>#myvideos.latest2.title</label>
+        <visible>control.hasfocus(15992)+string.equals(#myvideos.latest2.enabled,true)</visible>
+        <animation effect="fade" delay="300" time="700">visible</animation>
+        <animation effect="fade" time="300" delay="200">hidden</animation>
+	  </control>
+	  
+	   <control Style="BasicHomeFade">
+        <description>Cover1</description>
+        <type>textbox</type>
+        <id>1</id>
+        <posX>210</posX>
+        <posY>205</posY>
+		<height>15</height>
+		<width>1460</width>
+		<font>font12</font>
+		<textcolor>eaeaea</textcolor>
+        <label>#myvideos.latest2.genre #myvideos.latest2.dateAdded</label>
+        <visible>control.hasfocus(15992)+string.equals(#myvideos.latest2.enabled,true)</visible>
+        <animation effect="fade" delay="300" time="700">visible</animation>
+        <animation effect="fade" time="300" delay="200">hidden</animation>
+	  </control>
+	  
+	  
+	  <control Style="BasicHomeFade">
+        <description>Cover1</description>
+        <type>textboxscrollup</type>
+        <id>1</id>
+        <posX>210</posX>
+        <posY>270</posY>
+		<height>260</height>
+		<width>1460</width>
+		<font>font12</font>
+		<textcolor>eaeaea</textcolor>
+        <label>#myvideos.latest2.year - #myvideos.latest2.runtime</label>
+        <visible>control.hasfocus(15992)+string.equals(#myvideos.latest2.enabled,true)</visible>
+        <animation effect="fade" delay="300" time="700">visible</animation>
+        <animation effect="fade" time="300" delay="200">hidden</animation>
+	  </control>
+	  
+	  <control Style="BasicHomeFade">
+        <description>Cover1</description>
+        <type>textbox</type>
+        <id>1</id>
+        <posX>210</posX>
+        <posY>155</posY>
+		<height>15</height>
+		<width>1460</width>
+		<font>fontL2</font>
+		<textcolor>eaeaea</textcolor>
+        <label>#myvideos.latest3.title</label>
+        <visible>control.hasfocus(15993)+string.equals(#myvideos.latest3.enabled,true)</visible>
+        <animation effect="fade" delay="300" time="700">visible</animation>
+        <animation effect="fade" time="300" delay="200">hidden</animation>
+	  </control>
+	  
+	   <control Style="BasicHomeFade">
+        <description>Cover1</description>
+        <type>textbox</type>
+        <id>1</id>
+        <posX>210</posX>
+        <posY>205</posY>
+		<height>15</height>
+		<width>1460</width>
+		<font>font12</font>
+		<textcolor>eaeaea</textcolor>
+        <label>#myvideos.latest3.genre #myvideos.latest3.dateAdded</label>
+        <visible>control.hasfocus(15993)+string.equals(#myvideos.latest3.enabled,true)</visible>
+        <animation effect="fade" delay="300" time="700">visible</animation>
+        <animation effect="fade" time="300" delay="200">hidden</animation>
+	  </control>
+	  
+	  
+	  <control Style="BasicHomeFade">
+        <description>Cover1</description>
+        <type>textboxscrollup</type>
+        <id>1</id>
+        <posX>210</posX>
+        <posY>270</posY>
+		<height>260</height>
+		<width>1460</width>
+		<font>font12</font>
+		<textcolor>eaeaea</textcolor>
+        <label>#myvideos.latest3.year - #myvideos.latest3.runtime</label>
+        <visible>control.hasfocus(15993)+string.equals(#myvideos.latest3.enabled,true)</visible>
+        <animation effect="fade" delay="300" time="700">visible</animation>
+        <animation effect="fade" time="300" delay="200">hidden</animation>
+	  </control>
+	  
+	  
+	  <!-- music info-->
+	  <!--
+		  
+	  <control Style="BasicHomeFade">
+        <description>Cover1</description>
+        <type>textbox</type>
+        <id>1</id>
+        <posX>285</posX>
+        <posY>850</posY>
+		<height>15</height>
+		<width>1395</width>
+		<font>seg9</font>
+		<textcolor>eaeaea</textcolor>
+        <label>#latestMediaHandler.music.latest1.artist | #latestMediaHandler.music.latest1.album | #latestMediaHandler.music.latest1.dateAdded</label>
+        <visible>control.hasfocus(91919997)</visible>
+        <animation effect="fade" delay="300" time="700">visible</animation>
+        <animation effect="fade" time="300" delay="200">hidden</animation>
+	  </control>
+	  -->
+	  
+</controls>
+</window>

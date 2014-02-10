@@ -1,0 +1,822 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+  <controls>
+    <control>
+      <description>group element</description>
+      <type>group</type>
+      <animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+      <visible>!skin.hassetting(#skin.no.latestmedia)</visible>
+      <!--     *******************************************************************************************  -->
+      <!--     *************************   RECENTLY ADDED - Moving Pictures   ***********************************  -->
+      <!--     *******************************************************************************************  -->
+      
+	  <!-- MovingPics tile 2 -->
+	  
+	  <control Style="BasicHomeFade">
+        <description>cover1 thumb tile</description>
+        <type>image</type>
+        <id>0</id>
+		<posX>185</posX>
+        <posY>567</posY>
+		<height>400</height>
+		<width>284</width>
+		<texture mask="tile_Drop1.png">blanktile.png</texture>
+		<label>Latest Additions</label>
+		<visible>control.hasfocus(91919994) | control.hasfocus(91919991) | control.hasfocus(91919992) | control.hasfocus(91919993) | control.hasfocus(91919994) | control.hasfocus(91919995) | control.hasfocus(91919996) | control.hasfocus(77766) | control.hasfocus(77767) | control.hasfocus(30) | control.hasfocus(77779) | control.hasfocus(15991) | control.hasfocus(15992) | control.hasfocus(15993)+ string.equals(#latestMediaHandler.movingpicture.latest.enabled,true)</visible>
+      </control>
+	  
+      <control Style="BasicHomeFade">
+        <description>Cover1</description>
+        <type>image</type>
+        <id>1</id>
+        <posX>185</posX>
+        <posY>567</posY>
+		<height>400</height>
+		<width>284</width>
+        <texture mask="tile_Drop1.png">#latestMediaHandler.movingpicture.latest1.thumb</texture>
+        <visible>[control.hasfocus(91919994) | control.hasfocus(91919991) | control.hasfocus(91919992) | control.hasfocus(91919993) | control.hasfocus(91919994) | control.hasfocus(91919995) | control.hasfocus(91919996) | control.hasfocus(77766) | control.hasfocus(77767) | control.hasfocus(30) | control.hasfocus(330) | control.hasfocus(331)]+!string.equals(#skin.movie.swap,true)</visible>
+      </control>
+	  
+	  <!--
+	   <control Style="BasicHomeFade">
+	  <description>Cover1 thumb</description>
+        <type>multiimage</type>
+        <id>0</id>
+        <posX>185</posX>
+        <posY>567</posY>
+		<height>400</height>
+		<width>284</width>
+        <imagepath mask="tile_Drop1.png">C:\ProgramData\Team MediaPortal\MediaPortal\thumbs\Videos\Title</imagepath>
+		<timeperimage>15000</timeperimage>
+        <fadetime>1000</fadetime>
+        <loop>yes</loop>
+        <randomize>true</randomize>
+        <keepaspectratio>no</keepaspectratio>
+		<visible>[control.hasfocus(91919994) | control.hasfocus(91919991) | control.hasfocus(91919992) | control.hasfocus(91919993) | control.hasfocus(91919994) | control.hasfocus(91919995) | control.hasfocus(91919996) | control.hasfocus(77766) | control.hasfocus(77767) | control.hasfocus(30)]+!string.equals(#latestMediaHandler.movingpicture.latest.enabled,true)</visible>
+      </control>
+	  -->
+	  
+	  <control Style="BasicHomeFade">
+        <description>cover1 art overlay</description>
+        <type>button</type>
+        <id>91919991</id>
+		<posX>230</posX>
+        <posY>680</posY>
+		<height>165</height>
+		<width>204</width>
+		<textureFocus>artoverlay.png</textureFocus>
+		<textureNoFocus>artoverlay.png</textureNoFocus>
+		<label></label>
+		<onup>91919994</onup>
+		<onright>91919992</onright>
+		<onleft>6</onleft>
+		<animation effect="zoom" end="120,120" center="0,0" time="200">Focus</animation>
+		<animation effect="zoom" start="100,100" center="0,0" time="200">UnFocus</animation>
+	    <animation effect="fade" delay="0" time="700">visible</animation>
+        <animation effect="fade" time="100" delay="0">hidden</animation>
+		<visible allowhiddenfocus="true">[control.hasfocus(91919991)]+!string.equals(#skin.movie.swap,true)</visible>
+      </control>
+	  
+	  <!-- MovingPics tile 2 -->
+	  
+	  <control Style="BasicHomeFade">
+        <description>cover2 thumb tile</description>
+        <type>image</type>
+        <id>0</id>
+		<posX>490</posX>
+        <posY>567</posY>
+		<height>400</height>
+		<width>284</width>
+		<texture mask="tile_Drop1.png">blanktile.png</texture>
+		<label>Latest Additions</label>
+		<visible>control.hasfocus(91919994) | control.hasfocus(91919991) | control.hasfocus(91919992) | control.hasfocus(91919993) | control.hasfocus(91919994) | control.hasfocus(91919995) | control.hasfocus(91919996) | control.hasfocus(77766) | control.hasfocus(77767) | control.hasfocus(30) | control.hasfocus(77779) | control.hasfocus(15991) | control.hasfocus(15992) | control.hasfocus(15993)+ string.equals(#latestMediaHandler.movingpicture.latest.enabled,true)</visible>
+      </control>
+      <control Style="BasicHomeFade">
+        <description>Cover2</description>
+        <type>image</type>
+        <id>1</id>
+        <posX>490</posX>
+        <posY>567</posY>
+		<height>400</height>
+		<width>284</width>
+        <texture mask="tile_Drop1.png">#latestMediaHandler.movingpicture.latest2.thumb</texture>
+        <visible>[control.hasfocus(91919994) | control.hasfocus(91919991) | control.hasfocus(91919992) | control.hasfocus(91919993) | control.hasfocus(91919994) | control.hasfocus(91919995) | control.hasfocus(91919996) | control.hasfocus(77766) | control.hasfocus(77767) | control.hasfocus(30) | control.hasfocus(330) | control.hasfocus(331)]+!string.equals(#skin.movie.swap,true)</visible>
+      </control>
+	  
+	  <!--
+	  <control Style="BasicHomeFade">
+	  <description>Cover2 thumb</description>
+        <type>multiimage</type>
+        <id>0</id>
+        <posX>490</posX>
+        <posY>567</posY>
+		<height>400</height>
+		<width>284</width>
+        <imagepath mask="tile_Drop1.png">C:\ProgramData\Team MediaPortal\MediaPortal\thumbs\Videos\Title</imagepath>
+		<timeperimage>55000</timeperimage>
+        <fadetime>1000</fadetime>
+        <loop>yes</loop>
+        <randomize>true</randomize>
+        <keepaspectratio>no</keepaspectratio>
+		<visible>[control.hasfocus(91919994) | control.hasfocus(91919991) | control.hasfocus(91919992) | control.hasfocus(91919993) | control.hasfocus(91919994) | control.hasfocus(91919995) | control.hasfocus(91919996) | control.hasfocus(77766) | control.hasfocus(77767) | control.hasfocus(30)]+!string.equals(#latestMediaHandler.movingpicture.latest.enabled,true)</visible>
+      </control>
+-->
+	  
+	 <control Style="BasicHomeFade">
+        <description>cover2 art overlay</description>
+        <type>button</type>
+        <id>91919992</id>
+		<posX>530</posX>
+        <posY>680</posY>
+		<height>165</height>
+		<width>204</width>
+		<textureFocus>artoverlay.png</textureFocus>
+		<textureNoFocus>artoverlay.png</textureNoFocus>
+		<label></label>
+		<onup>91919995</onup>
+		<onright>91919993</onright>
+		<onleft>91919991</onleft>
+		<animation effect="zoom" end="120,120" center="0,0" time="200">Focus</animation>
+		<animation effect="zoom" start="100,100" center="0,0" time="200">UnFocus</animation>
+	    <animation effect="fade" delay="0" time="700">visible</animation>
+        <animation effect="fade" time="100" delay="0">hidden</animation>
+		<visible allowhiddenfocus="true">[control.hasfocus(91919992)]+!string.equals(#skin.movie.swap,true)</visible>
+      </control>
+	  
+	  <!-- MovingPics Tile3 -->
+	  
+	  <control Style="BasicHomeFade">
+        <description>cover3 thumb tile</description>
+        <type>image</type>
+        <id>0</id>
+		<posX>795</posX>
+        <posY>567</posY>
+		<height>400</height>
+		<width>284</width>
+		<texture mask="tile_Drop1.png">blanktile.png</texture>
+		<label>Latest Additions</label>
+		<visible>control.hasfocus(91919994) | control.hasfocus(91919991) | control.hasfocus(91919992) | control.hasfocus(91919993) | control.hasfocus(91919994) | control.hasfocus(91919995) | control.hasfocus(91919996) | control.hasfocus(77766) | control.hasfocus(77767) | control.hasfocus(30) | control.hasfocus(77779) | control.hasfocus(15991) | control.hasfocus(15992) | control.hasfocus(15993)+ string.equals(#latestMediaHandler.movingpicture.latest.enabled,true)</visible>
+      </control>
+      <control Style="BasicHomeFade">
+        <description>Cover3</description>
+        <type>image</type>
+        <id>1</id>
+        <posX>795</posX>
+        <posY>567</posY>
+		<height>400</height>
+		<width>284</width>
+        <texture mask="tile_Drop1.png">#latestMediaHandler.movingpicture.latest3.thumb</texture>
+        <visible>[control.hasfocus(91919994) | control.hasfocus(91919991) | control.hasfocus(91919992) | control.hasfocus(91919993) | control.hasfocus(91919994) | control.hasfocus(91919995) | control.hasfocus(91919996) | control.hasfocus(77766) | control.hasfocus(77767) | control.hasfocus(30) | control.hasfocus(330) | control.hasfocus(331)]+!string.equals(#skin.movie.swap,true)</visible>
+      </control>
+	  
+	  
+	  <!--
+	  <control Style="BasicHomeFade">
+	  <description>Cover3 thumb</description>
+        <type>multiimage</type>
+        <id>0</id>
+        <posX>795</posX>
+        <posY>567</posY>
+		<height>400</height>
+		<width>284</width>
+        <imagepath mask="tile_Drop1.png">C:\ProgramData\Team MediaPortal\MediaPortal\thumbs\Videos\Title</imagepath>
+		<timeperimage>25000</timeperimage>
+        <fadetime>1000</fadetime>
+        <loop>yes</loop>
+        <randomize>true</randomize>
+        <keepaspectratio>no</keepaspectratio>
+		<visible>[control.hasfocus(91919994) | control.hasfocus(91919991) | control.hasfocus(91919992) | control.hasfocus(91919993) | control.hasfocus(91919994) | control.hasfocus(91919995) | control.hasfocus(91919996) | control.hasfocus(77766) | control.hasfocus(77767) | control.hasfocus(30)]+!string.equals(#latestMediaHandler.movingpicture.latest.enabled,true)</visible>
+      </control>
+	  
+	  -->
+
+	  <control Style="BasicHomeFade">
+        <description>cover3 art overlay</description>
+        <type>button</type>
+        <id>91919993</id>
+		<posX>830</posX>
+        <posY>680</posY>
+		<height>165</height>
+		<width>204</width>
+		<textureFocus>artoverlay.png</textureFocus>
+		<textureNoFocus>artoverlay.png</textureNoFocus>
+		<label></label>
+		<onup>91919996</onup>
+		<onright>77766</onright>
+		<onleft>91919992</onleft>
+		<animation effect="zoom" end="120,120" center="0,0" time="200">Focus</animation>
+		<animation effect="zoom" start="100,100" center="0,0" time="200">UnFocus</animation>
+	    <animation effect="fade" delay="0" time="700">visible</animation>
+        <animation effect="fade" time="100" delay="0">hidden</animation>
+		<visible allowhiddenfocus="true">[control.hasfocus(91919993)]+!string.equals(#skin.movie.swap,true)</visible>
+      </control>
+	  
+	  
+	  <control Style="BasicHomeFade">
+        <description>Movies tile</description>
+        <type>button</type>
+        <id>77766</id>
+		<posX>1100</posX>
+        <posY>567</posY>
+		<hyperlink>96742</hyperlink>
+		<height>400</height>
+		<width>630</width>
+		<font></font>
+		<textureNoFocus mask="series_tile_mask.png">mpictures.jpg</textureNoFocus>
+		<textureFocus mask="series_tile_mask.png">mpictures_focus.jpg</textureFocus>
+		<label></label>
+		<align>left</align>
+		<textYOff>240</textYOff>
+		<textcolorNoFocus>ffffffff</textcolorNoFocus>
+		<textcolor>ffffffff</textcolor>
+		<onup>77767</onup>
+		<onright>77779</onright>
+		<ondown>77766</ondown>
+		<onleft>91919993</onleft>
+		<visible>[control.hasfocus(91919994) | control.hasfocus(91919991) | control.hasfocus(91919992) | control.hasfocus(91919993) | control.hasfocus(91919994) | control.hasfocus(91919995) | control.hasfocus(91919996) | control.hasfocus(77766) | control.hasfocus(77767) | control.hasfocus(30) | control.hasfocus(330) | control.hasfocus(331)]+!string.equals(#skin.movie.swap,true)</visible>
+		<animation effect="zoom" end="102,102" center="0,0" time="200">Focus</animation>
+		<animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
+        <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
+	    <animation effect="fade" delay="0" time="700">visible</animation>
+        <animation effect="fade" time="100" delay="0">hidden</animation>
+      </control>
+      
+	  
+	  
+	  <!-- ********TV SERIES LATEST********** -->
+	  
+	  
+	  <control Style="BasicHomeFade">
+        <description>cover1 thumb tile</description>
+        <type>image</type>
+        <id>0</id>
+		<posX>185</posX>
+        <posY>145</posY>
+		<height>400</height>
+		<width>284</width>
+		<texture mask="tile_Drop1.png">blanktile.png</texture>
+		<label>Latest Additions</label>
+		<visible>control.hasfocus(91919994) | control.hasfocus(91919991) | control.hasfocus(91919992) | control.hasfocus(91919993) | control.hasfocus(91919994) | control.hasfocus(91919995) | control.hasfocus(91919996) | control.hasfocus(77766) | control.hasfocus(77767) | control.hasfocus(30) | control.hasfocus(77779) | control.hasfocus(15991) | control.hasfocus(15992) | control.hasfocus(15993)+ string.equals(#latestMediaHandler.tvseries.latest.enabled,true)</visible>
+      </control>
+	  <control Style="BasicHomeFade">
+	  <description>Cover1 thumb</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>185</posX>
+        <posY>145</posY>
+        <height>400</height>
+		<width>284</width>
+        <texture mask="tile_Drop1.png">#latestMediaHandler.tvseries.latest1.serieThumb</texture>
+        <visible>control.hasfocus(91919994) | control.hasfocus(91919991) | control.hasfocus(91919992) | control.hasfocus(91919993) | control.hasfocus(91919994) | control.hasfocus(91919995) | control.hasfocus(91919996) | control.hasfocus(77766) | control.hasfocus(77767) | control.hasfocus(30) | control.hasfocus(77779) | control.hasfocus(15991) | control.hasfocus(15992) | control.hasfocus(15993) | control.hasfocus(330) | control.hasfocus(331)+ string.equals(#latestMediaHandler.tvseries.latest.enabled,true)</visible>
+      </control>
+	  <control Style="BasicHomeFade">
+        <description>cover1 art overlay</description>
+        <type>button</type>
+        <id>91919994</id>
+		<posX>230</posX>
+        <posY>250</posY>
+		<height>165</height>
+		<width>204</width>
+		<textureFocus>artoverlay.png</textureFocus>
+		<textureNoFocus>artoverlay.png</textureNoFocus>
+		<label></label>
+		<onleft>6</onleft>
+		<onright>91919995</onright>
+		<onup>30</onup>
+		<ondown>#skin.rec1.nav</ondown>
+		<animation effect="zoom" end="120,120" center="0,0" time="200">Focus</animation>
+		<animation effect="zoom" start="100,100" center="0,0" time="200">UnFocus</animation>
+	    <animation effect="fade" delay="0" time="700">visible</animation>
+        <animation effect="fade" time="100" delay="0">hidden</animation>
+		<visible allowhiddenfocus="true">control.hasfocus(91919994)+ string.equals(#latestMediaHandler.tvseries.latest.enabled,true)</visible>
+      </control>
+	  
+	  <control Style="BasicHomeFade">
+        <description>cover2 thumb tile</description>
+        <type>image</type>
+        <id>0</id>
+		<posX>490</posX>
+        <posY>145</posY>
+		<height>400</height>
+		<width>284</width>
+		<texture mask="tile_Drop1.png">blanktile.png</texture>
+		<label>Latest Additions</label>
+		<visible>control.hasfocus(91919994) | control.hasfocus(91919991) | control.hasfocus(91919992) | control.hasfocus(91919993) | control.hasfocus(91919994) | control.hasfocus(91919995) | control.hasfocus(91919996) | control.hasfocus(77766) | control.hasfocus(77767) | control.hasfocus(30) | control.hasfocus(77779) | control.hasfocus(15991) | control.hasfocus(15992) | control.hasfocus(15993)+ string.equals(#latestMediaHandler.tvseries.latest.enabled,true)</visible>
+      </control>
+	  <control Style="BasicHomeFade">
+	  <description>Cover2 thumb</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>490</posX>
+        <posY>145</posY>
+        <height>400</height>
+		<width>284</width>
+        <texture mask="tile_Drop1.png">#latestMediaHandler.tvseries.latest2.serieThumb</texture>
+        <visible>control.hasfocus(91919994) | control.hasfocus(91919991) | control.hasfocus(91919992) | control.hasfocus(91919993) | control.hasfocus(91919994) | control.hasfocus(91919995) | control.hasfocus(91919996) | control.hasfocus(77766) | control.hasfocus(77767) | control.hasfocus(30) | control.hasfocus(77779) | control.hasfocus(15991) | control.hasfocus(15992) | control.hasfocus(15993) | control.hasfocus(330) | control.hasfocus(331)+ string.equals(#latestMediaHandler.tvseries.latest.enabled,true)</visible>
+      </control>
+
+	  <control Style="BasicHomeFade">
+        <description>cover2 art overlay</description>
+        <type>button</type>
+        <id>91919995</id>
+		<posX>530</posX>
+        <posY>250</posY>
+		<height>165</height>
+		<width>204</width>
+		<textureFocus>artoverlay.png</textureFocus>
+		<textureNoFocus>artoverlay.png</textureNoFocus>
+		<label></label>
+		<onleft>91919994</onleft>
+		<onright>91919996</onright>
+		<onup>30</onup>
+		<ondown>#skin.rec2.nav</ondown>
+		<animation effect="zoom" end="120,120" center="0,0" time="200">Focus</animation>
+		<animation effect="zoom" start="100,100" center="0,0" time="200">UnFocus</animation>
+	    <animation effect="fade" delay="0" time="700">visible</animation>
+        <animation effect="fade" time="100" delay="0">hidden</animation>
+		<visible allowhiddenfocus="true">control.hasfocus(91919995)+ string.equals(#latestMediaHandler.tvseries.latest.enabled,true)</visible>
+      </control>
+	  
+	  <control Style="BasicHomeFade">
+        <description>cover3 thumb tile</description>
+        <type>image</type>
+        <id>0</id>
+		<posX>795</posX>
+        <posY>145</posY>
+		<height>400</height>
+		<width>284</width>
+		<texture mask="tile_Drop1.png">blanktile.png</texture>
+		<label>Latest Additions</label>
+		<visible>control.hasfocus(91919994) | control.hasfocus(91919991) | control.hasfocus(91919992) | control.hasfocus(91919993) | control.hasfocus(91919994) | control.hasfocus(91919995) | control.hasfocus(91919996) | control.hasfocus(77766) | control.hasfocus(77767) | control.hasfocus(30) | control.hasfocus(77779) | control.hasfocus(15991) | control.hasfocus(15992) | control.hasfocus(15993)+ string.equals(#latestMediaHandler.tvseries.latest.enabled,true)</visible>
+      </control>
+	  <control Style="BasicHomeFade">
+	  <description>Cover3 thumb</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>795</posX>
+        <posY>145</posY>
+        <height>400</height>
+		<width>284</width>
+        <texture mask="tile_Drop1.png">#latestMediaHandler.tvseries.latest3.serieThumb</texture>
+        <visible>control.hasfocus(91919994) | control.hasfocus(91919991) | control.hasfocus(91919992) | control.hasfocus(91919993) | control.hasfocus(91919994) | control.hasfocus(91919995) | control.hasfocus(91919996) | control.hasfocus(77766) | control.hasfocus(77767) | control.hasfocus(30) | control.hasfocus(77779) | control.hasfocus(15991) | control.hasfocus(15992) | control.hasfocus(15993) | control.hasfocus(330) | control.hasfocus(331)+ string.equals(#latestMediaHandler.tvseries.latest.enabled,true)</visible>
+      </control>
+	  
+	  <control Style="BasicHomeFade">
+        <description>cover3 art overlay</description>
+        <type>button</type>
+        <id>91919996</id>
+		<posX>830</posX>
+        <posY>250</posY>
+		<height>165</height>
+		<width>204</width>
+		<textureFocus>artoverlay.png</textureFocus>
+		<textureNoFocus>artoverlay.png</textureNoFocus>
+		<label></label>
+		<onleft>91919995</onleft>
+		<onright>77767</onright>
+		<onup>30</onup>
+		<ondown>#skin.rec3.nav</ondown>
+		<animation effect="zoom" end="120,120" center="0,0" time="200">Focus</animation>
+		<animation effect="zoom" start="100,100" center="0,0" time="200">UnFocus</animation>
+	    <animation effect="fade" delay="0" time="700">visible</animation>
+        <animation effect="fade" time="100" delay="0">hidden</animation>
+		<visible allowhiddenfocus="true">control.hasfocus(91919996)+string.equals(#latestMediaHandler.tvseries.latest.enabled,true)</visible>
+      </control>
+	  
+	  <control Style="BasicHomeFade">
+        <description>TVSeries tile</description>
+        <type>button</type>
+        <id>77767</id>
+		<posX>1100</posX>
+        <posY>145</posY>
+		<hyperlink>9811</hyperlink>
+		<height>400</height>
+		<width>630</width>
+		<font></font>
+		<textureNoFocus mask="series_tile_mask.png">series.jpg</textureNoFocus>
+		<textureFocus mask="series_tile_mask.png">series_focus.jpg</textureFocus>
+		<label></label>
+		<align>left</align>
+		<textYOff>240</textYOff>
+		<textcolorNoFocus>ffffffff</textcolorNoFocus>
+		<textcolor>ffffffff</textcolor>
+		<onup>30</onup>
+		<onright>77773</onright>
+		<onleft>91919996</onleft>
+		<ondown>#skin.movietilenav</ondown>
+		<visible allowhiddenfocus="true">control.hasfocus(91919994) | control.hasfocus(91919991) | control.hasfocus(91919992) | control.hasfocus(91919993) | control.hasfocus(91919994) | control.hasfocus(91919995) | control.hasfocus(91919996) | control.hasfocus(77766) | control.hasfocus(77767) | control.hasfocus(30) | control.hasfocus(77779) | control.hasfocus(15991) | control.hasfocus(15992) | control.hasfocus(15993) | control.hasfocus(330) | control.hasfocus(331)</visible>
+		<animation effect="zoom" end="102,102" center="0,0" time="200">Focus</animation>
+		<animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
+        <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
+	    <animation effect="fade" delay="0" time="700">visible</animation>
+        <animation effect="fade" time="100" delay="0">hidden</animation>
+      </control>
+	  
+	  <!-- Online Videos tiled button -->
+	  
+	  <control Style="BasicHomeFade">
+        <description>Online videos tile</description>
+        <type>button</type>
+        <id>77773</id>
+		<posX>185</posX>
+        <posY>145</posY>
+		<hyperlink>4755</hyperlink>
+		<height>400</height>
+		<width>630</width>
+		<font></font>
+		<textureNoFocus mask="series_tile_mask.png">onlinetile.jpg</textureNoFocus>
+		<textureFocus mask="series_tile_mask.png">onlinetile_focus.jpg</textureFocus>
+		<label></label>
+		<align>left</align>
+		<textYOff>240</textYOff>
+		<textcolorNoFocus>ffffffff</textcolorNoFocus>
+		<textcolor>ffffffff</textcolor>
+		<onup>30</onup>
+		<onright>#skin.movietilenav2</onright>
+		<onleft>77767</onleft>
+		<ondown>77773</ondown>
+		<visible allowhiddenfocus="true">control.hasfocus(77773)|control.hasfocus(76671)|control.hasfocus(76672)|control.hasfocus(76673)</visible>
+		<animation effect="zoom" start="100,100" end="105,105" center="0,0" time="200" pulse="true">Focus</animation>
+		<animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
+        <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
+	    <animation effect="fade" delay="0" time="700">visible</animation>
+        <animation effect="fade" time="100" delay="0">hidden</animation>
+      </control>
+	  
+	  
+	  <!-- Extra items in mediahub like MyVideos -->
+	  
+	  <!-- Arrow indicator -->
+	  
+	  <control Style="BasicHomeFade">
+        <description>next menu</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>1800</posX>
+        <posY>310</posY>
+		<height>506</height>
+		<width>64</width>
+        <texture>right.png</texture>
+        <align>left</align>
+        <font>font10</font>
+        <visible>control.isvisible(77767)</visible>
+        <colordiffuse>ffffffff</colordiffuse>
+		<!--<animation effect="zoom" start="100,100" end="120,120" time="1000" condition="true" pulse="true">conditional</animation>-->
+      </control>
+	  
+	  <control Style="BasicHomeFade">
+        <description>next menu</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>50</posX>
+        <posY>310</posY>
+		<height>506</height>
+		<width>64</width>
+        <texture>left.png</texture>
+        <align>left</align>
+        <font>font10</font>
+        <visible>control.isvisible(77773)</visible>
+        <colordiffuse>ffffffff</colordiffuse>
+		<!--<animation effect="zoom" start="100,100" end="120,120" time="1000" condition="true" pulse="true">conditional</animation>-->
+      </control>
+	  
+	  <!--
+      
+	  <control>
+        <description>myvideos tile</description>
+        <type>button</type>
+        <id>77779</id>
+		<posX>185</posX>
+        <posY>145</posY>
+		<hyperlink>6</hyperlink>
+		<height>400</height>
+		<width>630</width>
+		<font></font>
+		<textureNoFocus mask="series_tile_mask.png">myvideos.jpg</textureNoFocus>
+		<textureFocus mask="series_tile_mask.png">myvideos_focus.jpg</textureFocus>
+		<label></label>
+		<align>left</align>
+		<textYOff>240</textYOff>
+		<textcolorNoFocus>ffffffff</textcolorNoFocus>
+		<textcolor>ffffffff</textcolor>
+		<onup>30</onup>
+		<onright>15991</onright>
+		<onleft>77767</onleft>
+		<ondown>77773</ondown>
+		<visible allowhiddenfocus="true">control.hasfocus(77779)|control.hasfocus(77773)|control.hasfocus(15991)|control.hasfocus(15992)|control.hasfocus(15993)|control.hasfocus(76671)</visible>
+		<animation effect="zoom" end="102,102" center="0,0" time="200">Focus</animation>
+		<animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
+        <animation effect="slide" start="0,0" end="3000,0" time="100">hidden</animation>
+	    <animation effect="fade" delay="0" time="700">visible</animation>
+        <animation effect="fade" time="100" delay="0">hidden</animation>
+      </control>
+	  -->
+	  <!-- My Videos tile area -->
+	  <!-- MyVideos tile 1 -->
+	  
+	  <control Style="BasicHomeFade">
+        <description>Cover1</description>
+        <type>image</type>
+        <id>1</id>
+        <posX>185</posX>
+        <posY>567</posY>
+		<height>400</height>
+		<width>284</width>
+        <texture mask="tile_Drop1.png">#myvideos.latest1.thumb</texture>
+        <visible>[control.hasfocus(91919994) | control.hasfocus(15991) | control.hasfocus(15992) | control.hasfocus(15993) | control.hasfocus(91919994) | control.hasfocus(91919995) | control.hasfocus(91919996) | control.hasfocus(77766) | control.hasfocus(77767) | control.hasfocus(30) | control.hasfocus(77779) | control.hasfocus(330) | control.hasfocus(331)]+string.equals(#skin.movie.swap,true)</visible>
+      </control>
+	  
+	  <control Style="BasicHomeFade">
+        <description>cover1 art overlay</description>
+        <type>button</type>
+        <id>15991</id>
+		<posX>230</posX>
+        <posY>680</posY>
+		<height>165</height>
+		<width>204</width>
+		<textureFocus>artoverlay.png</textureFocus>
+		<textureNoFocus>artoverlay.png</textureNoFocus>
+		<label></label>
+		<onup>91919994</onup>
+		<onright>15992</onright>
+		<onleft>6</onleft>
+		<animation effect="zoom" end="120,120" center="0,0" time="200">Focus</animation>
+		<animation effect="zoom" start="100,100" center="0,0" time="200">UnFocus</animation>
+	    <animation effect="fade" delay="0" time="700">visible</animation>
+        <animation effect="fade" time="100" delay="0">hidden</animation>
+		<visible allowhiddenfocus="true">control.hasfocus(15991)+string.equals(#skin.movie.swap,true)</visible>
+      </control>
+	  
+	  <control Style="BasicHomeFade">
+        <description>Cover2</description>
+        <type>image</type>
+        <id>1</id>
+        <posX>490</posX>
+        <posY>567</posY>
+		<height>400</height>
+		<width>284</width>
+        <texture mask="tile_Drop1.png">#myvideos.latest2.thumb</texture>
+        <visible>[control.hasfocus(91919994) | control.hasfocus(15991) | control.hasfocus(15992) | control.hasfocus(15993) | control.hasfocus(91919994) | control.hasfocus(91919995) | control.hasfocus(91919996) | control.hasfocus(77766) | control.hasfocus(77767) | control.hasfocus(30) | control.hasfocus(77779) | control.hasfocus(330) | control.hasfocus(331)]+string.equals(#skin.movie.swap,true)</visible>
+      </control>
+	  
+	  <control Style="BasicHomeFade">
+        <description>cover2 art overlay</description>
+        <type>button</type>
+        <id>15992</id>
+		<posX>530</posX>
+        <posY>680</posY>
+		<height>165</height>
+		<width>204</width>
+		<textureFocus>artoverlay.png</textureFocus>
+		<textureNoFocus>artoverlay.png</textureNoFocus>
+		<label></label>
+		<onup>91919995</onup>
+		<onright>15993</onright>
+		<onleft>15991</onleft>
+		<animation effect="zoom" end="120,120" center="0,0" time="200">Focus</animation>
+		<animation effect="zoom" start="100,100" center="0,0" time="200">UnFocus</animation>
+	    <animation effect="fade" delay="0" time="700">visible</animation>
+        <animation effect="fade" time="100" delay="0">hidden</animation>
+		<visible allowhiddenfocus="true">control.hasfocus(15992)+string.equals(#skin.movie.swap,true)</visible>
+      </control>
+	  
+	  <control Style="BasicHomeFade">
+        <description>Cover3</description>
+        <type>image</type>
+        <id>1</id>
+        <posX>795</posX>
+        <posY>567</posY>
+		<height>400</height>
+		<width>284</width>
+        <texture mask="tile_Drop1.png">#myvideos.latest3.thumb</texture>
+        <visible>[control.hasfocus(91919994) | control.hasfocus(15991) | control.hasfocus(15992) | control.hasfocus(15993) | control.hasfocus(91919994) | control.hasfocus(91919995) | control.hasfocus(91919996) | control.hasfocus(77766) | control.hasfocus(77767) | control.hasfocus(30) | control.hasfocus(77779) | control.hasfocus(330) | control.hasfocus(331)]+string.equals(#skin.movie.swap,true)</visible>
+      </control>
+	  
+	  <control Style="BasicHomeFade">
+        <description>cover3 art overlay</description>
+        <type>button</type>
+        <id>15993</id>
+		<posX>830</posX>
+        <posY>680</posY>
+		<height>165</height>
+		<width>204</width>
+		<textureFocus>artoverlay.png</textureFocus>
+		<textureNoFocus>artoverlay.png</textureNoFocus>
+		<label></label>
+		<onup>91919996</onup>
+		<onright>77779</onright>
+		<onleft>15992</onleft>
+		<animation effect="zoom" end="120,120" center="0,0" time="200">Focus</animation>
+		<animation effect="zoom" start="100,100" center="0,0" time="200">UnFocus</animation>
+	    <animation effect="fade" delay="0" time="700">visible</animation>
+        <animation effect="fade" time="100" delay="0">hidden</animation>
+		<visible allowhiddenfocus="true">[control.hasfocus(15993)]+string.equals(#skin.movie.swap,true)</visible>
+      </control>
+	  
+	  <control Style="BasicHomeFade">
+        <description>Movies tile</description>
+        <type>button</type>
+        <id>77779</id>
+		<posX>1100</posX>
+        <posY>567</posY>
+		<hyperlink>6</hyperlink>
+		<height>400</height>
+		<width>630</width>
+		<font></font>
+		<textureNoFocus mask="series_tile_mask.png">myvideos.jpg</textureNoFocus>
+		<textureFocus mask="series_tile_mask.png">myvideos_focus.jpg</textureFocus>
+		<label></label>
+		<align>left</align>
+		<textYOff>240</textYOff>
+		<textcolorNoFocus>ffffffff</textcolorNoFocus>
+		<textcolor>ffffffff</textcolor>
+		<onup>77767</onup>
+		<onright>77773</onright>
+		<ondown>77779</ondown>
+		<onleft>15993</onleft>
+		<visible>[control.hasfocus(91919994) | control.hasfocus(15991) | control.hasfocus(15992) | control.hasfocus(15993) | control.hasfocus(91919994) | control.hasfocus(91919995) | control.hasfocus(91919996) | control.hasfocus(77766) | control.hasfocus(77767) | control.hasfocus(30) | control.hasfocus(77779) | control.hasfocus(330) | control.hasfocus(331)]+string.equals(#skin.movie.swap,true)</visible>
+		<animation effect="zoom" end="102,102" center="0,0" time="200">Focus</animation>
+		<animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
+        <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
+	    <animation effect="fade" delay="0" time="700">visible</animation>
+        <animation effect="fade" time="100" delay="0">hidden</animation>
+      </control>
+	  
+	  
+	  <!-- Blank tiles for future use -->
+	
+	  
+	  <control Style="BasicHomeFade">
+        <description>blank tile</description>
+        <type>image</type>
+        <id>0</id>
+		<posX>185</posX>
+        <posY>567</posY>
+		<height>400</height>
+		<width>284</width>
+		<texture mask="tile_Drop1.png">blanktile.png</texture>
+		<label>Latest Additions</label>
+		<visible>control.isvisible(77773)|control.hasfocus(76671)</visible>
+      </control>
+	  
+	  <control Style="BasicHomeFade">
+        <description>blank tile</description>
+        <type>image</type>
+        <id>0</id>
+		<posX>185</posX>
+        <posY>567</posY>
+		<height>400</height>
+		<width>284</width>
+		<texture mask="tile_Drop1.png">#OnlineVideos.LatestVideo1.SiteIcon</texture>
+		<label>Latest Additions</label>
+		<visible>control.isvisible(77773)|control.hasfocus(76671)</visible>
+      </control>
+	  
+	  <control Style="BasicHomeFade">
+        <description>blank tile</description>
+        <type>image</type>
+        <id>0</id>
+		<posX>490</posX>
+        <posY>567</posY>
+		<height>400</height>
+		<width>284</width>
+		<texture mask="tile_Drop1.png">blanktile.png</texture>
+		<label>Latest Additions</label>
+		<visible>control.isvisible(77773)|control.hasfocus(76671)</visible>
+      </control>
+	  
+	  <control Style="BasicHomeFade">
+        <description>blank tile</description>
+        <type>image</type>
+        <id>0</id>
+		<posX>490</posX>
+        <posY>567</posY>
+		<height>400</height>
+		<width>284</width>
+		<texture mask="tile_Drop1.png">#OnlineVideos.LatestVideo2.SiteIcon</texture>
+		<label>Latest Additions</label>
+		<visible>control.isvisible(77773)|control.hasfocus(76671)</visible>
+      </control>
+	  
+	   <control Style="BasicHomeFade">
+        <description>blank tile</description>
+        <type>image</type>
+        <id>0</id>
+		<posX>795</posX>
+        <posY>567</posY>
+		<height>400</height>
+		<width>284</width>
+		<texture mask="tile_Drop1.png">blanktile.png</texture>
+		<label>Latest Additions</label>
+		<visible>control.isvisible(77773)|control.hasfocus(76671)</visible>
+      </control>
+	  
+	  <control Style="BasicHomeFade">
+        <description>blank tile</description>
+        <type>image</type>
+        <id>0</id>
+		<posX>795</posX>
+        <posY>567</posY>
+		<height>400</height>
+		<width>284</width>
+		<texture mask="tile_Drop1.png">#OnlineVideos.LatestVideo3.SiteIcon</texture>
+		<label>Latest Additions</label>
+		<visible>[control.isvisible(77773)]+!string.equals(#skin.ovip.enable,true)</visible>
+      </control>
+
+	  <!--bbc iplayer-->
+	  
+	  <control Style="BasicHomeFade">
+        <description>Online videos tile</description>
+        <type>button</type>
+        <id>76671</id>
+		<posX>1475</posX>
+        <posY>145</posY>
+		<height>400</height>
+		<width>264</width>
+		<hyperlink>4755</hyperlink>
+		<hyperlinkParameter>site:BBC iPlayer</hyperlinkParameter>
+		<font></font>
+		<textureNoFocus mask="tile_Drop1.png">iplayer.jpg</textureNoFocus>
+		<textureFocus mask="tile_Drop1.png">iplayer.jpg</textureFocus>
+		<label></label>
+		<align>left</align>
+		<textYOff>240</textYOff>
+		<textcolorNoFocus>ffffffff</textcolorNoFocus>
+		<textcolor>ffffffff</textcolor>
+		<onup>30</onup>
+		<onright>76671</onright>
+		<onleft>#skin.movietilenav2</onleft>
+		<ondown>76671</ondown>
+		<visible allowhiddenfocus="true">[control.hasfocus(77773)|control.hasfocus(76671)|control.hasfocus(76672)|control.hasfocus(76673)]+string.equals(#skin.ovip.enable,true)</visible>
+		<animation effect="zoom" start="100,100" end="105,105" center="0,0" time="200" pulse="true">Focus</animation>
+		<animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
+        <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
+	    <animation effect="fade" delay="0" time="700">visible</animation>
+        <animation effect="fade" time="100" delay="0">hidden</animation>
+      </control>
+	  
+	  <!-- Movie plugin tiles for disabled plugin -->
+	  
+	  <control Style="BasicHomeFade">
+        <description>Movies tile</description>
+        <type>button</type>
+        <id>76672</id>
+		<posX>835</posX>
+        <posY>145</posY>
+		<hyperlink>96742</hyperlink>
+		<height>400</height>
+		<width>620</width>
+		<font></font>
+		<textureNoFocus mask="series_tile_mask.png">mpictures.jpg</textureNoFocus>
+		<textureFocus mask="series_tile_mask.png">mpictures_focus.jpg</textureFocus>
+		<label></label>
+		<align>left</align>
+		<textYOff>240</textYOff>
+		<textcolorNoFocus>ffffffff</textcolorNoFocus>
+		<textcolor>ffffffff</textcolor>
+		<onup>30</onup>
+		<onright>76671</onright>
+		<ondown>76672</ondown>
+		<onleft>77773</onleft>
+		<visible>[control.hasfocus(76672) | control.hasfocus(76671) | control.hasfocus(77773)]+string.equals(#skin.movie.swap,true)</visible>
+		<animation effect="zoom" end="102,102" center="0,0" time="200">Focus</animation>
+		<animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
+        <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
+	    <animation effect="fade" delay="0" time="700">visible</animation>
+        <animation effect="fade" time="100" delay="0">hidden</animation>
+      </control>
+	  
+	  <control Style="BasicHomeFade">
+        <description>Movies tile</description>
+        <type>button</type>
+        <id>76673</id>
+		<posX>835</posX>
+        <posY>145</posY>
+		<hyperlink>6</hyperlink>
+		<height>400</height>
+		<width>620</width>
+		<font></font>
+		<textureNoFocus mask="series_tile_mask.png">myvideos.jpg</textureNoFocus>
+		<textureFocus mask="series_tile_mask.png">myvideos_focus.jpg</textureFocus>
+		<label></label>
+		<align>left</align>
+		<textYOff>240</textYOff>
+		<textcolorNoFocus>ffffffff</textcolorNoFocus>
+		<textcolor>ffffffff</textcolor>
+		<onup>30</onup>
+		<onright>76671</onright>
+		<ondown>76673</ondown>
+		<onleft>77773</onleft>
+		<visible>[control.hasfocus(76673) | control.hasfocus(76671) | control.hasfocus(77773)]+!string.equals(#skin.movie.swap,true)</visible>
+		<animation effect="zoom" end="102,102" center="0,0" time="200">Focus</animation>
+		<animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
+        <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
+	    <animation effect="fade" delay="0" time="700">visible</animation>
+        <animation effect="fade" time="100" delay="0">hidden</animation>
+      </control>
+	  
+	  </control>
+  </controls>
+</window>

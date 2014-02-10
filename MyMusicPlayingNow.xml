@@ -1,0 +1,794 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+  <id>510</id>
+  <defaultcontrol>33</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+  <define>#usePlayFanart:Yes</define>
+  <define>#selecteditem:</define>
+  <controls>
+    <control>
+      <type>label</type>
+      <description>Dummy label</description>
+      <id>1</id>
+      <posX>3090</posX>
+      <label>-</label>
+    </control>
+    <control>
+      <type>button</type>
+      <description>Dummy button</description>
+      <id>30</id>
+      <posX>3090</posX>
+      <label>-</label>
+    </control>
+    <control>
+      <type>button</type>
+      <description>Dummy button</description>
+      <id>31</id>
+      <posX>3090</posX>
+      <label>-</label>
+    </control>
+    <control>
+      <description>BG</description>
+      <type>image</type>
+      <id>0</id>
+      <texture>background_02.jpg</texture>
+      <width>1920</width>
+      <height>1080</height>
+    </control>
+    <!--<import>common.music.play.fanart.xml</import>-->
+	
+	<control>
+		  <description>Backdrop Overlay - thumbs View</description>
+          <type>image</type>
+          <id>0</id>
+          <posX>40</posX>
+          <posY>135</posY>
+          <width>1832</width>
+          <height>943</height>
+          <texture>0011.png</texture>
+		</control>
+
+	<!--List background-->
+    
+    <control>
+      <type>label</type>
+      <description>Dummy label to cause focus on top tracks / related tracks</description>
+      <id>888</id>
+      <posX>3090</posX>
+      <label>-</label>
+    </control>
+	
+	<control>
+		  <description>Current window</description>
+		  <type>label</type>
+		  <id>16</id>
+		  <posX>1810</posX>
+		  <posY>33</posY>
+		  <align>right</align>
+		  <width>1800</width>
+		  <font>fontL</font>		  
+		  <label>#(iif(and(neq(L(102012), #currentmodule), neq(L(102002), #currentmodule), neq(L(100100), #currentmodule), neq(L(102015), #currentmodule)), #currentmodule, ' '))</label>
+		  <textcolor>eaeaea</textcolor>		  
+		  <animation effect="fade" time="250">WindowOpen</animation>
+		  <animation effect="fade" time="250">WindowClose</animation>
+		</control>
+		
+		<control>
+		  <description>Date / Time</description>
+		  <type>label</type>
+		  <id>0</id>
+		  <posX>1810</posX>
+		  <posY>113</posY>
+		  <label>#time #date #itemcount Files</label>
+		  <align>right</align>
+		  <font>fontL2</font>
+		  <textcolor>eaeaea</textcolor>
+		  <animation effect="fade" time="250">WindowOpen</animation>
+		  <animation effect="fade" time="250">WindowClose</animation>
+		</control>
+		
+		
+	<!--
+    <control>
+      <type>image</type>
+      <description>album art image</description>
+      <id>112</id>
+      <posX>1417</posX>
+      <posY>270</posY>
+      <width>390</width>
+      <height>390</height>
+      <texture mask="cdthumbmask.png">#play.current.thumb</texture>
+      <keepaspectratio>yes</keepaspectratio>
+      <centered>yes</centered>
+      <zoom>yes</zoom>
+    </control>
+	-->
+
+	
+	<control>
+      <description>list_back</description>
+      <type>image</type>
+      <id>0</id>
+      <posX>300</posX>
+      <posY>255</posY>
+      <width>902</width>
+      <height>655</height>
+      <texture>music_bk.png</texture>
+      <visible>control.hasthumb(112)</visible>
+	  <colordiffuse>ffffffff</colordiffuse>
+      <animation effect="fade" time="250" delay="0">WindowClose</animation>
+    </control>
+	
+	 <control>
+      <id>1</id>
+      <type>image</type>
+      <posX>310</posX>
+      <posY>265</posY>
+      <width>630</width>
+      <height>632</height>
+      <texture>missing_Coverart.png</texture>
+      <visible>!control.hasthumb(112)</visible>
+      <animation effect="fade" time="70" reversible="false">visible</animation>
+    </control>
+	
+	<control>
+      <id>1</id>
+      <type>image</type>
+      <posX>550</posX>
+      <posY>280</posY>
+      <width>625</width>
+      <height>603</height>
+      <texture>cdfx.png</texture>
+      <visible>control.hasthumb(112)</visible>
+      <animation effect="fade" time="70" reversible="false">visible</animation>
+	  <animation effect="rotate" delay="0" end="-360" centre="475,258" time="30000" loop="true" condition="player.hasAudio">Conditional</animation>
+	  <colordiffuse>ffffffff</colordiffuse>
+    </control>
+	
+    <control>
+      <id>0</id>
+      <type>image</type>
+      <posX>310</posX>
+      <posY>255</posY>
+      <width>642</width>
+      <height>652</height>
+      <texture>largeart_shadow.png</texture>
+      <visible>control.hasthumb(112)</visible>
+      <animation effect="fade" time="70" reversible="false">visible</animation>
+    </control>
+	
+    <control>
+      <id>112</id>
+      <type>image</type>
+      <posX>310</posX>
+      <posY>265</posY>
+      <width>630</width>
+      <height>632</height>
+      <texture>#selectedthumb</texture>
+      <visible>control.hasthumb(112)</visible>
+      <animation effect="fade" time="70" reversible="false">visible</animation>
+    </control>
+	
+	<control>
+      <type>image</type>
+      <id>117</id>
+      <posX>800</posX>
+      <posY>955</posY>
+      <width>10</width>
+      <height>10</height>
+      <texture><!--osd_progress_background_medium.png--></texture>
+      <visible>Player.HasAudio+!Player.HasVideo+string.equals(#duration)</visible>
+    </control>
+	
+	<control>
+      <type>image</type>
+      <id>0</id>
+      <posX>400</posX>
+      <posY>952</posY>
+      <width>2</width>
+      <height>20</height>
+      <texture>slider_vertical.png</texture>
+      <visible>Player.HasAudio+!Player.HasVideo+string.equals(#duration)</visible>
+    </control>
+	
+    <control>
+      <type>image</type>
+      <id>0</id>
+      <posX>770</posX>
+      <posY>952</posY>
+      <width>2</width>
+      <height>20</height>
+      <texture>slider_vertical.png</texture>
+      <visible>Player.HasAudio+!Player.HasVideo+string.equals(#duration)</visible>
+    </control>
+
+    <control>
+      <description>progress bar</description>
+      <type>progress</type>
+      <id>118</id>
+      <posX>401</posX>
+      <posY>957</posY>
+      <width>391</width>
+      <height>10</height>
+      <label>#percentage</label>
+      <texturebg></texturebg>
+      <onlymidtexture>yes</onlymidtexture>
+      <midwidth>370</midwidth>
+      <midheight>10</midheight>
+      <midoffsetX>-</midoffsetX>
+      <midoffsetY>0</midoffsetY>
+      <midtexture>osd_progress_mid.png</midtexture>
+      <visible>player.hasmedia</visible>
+	  </control>
+	<!--
+    <control>
+      <type>label</type>
+      <description>track progress label</description>
+      <id>119</id>
+      <posX>850</posX>
+      <posY>1010</posY>
+      <label>#currentplaytime</label>
+      <font>font12</font>
+      <align>right</align>
+      <textcolor>99ffffff</textcolor>
+      <visible>Player.HasAudio+!Player.HasVideo+string.equals(#duration)</visible>
+    </control>
+    <control>
+      <type>label</type>
+      <description>track duration label</description>
+      <id>110</id>
+      <posX>1400</posX>
+      <posY>1010</posY>
+      <label>#currentremaining</label>
+      <font>font12</font>
+      <align>left</align>
+      <textcolor>99ffffff</textcolor>
+      <visible>Player.HasAudio+!Player.HasVideo+string.equals(#duration)</visible>
+    </control>
+	-->
+	
+	<!-- Next playing song -->
+	
+    <control>
+      <type>label</type>
+      <description>up next label</description>
+      <id>20</id>
+      <posX>1260</posX>
+      <posY>255</posY>
+      <label>4541</label>
+      <font>fontL2</font>
+      <align>left</align>
+      <textcolor>99ffffff</textcolor>
+    </control>
+    <control>
+      <description>music logo</description>
+      <type>image</type>
+      <id>600</id>
+      <posX>1260</posX>
+      <posY>303</posY>
+      <width>105</width>
+      <height>105</height>
+      <texture>#Play.Next.Thumb</texture>
+    </control>
+    
+    <control>
+      <type>fadelabel</type>
+      <description>next artist label</description>
+      <id>121</id>
+      <posX>1395</posX>
+      <posY>300</posY>
+      <width>420</width>
+      <label>#Play.Next.Artist</label>
+      <align>left</align>
+      <font>font11</font>
+      <textcolor>99ffffff</textcolor>
+    </control>
+    <control>
+      <type>fadelabel</type>
+      <description>next title label</description>
+      <id>123</id>
+      <posX>1395</posX>
+      <posY>337</posY>
+      <width>420</width>
+      <label>#Play.Next.Title</label>
+      <align>left</align>
+      <font>font11</font>
+      <textcolor>99ffffff</textcolor>
+    </control>
+    <control>
+      <type>fadelabel</type>
+      <description>next artist label</description>
+      <id>0</id>
+      <posX>1395</posX>
+      <posY>375</posY>
+      <width>420</width>
+      <label>#Play.Next.Album</label>
+      <align>left</align>
+      <font>font11</font>
+      <textcolor>99ffffff</textcolor>
+    </control>
+	
+	<!-- Now Playing info -->
+	
+	<control>
+      <type>fadelabel</type>
+      <id>1</id>
+      <posX>110</posX>
+      <posY>800</posY>
+      <width>200</width>
+      <visible>Player.HasAudio</visible>
+      <label>Now Playing...</label>
+      <align>left</align>
+      <font>fontL2</font>
+      <textcolor>99ffffff</textcolor>
+	  <animation effect="rotate" delay="0" end="90" time="0" loop="false" condition="true">Conditional</animation>
+
+    </control>
+	
+	<control>
+      <type>label</type>
+      <id>1</id>
+      <posX>215</posX>
+      <posY>945</posY>
+      <width>150</width>
+      <label>#currentplaytime &gt; #currentremaining</label>
+      <align>left</align>
+      <textcolor>99ffffff</textcolor>
+      <font>font11</font>
+      <visible>Player.HasAudio+string.equals(#Play.Current.Lastfm.CurrentStream,)</visible>
+    </control>
+    <control>
+      <type>fadelabel</type>
+      <id>1</id>
+      <posX>215</posX>
+      <posY>945</posY>
+      <width>150</width>
+      <label>#currentplaytime &gt; #currentremaining</label>
+      <align>left</align>
+      <textcolor>99ffffff</textcolor>
+      <font>font11</font>
+      <visible>Player.HasAudio+!string.equals(#Play.Current.Lastfm.CurrentStream,)</visible>
+    </control>
+	
+	<control>
+      <type>label</type>
+      <id>1</id>
+      <posX>265</posX>
+      <posY>900</posY>
+      <visible>Player.HasAudio</visible>
+      <label>#Play.Current.Artist</label>
+      <align>left</align>
+      <font>font10</font>
+      <textcolor>99ffffff</textcolor>
+	  <animation effect="rotate" delay="0" end="90" centre="0,0" time="0" loop="false" condition="true">Conditional</animation>
+    </control>
+
+    <control>
+      <type>fadelabel</type>
+      <id>1</id>
+      <posX>215</posX>
+      <posY>910</posY>
+      <visible>Player.HasAudio</visible>
+      <label>#Play.Current.Title</label>
+      <width>900</width>
+      <align>left</align>
+      <font>font10</font>
+      <textcolor>99FFFFFF</textcolor>
+    </control>
+
+	
+	<control>
+      <description>music logo when no thumb</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>308</posX>
+      <posY>684</posY>
+      <width>215</width>
+      <height>215</height>
+      <centered>no</centered>
+      <keepaspectratio>no</keepaspectratio>
+      <visible>Player.HasAudio</visible>
+      <texture>smallart_shadow.png</texture>
+    </control>
+	
+	<control>
+      <description>music logo when no thumb</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>310</posX>
+      <posY>692</posY>
+      <width>205</width>
+      <height>205</height>
+      <centered>no</centered>
+      <keepaspectratio>no</keepaspectratio>
+      <visible>Player.HasAudio+!control.hasThumb(12345)</visible>
+      <texture>defaultArtistBig.png</texture>
+    </control>
+    <control>
+      <description>music logo</description>
+      <type>image</type>
+      <id>12345</id>
+      <posX>310</posX>
+      <posY>692</posY>
+      <width>205</width>
+      <height>205</height>
+      <centered>no</centered>
+      <keepaspectratio>no</keepaspectratio>
+      <visible>Player.HasAudio</visible>
+      <texture>#Play.Current.Thumb</texture>
+    </control>
+    <control>
+      <description>music logo</description>
+      <type>image</type>
+      <id>77</id>
+      <posX>310</posX>
+      <posY>692</posY>
+      <width>205</width>
+      <height>205</height>
+      <centered>no</centered>
+      <keepaspectratio>no</keepaspectratio>
+      <texture>#Play.Current.ArtistThumb</texture>
+      <visible>Player.HasAudio</visible>
+    </control>
+    <!-- *************************************************************************************************** -->
+    <!-- *************************** Here are the top tracks / related tracks  ***************************** -->
+    <!-- *************************************************************************************************** -->
+    <control>
+      <type>group</type>
+      <description>group element</description>
+      <control>
+        <type>listcontrol</type>
+        <description>list of best album tracks</description>
+        <id>166</id>
+        <posX>1200</posX>
+        <posY>495</posY>
+        <width>500</width>
+        <height>270</height>
+        <onright>9876</onright>
+        <ondown>155</ondown>
+        <onleft>333</onleft>
+        <onup>333</onup>
+        <spinColor>-</spinColor>
+        <image>-</image>
+		<textureFocus>Menu_bk.png</textureFocus>
+        <textureUp>-</textureUp>
+        <textureDown>-</textureDown>
+        <textureUpFocus>-</textureUpFocus>
+        <textureDownFocus>-</textureDownFocus>
+        <textureNoFocus>-</textureNoFocus>
+        <shadedColor>ffffffff</shadedColor>
+        <textureHeight>45</textureHeight>
+        <font>font11</font>
+        <textXOff>0</textXOff>
+		<textcolorNoFocus>99ffffff</textcolorNoFocus>
+		<textcolor>ffffffff</textcolor>
+		<textcolor2>99ffffff</textcolor2>
+        <textcolor3>99ffffff</textcolor3>
+      </control>
+      <control>
+        <type>listcontrol</type>
+        <description>list of best tag tracks</description>
+        <id>155</id>
+        <posX>1230</posX>
+        <posY>712</posY>
+        <width>570</width>
+        <height>270</height>
+        <onup>166</onup>
+        <onleft>333</onleft>
+        <onright>333</onright>
+        <ondown>333</ondown>
+        <scrollOffset>2</scrollOffset>
+    <unfocusedAlpha>160</unfocusedAlpha>
+    <scrollbarHeight>400</scrollbarHeight>
+    <scrollbarbg>bar_vert.png</scrollbarbg>
+    <scrollbartop>mouse_left_horizontal.png</scrollbartop>
+    <scrollbarbottom>mouse_right_horizontal.png</scrollbarbottom>
+    <scrollbarXOff>35</scrollbarXOff>
+    <scrollbarYOff>0</scrollbarYOff>
+    <showScrollbar>yes</showScrollbar>
+    <scrollbarwidth>7</scrollbarwidth>
+    <spinWidth>33</spinWidth>
+    <spinHeight>33</spinHeight>
+    <spinPosX>2180</spinPosX>
+    <spinPosY>662</spinPosY>
+    <spinAlign>Right</spinAlign>
+    <spinColor>ffffffff</spinColor>
+    <textureUp>page_up_nofocus.png</textureUp>
+    <textureDown>page_down_nofocus.png</textureDown>
+    <textureUpFocus>page_up_focus.png</textureUpFocus>
+    <textureDownFocus>page_down_focus.png</textureDownFocus>
+    <textureFocus>0012_btn.png</textureFocus>
+    <textureNoFocus></textureNoFocus>
+    <textureHeight>35</textureHeight>
+    <spaceBetweenItems></spaceBetweenItems>
+    <font>font10</font>
+    <shadedColor>ffffffff</shadedColor>
+    <selectedColor3>ff808080</selectedColor3>
+    <selectedColor2>ff808080</selectedColor2>
+    <selectedColor>ff808080</selectedColor>
+    <playedColor>ff808080</playedColor>
+    <playedColor2>ff808080</playedColor2>
+    <textcolor>ffffffff</textcolor>
+    <textcolorNoFocus>ff666666</textcolorNoFocus>
+    <textcolor2>ff666666</textcolor2>
+    <textcolor3>ff666666</textcolor3>
+    <colordiffuse>ffffffff</colordiffuse>
+    <remoteColor>ff4d96b1</remoteColor>
+    <remoteColor2>ff4d96b1</remoteColor2>
+    <downloadColor>ffffffff</downloadColor>
+    <downloadColor2>ffffffff</downloadColor2>
+    <dimColor>ffffffff</dimColor>
+    <scrollStartDelaySec>1</scrollStartDelaySec>
+    <textXOff>2</textXOff>
+    <textYOff>2</textYOff>
+    <textXOff2>0</textXOff2>
+    <textYOff2>2</textYOff2>
+    <itemWidth>32</itemWidth>
+    <itemHeight>32</itemHeight>
+    <IconXOff>4000</IconXOff>
+    <IconYOff>2</IconYOff>
+    <PinIconXOff>785</PinIconXOff>
+    <PinIconYOff>6</PinIconYOff>
+    <PinIconWidth>35</PinIconWidth>
+    <PinIconHeight>25</PinIconHeight>
+    <folderPrefix></folderPrefix>
+    <folderSuffix></folderSuffix>
+    <unfocusedAlpha>160</unfocusedAlpha>
+    <keepaspectratio>yes</keepaspectratio>
+    <shadowAngle>0</shadowAngle>
+    <shadowDistance>0</shadowDistance>
+    <shadowColor>00000000</shadowColor>
+      </control>
+      <control>
+        <description>unknown rating1</description>
+        <type>imagelist</type>
+        <id>77</id>
+        <posX>1670</posX>
+        <posY>505</posY>
+        <width>150</width>
+        <height>48</height>
+        <textureWidth>24</textureWidth>
+        <textureHeight>27</textureHeight>
+        <subitems>
+          <subitem>greystar.png</subitem>
+          <subitem>star.png</subitem>
+        </subitems>
+        <orientation>horizontal</orientation>
+        <align>left</align>
+        <imagesToDraw>5</imagesToDraw>
+        <percentage>#Lastfm.Rating.AlbumTrack1</percentage>
+      </control>
+      <control>
+        <description>unknown rating2</description>
+        <type>imagelist</type>
+        <id>78</id>
+        <posX>1670</posX>
+        <posY>552</posY>
+        <width>150</width>
+        <height>48</height>
+        <textureWidth>24</textureWidth>
+        <textureHeight>27</textureHeight>
+        <subitems>
+          <subitem>greystar.png</subitem>
+          <subitem>star.png</subitem>
+        </subitems>
+        <orientation>horizontal</orientation>
+        <align>left</align>
+        <imagesToDraw>5</imagesToDraw>
+        <percentage>#Lastfm.Rating.AlbumTrack2</percentage>
+      </control>
+      <control>
+        <description>unknown rating3</description>
+        <type>imagelist</type>
+        <id>79</id>
+        <posX>1670</posX>
+        <posY>598</posY>
+        <width>150</width>
+        <height>48</height>
+        <textureWidth>24</textureWidth>
+        <textureHeight>27</textureHeight>
+        <subitems>
+          <subitem>greystar.png</subitem>
+          <subitem>star.png</subitem>
+        </subitems>
+        <orientation>horizontal</orientation>
+        <align>left</align>
+        <imagesToDraw>5</imagesToDraw>
+        <percentage>#Lastfm.Rating.AlbumTrack3</percentage>
+      </control>
+      <control>
+        <description>existent rating1</description>
+        <type>imagelist</type>
+        <id>80</id>
+        <posX>1670</posX>
+        <posY>505</posY>
+        <width>150</width>
+        <height>48</height>
+        <textureWidth>24</textureWidth>
+        <textureHeight>27</textureHeight>
+        <subitems>
+          <subitem>greystar.png</subitem>
+          <subitem>star.png</subitem>
+        </subitems>
+        <orientation>horizontal</orientation>
+        <align>left</align>
+        <imagesToDraw>5</imagesToDraw>
+        <percentage>#Lastfm.Rating.AlbumTrack1</percentage>
+      </control>
+      <control>
+        <description>existent rating2</description>
+        <type>imagelist</type>
+        <id>81</id>
+        <posX>1670</posX>
+        <posY>552</posY>
+        <width>150</width>
+        <height>48</height>
+        <textureWidth>24</textureWidth>
+        <textureHeight>27</textureHeight>
+        <subitems>
+          <subitem>greystar.png</subitem>
+          <subitem>star.png</subitem>
+        </subitems>
+        <orientation>horizontal</orientation>
+        <align>left</align>
+        <imagesToDraw>5</imagesToDraw>
+        <percentage>#Lastfm.Rating.AlbumTrack2</percentage>
+      </control>
+      <control>
+        <description>existent rating3</description>
+        <type>imagelist</type>
+        <id>82</id>
+        <posX>1670</posX>
+        <posY>598</posY>
+        <width>150</width>
+        <height>48</height>
+        <textureWidth>24</textureWidth>
+        <textureHeight>27</textureHeight>
+        <subitems>
+          <subitem>greystar.png</subitem>
+          <subitem>star.png</subitem>
+        </subitems>
+        <orientation>horizontal</orientation>
+        <align>left</align>
+        <imagesToDraw>5</imagesToDraw>
+        <percentage>#Lastfm.Rating.AlbumTrack3</percentage>
+      </control>
+      <control>
+        <description>known rating1</description>
+        <type>imagelist</type>
+        <id>83</id>
+        <posX>1670</posX>
+        <posY>505</posY>
+        <width>150</width>
+        <height>48</height>
+        <textureWidth>24</textureWidth>
+        <textureHeight>27</textureHeight>
+        <subitems>
+          <subitem>greystar.png</subitem>
+          <subitem>star.png</subitem>
+        </subitems>
+        <orientation>horizontal</orientation>
+        <align>left</align>
+        <imagesToDraw>5</imagesToDraw>
+        <percentage>#Lastfm.Rating.AlbumTrack1</percentage>
+      </control>
+      <control>
+        <description>known rating2</description>
+        <type>imagelist</type>
+        <id>84</id>
+        <posX>1670</posX>
+        <posY>552</posY>
+        <width>150</width>
+        <height>48</height>
+        <textureWidth>24</textureWidth>
+        <textureHeight>27</textureHeight>
+        <subitems>
+          <subitem>greystar.png</subitem>
+          <subitem>star.png</subitem>
+        </subitems>
+        <orientation>horizontal</orientation>
+        <align>left</align>
+        <imagesToDraw>5</imagesToDraw>
+        <percentage>#Lastfm.Rating.AlbumTrack2</percentage>
+      </control>
+      <control>
+        <description>known rating3</description>
+        <type>imagelist</type>
+        <id>85</id>
+        <posX>1670</posX>
+        <posY>598</posY>
+        <width>150</width>
+        <height>48</height>
+        <textureWidth>24</textureWidth>
+        <textureHeight>27</textureHeight>
+        <subitems>
+          <subitem>greystar.png</subitem>
+          <subitem>star.png</subitem>
+        </subitems>
+        <orientation>horizontal</orientation>
+        <align>left</align>
+        <imagesToDraw>5</imagesToDraw>
+        <percentage>#Lastfm.Rating.AlbumTrack3</percentage>
+      </control>
+      <control>
+        <description>famous rating1</description>
+        <type>imagelist</type>
+        <id>87</id>
+        <posX>1670</posX>
+        <posY>505</posY>
+        <width>150</width>
+        <height>48</height>
+        <textureWidth>24</textureWidth>
+        <textureHeight>27</textureHeight>
+        <subitems>
+          <subitem>greystar.png</subitem>
+          <subitem>star.png</subitem>
+        </subitems>
+        <orientation>horizontal</orientation>
+        <align>left</align>
+        <imagesToDraw>5</imagesToDraw>
+        <percentage>#Lastfm.Rating.AlbumTrack1</percentage>
+      </control>
+      <control>
+        <description>famous rating2</description>
+        <type>imagelist</type>
+        <id>88</id>
+        <posX>1670</posX>
+        <posY>552</posY>
+        <width>150</width>
+        <height>48</height>
+        <textureWidth>24</textureWidth>
+        <textureHeight>27</textureHeight>
+        <subitems>
+          <subitem>greystar.png</subitem>
+          <subitem>star.png</subitem>
+        </subitems>
+        <orientation>horizontal</orientation>
+        <align>left</align>
+        <imagesToDraw>5</imagesToDraw>
+        <percentage>#Lastfm.Rating.AlbumTrack2</percentage>
+      </control>
+      <control>
+        <description>famous rating3</description>
+        <type>imagelist</type>
+        <id>89</id>
+        <posX>1670</posX>
+        <posY>598</posY>
+        <width>150</width>
+        <height>48</height>
+        <textureWidth>24</textureWidth>
+        <textureHeight>27</textureHeight>
+        <subitems>
+          <subitem>greystar.png</subitem>
+          <subitem>star.png</subitem>
+        </subitems>
+        <orientation>horizontal</orientation>
+        <align>left</align>
+        <imagesToDraw>5</imagesToDraw>
+        <percentage>#Lastfm.Rating.AlbumTrack3</percentage>
+      </control>
+      <control>
+        <type>fadelabel</type>
+        <description>best album tracks label</description>
+        <id>29</id>
+        <posX>1260</posX>
+        <posY>450</posY>
+        <width>780</width>
+        <label>33030</label>
+        <font>fontL2</font>
+        <textcolor>99ffffff</textcolor>
+      </control>
+      <control>
+        <type>fadelabel</type>
+        <description>best tag tracks label</description>
+        <id>28</id>
+        <posX>1260</posX>
+        <posY>667</posY>
+        <width>550</width>
+        <font>fontL2</font>
+        <label>Top tracks for tag</label>
+        <textcolor>99ffffff</textcolor>
+      </control>
+    </control>
+  </controls>
+</window>

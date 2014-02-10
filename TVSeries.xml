@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+  <id>9811</id>
+  <defaultcontrol>50</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+  <define>#useSelectedFanart:No</define>
+  <controls>
+		<import>TVSeries.Dummy.xml</import>
+    <control>
+      <description>BG</description>
+      <type>image</type>
+      <id>1</id>
+	  <posX>0</posX>
+      <posY>0</posY>
+      <texture>background_02.jpg</texture>
+      <width>1920</width>
+      <height>1080</height>
+      <colordiffuse>ffffffff</colordiffuse>
+    </control>
+	<!--
+		<control>
+      <description>Fanart Background #1</description>
+      <type>image</type>
+      <id>524</id>
+      <posX>0</posX>
+      <posY>0</posY>
+      <width>1920</width>
+      <height>1080</height>
+      <texture>#TVSeries.Fanart.1</texture>
+	  <colordiffuse>ffffffff</colordiffuse>
+      <animation effect="fade" time="300">visible</animation>
+      <animation effect="fade" time="300" delay="300">hidden</animation>
+    </control>
+    <control>
+      <description>Fanart Background #2</description>
+      <type>image</type>
+      <id>525</id>
+      <posX>0</posX>
+      <posY>0</posY>
+      <width>1920</width>
+      <height>1080</height>
+      <texture>#TVSeries.Fanart.2</texture>
+	  <colordiffuse>ffffffff</colordiffuse>
+      <animation effect="fade" time="300">visible</animation>
+      <animation effect="fade" time="300" delay="300">hidden</animation>
+    </control>
+	-->
+   
+	<!-- Added control for movie title in filmstrip view -->
+	<control>
+		  <description>series title</description>
+		  <type>label</type>
+		  <id>0</id>
+		  <posX>0</posX>
+		  <posY>930</posY>
+		  <width>1920</width>
+		  <font>font13</font>
+          <align>center</align>		  
+		  <label>#TVSeries.Title</label>
+		  <textcolor>ffffffff</textcolor>		  
+		  <animation effect="fade" time="250">WindowOpen</animation>
+		  <animation effect="fade" time="250">WindowClose</animation>
+		  <visible>facadeview.filmstrip</visible>
+		</control>
+		<!--
+    <control>
+      <type>label</type>
+      <id>1</id>
+      <posX>1866</posX>
+      <posY>45</posY>
+      <label>#currentmodule | #TVSeries.SimpleCurrentView</label>
+      <font>fontQU</font>
+      <align>right</align>
+      <textcolor>ff444444</textcolor>
+    </control>
+    <control>
+      <description>Number of Files Label</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>1866</posX>
+      <posY>18</posY>
+      <label>#selectedindex/#itemcount</label>
+      <align>right</align>
+      <textcolor>ff444444</textcolor>
+      <font>font10</font>
+      <visible>string.equals(#selectedindex)+string.equals(#itemcount)</visible>
+    </control>
+-->
+    <!--<import>common.time.xml</import>-->
+    
+    <!--<control>
+      <description>Selected item Label</description>
+      <type>fadelabel</type>
+      <id>1</id>
+      <posX>0</posX>
+      <posY>142</posY>
+      <width>1920</width>
+      <label>#TVSeries.Title</label>
+      <font>font14</font>
+      <align>center</align>
+      <textcolor>ffffffff</textcolor>
+    </control>-->
+    <!--<control>
+      <description>Overlay text right</description>
+      <id>0</id>
+      <type>image</type>
+      <posX>1065</posX>
+      <posY>234</posY>
+      <width>825</width>
+      <height>699</height>
+      <texture mask="picturethumbmask.png">black.png</texture>
+      <colordiffuse>ffffffff</colordiffuse>
+      <visible>[facadeview.list|facadeview.largeicons]</visible>
+    </control>-->
+		<!--
+		**//// Series and Season View ////**
+		-->
+    <!--<control>
+			<description>Series Rating</description>
+      <type>imagelist</type>
+      <id>1</id>
+      <posX>1095</posX>
+      <posY>247</posY>
+      <width>453</width>
+      <height>55</height>
+      <textureWidth>25</textureWidth>
+      <textureHeight>25</textureHeight>
+      <subitems>
+        <subitem>greystar.png</subitem>
+        <subitem>star.png</subitem>
+      </subitems>
+      <orientation>horizontal</orientation>
+      <align>left</align>
+      <imagesToDraw>10</imagesToDraw>
+      <percentage>#TVSeries.Series.Rating</percentage>
+      <visible>[facadeview.list|facadeview.largeicons]+[control.isvisible(1237)|control.isvisible(1238)]</visible>
+    </control>
+    <control>
+      <description>Series Text Rating/Votes Value</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>1380</posX>
+      <posY>241</posY>
+      <label>#TVSeries.Series.DataPanelLine41Value #(string.format('({0} {1}{2})',L(205),'#TVSeries.Series.RatingCount',iif(eq(#TVSeries.Series.myRating,''),'',', #TVSeries.Translation.Rated.Label: #TVSeries.Series.myRating')))</label>
+			<width>480</width>
+      <font>font11</font>
+      <align>left</align>
+      <textcolor>ff666666</textcolor>
+      <visible>[facadeview.list|facadeview.largeicons]+[control.isvisible(1237)|control.isvisible(1238)]+!string.equals(#TVSeries.Series.RatingCount,0)</visible>
+    </control>-->
+	
+	
+	<control>
+      <description>Cover Art shadow</description>
+      <type>image</type>
+      <id>0</id>
+      <posX>40</posX>
+          <posY>135</posY>
+          <width>1832</width>
+          <height>943</height>
+      <texture>0011.png</texture>
+      <visible>facadeview.list|control.isvisible(1237)|control.isvisible(1238)|control.isvisible(1239)|facadeview.WideBanners</visible>
+      <animation effect="fade" time="250" delay="0">WindowClose</animation>
+	  <animation effect="fade" time="70" reversible="false">visible</animation>
+    </control>
+	
+	
+		<control>
+      <description>BG</description>
+      <type>image</type>
+      <id>0</id>
+	  <posX>25</posX>
+      <posY>690</posY>
+      <texture>#TVSeries.ClearLogo\#(string.rtrim(#TVSeries.Series.ID)).png</texture>
+      <width>400</width>
+      <height>155</height>
+	  <animation effect="rotate" delay="0" end="90" time="0" loop="false" condition="true">Conditional</animation>
+	  <visible>[facadeview.list]+[control.isvisible(1237)|control.isvisible(1238)|control.isvisible(1239)]</visible>
+    </control>
+	
+	<control>
+      <description>Cover Art shadow</description>
+      <type>image</type>
+      <id>0</id>
+      <posX>295</posX>
+      <posY>225</posY>
+      <width>507</width>
+      <height>755</height>
+      <texture>0013_shadow.png</texture>
+      <visible>[facadeview.list]+[control.isvisible(1237)|control.isvisible(1238)]</visible>
+      <animation effect="fade" time="250" delay="0">WindowClose</animation>
+	  <animation effect="fade" time="70" reversible="false">visible</animation>
+    </control>
+	
+    <control>
+      <description>Series Default image</description>
+      <id>0</id>
+      <type>image</type>
+      <posX>302</posX>
+      <posY>232</posY>
+      <width>494</width>
+      <height>741</height>
+      <texture mask="0014_mask.png">missing_Coverart_video.png</texture>
+      <visible>[facadeview.list]+!control.hasthumb(500)+[control.isvisible(1237)|control.isvisible(1238)]</visible>
+    </control>
+
+    <control>
+      <description>Series Poster</description>
+      <id>500</id>
+      <type>image</type>
+      <posX>302</posX>
+      <posY>232</posY>
+      <width>494</width>
+      <height>741</height>
+      <texture mask="0014_mask.png">#TVSeries.SeriesPoster</texture>
+      <visible>[facadeview.list]+[control.isvisible(1237)|control.isvisible(1238)]</visible>
+    </control>
+	<!--
+    <control>
+      <description>New Series Indicator</description>
+      <id>0</id>
+      <type>image</type>
+      <posX>297</posX>
+      <posY>535</posY>
+      <width>100</width>
+      <height>112</height>
+	  <align>right</align>
+      <texture>tvseries_newlabel.png</texture>
+      <visible>[facadeview.list]+string.equals(#TVSeries.Series.HasNewEpisodes,1)+[control.isvisible(1237)|control.isvisible(1238)]</visible>
+    </control>
+	-->
+
+    <!--<control Style="NoShadow">
+      <description>Series Genre txt</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>1095</posX>
+      <posY>280</posY>
+      <label>174</label>
+      <font>font10</font>
+      <align>left</align>
+      <textcolor>ff666666</textcolor>
+      <visible>[facadeview.list|facadeview.largeicons]+[control.isvisible(1237)|control.isvisible(1238)]</visible>
+    </control>
+    <control Style="NoShadow">
+      <description>Series Genre value</description>
+      <type>fadelabel</type>
+      <id>1</id>
+      <posX>1095</posX>
+      <posY>309</posY>
+      <width>420</width>
+      <label>#(iif(eq(#TVSeries.Series.Genre,''),'N/A','#TVSeries.Series.Genre'))</label>
+      <font>font9</font>
+      <textcolor>ff808080</textcolor>
+      <visible>[facadeview.list|facadeview.largeicons]+[control.isvisible(1237)|control.isvisible(1238)]</visible>
+    </control>
+    <control Style="NoShadow">
+      <description>Series Airs txt</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>1095</posX>
+      <posY>346</posY>
+      <label>#TVSeries.Translation.Airs.Label:</label>
+      <font>font10</font>
+      <align>left</align>
+      <textcolor>ff666666</textcolor>
+      <visible>[facadeview.list|facadeview.largeicons]+[control.isvisible(1237)|control.isvisible(1238)]</visible>
+    </control>
+    <control Style="NoShadow">
+      <description>Series Airs value</description>
+      <type>fadelabel</type>
+      <id>1</id>
+      <posX>1095</posX>
+      <posY>375</posY>
+      <label>#(iif(eq(#TVSeries.Series.AirsDay,''),'N/A','#TVSeries.Series.AirsDay')) #(iif(eq(#TVSeries.Series.AirsTime,''), '', '@ #TVSeries.Series.AirsTime'))</label>
+      <font>font9</font>
+      <width>420</width>
+      <textcolor>ff808080</textcolor>
+      <visible>[facadeview.list|facadeview.largeicons]+[control.isvisible(1237)|control.isvisible(1238)]</visible>
+    </control>
+    <control Style="NoShadow">
+      <description>Series FirstAired txt</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>1095</posX>
+      <posY>412</posY>
+      <label>#TVSeries.Translation.FirstAired.Label:</label>
+      <font>font10</font>
+      <align>left</align>
+      <textcolor>ff666666</textcolor>
+      <visible>[facadeview.list|facadeview.largeicons]+[control.isvisible(1237)|control.isvisible(1238)]</visible>
+    </control>
+    <control Style="NoShadow">
+      <description>Series FirstAired</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>1095</posX>
+      <posY>441</posY>
+      <width>420</width>
+      <label>#TVSeries.Series.DataPanelLine2Value</label>
+      <font>font9</font>
+      <textcolor>ff808080</textcolor>
+      <visible>[facadeview.list|facadeview.largeicons]+[control.isvisible(1237)|control.isvisible(1238)]</visible>
+    </control>
+    <control Style="NoShadow">
+      <description>Series Runtime txt</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>1095</posX>
+      <posY>478</posY>
+      <label>299</label>
+      <font>font9</font>
+      <align>left</align>
+      <textcolor>ff666666</textcolor>
+      <visible>[facadeview.list|facadeview.largeicons]+[control.isvisible(1237)|control.isvisible(1238)]</visible>
+    </control>
+    <control Style="NoShadow">
+      <description>Series Runtime value</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>1095</posX>
+      <posY>507</posY>
+      <width>420</width>
+      <label>#TVSeries.Series.DataPanelLine3Value</label>
+      <font>font9</font>
+      <textcolor>ff808080</textcolor>
+      <visible>[facadeview.list|facadeview.largeicons]+[control.isvisible(1237)|control.isvisible(1238)]</visible>
+    </control>
+    <control Style="NoShadow">
+      <description>Series Network Label</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>1095</posX>
+      <posY>544</posY>
+      <label>#TVSeries.Translation.Network.Label:</label>
+      <font>font11</font>
+      <textcolor>ff666666</textcolor>
+      <visible>[facadeview.list|facadeview.largeicons]+[control.isvisible(1237)|control.isvisible(1238)]</visible>
+    </control>
+    <control Style="NoShadow">
+      <description>Series Network Value</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>1095</posX>
+      <posY>573</posY>
+      <label>#(iif(eq(#TVSeries.Series.Network,''),'N/A','#TVSeries.Series.Network'))</label>
+      <font>font9</font>
+      <textcolor>ff808080</textcolor>
+      <visible>[facadeview.list|facadeview.largeicons]+[control.isvisible(1237)|control.isvisible(1238)]</visible>
+    </control>
+    <control Style="NoShadow">
+      <description>Series MPAA txt</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>1095</posX>
+      <posY>610</posY>
+      <label>173</label>
+      <font>font10</font>
+      <align>left</align>
+      <textcolor>ff666666</textcolor>
+      <visible>[facadeview.list|facadeview.largeicons]+[control.isvisible(1237)|control.isvisible(1238)]</visible>
+    </control>
+    <control Style="NoShadow">
+      <description>Series MPAA Rating</description>
+      <type>fadelabel</type>
+      <id>1</id>
+      <posX>1095</posX>
+      <posY>639</posY>
+      <width>420</width>
+      <label>#(iif(eq(#TVSeries.Series.ContentRating,''),'N/A','#TVSeries.Series.ContentRating'))</label>
+      <font>font9</font>
+      <align>left</align>
+      <textcolor>ff808080</textcolor>
+      <visible>[facadeview.list|facadeview.largeicons]+[control.isvisible(1237)|control.isvisible(1238)]</visible>
+    </control>-->
+    <!--<control>
+      <description>Separator Line</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>1095</posX>
+      <posY>690</posY>
+      <width>750</width>
+      <height>1</height>
+      <texture>hbar1white.png</texture>
+      <colordiffuse>60ffffff</colordiffuse>
+      <visible>[facadeview.list|facadeview.largeicons]</visible>
+    </control>-->
+		<control Style="NoShadow">
+      <description>Selected item Label</description>
+      <type>fadelabel</type>
+      <id>0</id>
+      <posX>880</posX>
+      <posY>630</posY>
+	  <textalign>left</textalign>
+      <width>750</width>
+      <height>50</height>
+      <textcolor>eaeaea</textcolor>
+      <font>fontL1</font>
+      <label>#TVSeries.Title</label>
+      <visible>[facadeview.list]+!control.isvisible(1239)</visible>	  
+    </control>
+
+	<control Style="NoShadow">
+      <description>Plot value</description>
+      <type>textboxscrollup</type>
+      <id>1</id>
+      <posX>880</posX>
+      <posY>700</posY>
+	  <textalign>left</textalign>
+      <width>870</width>
+      <height>265</height>
+      <textcolor>eaeaea</textcolor>
+      <font>font12</font>
+      <label>#TVSeries.Description</label>
+      <visible>[facadeview.list]+!control.isvisible(1239)</visible>
+    </control>
+	
+	<import>TVSeries.HiddenMenu.xml</import>
+    <import>TVSeries.Facade.xml</import>
+	
+	<control>
+		  <description>Date / Time</description>
+		  <type>label</type>
+		  <id>0</id>
+		  <posX>1810</posX>
+		  <posY>113</posY>
+		  <label>#time #date | #TVSeries.SeriesCount Series</label>
+		  <align>right</align>
+		  <font>fontL2</font>
+		  <textcolor>eaeaea</textcolor>
+		  <animation effect="fade" time="250">WindowOpen</animation>
+		  <animation effect="fade" time="250">WindowClose</animation>
+		  <visible>!control.isvisible(1239)</visible>
+		</control>
+		
+		<control>
+		  <description>Date / Time</description>
+		  <type>label</type>
+		  <id>0</id>
+		  <posX>1810</posX>
+		  <posY>113</posY>
+		  <label>#time #date</label>
+		  <align>right</align>
+		  <font>fontL2</font>
+		  <textcolor>eaeaea</textcolor>
+		  <animation effect="fade" time="250">WindowOpen</animation>
+		  <animation effect="fade" time="250">WindowClose</animation>
+		  <visible>control.isvisible(1239)</visible>
+		</control>
+		
+		<control>
+		  <description>Current Category</description>
+		  <type>label</type>
+		  <id>0</id>
+		  <posX>1810</posX>
+		  <posY>33</posY>
+		  <align>right</align>
+		  <width>1800</width>
+		  <font>fontL</font>		  
+		  <label>TVSeries</label>
+		  <textcolor>eaeaea</textcolor>		  
+		  <animation effect="fade" time="250">WindowOpen</animation>
+		  <animation effect="fade" time="250">WindowClose</animation>
+		</control>
+	
+	<!-- REF |facadeview.largeicons -->
+
+	<!--
+	<control Style="NoShadow">
+      <description>episode count</description>
+      <type>textbox</type>
+      <id>1</id>
+      <posX>1490</posX>
+      <posY>1035</posY>
+      <width>750</width>
+      <height>495</height>
+      <label>#TVSeries.Series.DataPanelLine6Value</label>
+      <font>font9</font>
+      <textcolor>eaeaea</textcolor>
+      <visible>[facadeview.list|facadeview.largeicons]+!control.isvisible(1239)+!control.isvisible(1238)</visible>
+    </control>
+
+	<control Style="NoShadow">
+      <description>episode count</description>
+      <type>textbox</type>
+      <id>1</id>
+      <posX>1687</posX>
+      <posY>1035</posY>
+      <width>750</width>
+      <height>495</height>
+      <label>#TVSeries.Series.DataPanelLine7Value</label>
+      <font>font9</font>
+      <textcolor>eaeaea</textcolor>
+      <visible>[facadeview.list|facadeview.largeicons]+!control.isvisible(1239)+!control.isvisible(1238)</visible>
+    </control>
+	<control>
+      <description>Series watched/unwatched logo</description>
+      <id>1</id>
+      <type>image</type>
+      <posX>1435</posX>
+      <posY>1035</posY>
+      <width>40</width>
+      <height>30</height>
+      <texture>watched_icon.png</texture>
+      <visible>[facadeview.list|facadeview.largeicons]+!control.isvisible(1239)+!control.isvisible(1238)</visible>
+    </control>
+	<control>
+      <description>Series watched/unwatched logo</description>
+      <id>1</id>
+      <type>image</type>
+      <posX>1630</posX>
+      <posY>1035</posY>
+      <width>40</width>
+      <height>30</height>
+      <texture>unwatched_icon.png</texture>
+      <visible>[facadeview.list|facadeview.largeicons]+!control.isvisible(1239)+!control.isvisible(1238)</visible>
+    </control>
+	<control Style="NoShadow">
+      <description>Season count</description>
+      <type>textbox</type>
+      <id>1</id>
+      <posX>1472</posX>
+      <posY>1035</posY>
+      <width>750</width>
+      <height>495</height>
+      <label>#TVSeries.Season.EpisodeCount Episodes</label>
+      <font>font9</font>
+      <textcolor>eaeaea</textcolor>
+      <visible>control.isvisible(1238)</visible>
+    </control>
+	<control Style="NoShadow">
+      <description>Season count unwatched</description>
+      <type>textbox</type>
+      <id>1</id>
+      <posX>1677</posX>
+      <posY>1035</posY>
+      <width>750</width>
+      <height>495</height>
+      <label>#TVSeries.Season.InfoPanelLine2Key Unwatched</label>
+      <font>font9</font>
+      <textcolor>eaeaea</textcolor>
+      <visible>control.isvisible(1238)</visible>
+    </control>
+	<control>
+      <description>Season episodes logo</description>
+      <id>1</id>
+      <type>image</type>
+      <posX>1455</posX>
+      <posY>1035</posY>
+      <width>33</width>
+      <height>37</height>
+      <texture></texture>
+      <visible>control.isvisible(1238)</visible>
+    </control>
+	<control>
+      <description>Season watched logo</description>
+      <id>1</id>
+      <type>image</type>
+      <posX>1620</posX>
+      <posY>1035</posY>
+      <width>40</width>
+      <height>30</height>
+      <texture>unwatched_icon.png</texture>
+      <visible>control.isvisible(1238)</visible>
+    </control>
+	
+	-->
+	
+	<!--Coverflow episode count-->
+	
+	<control Style="NoShadow">
+      <description>episode count coverflow</description>
+      <type>textbox</type>
+      <id>1</id>
+      <posX>-15</posX>
+      <posY>920</posY>
+      <width>1920</width>
+      <height>495</height>
+	  <textalign>center</textalign>
+      <label>#TVSeries.Title</label>
+      <font>fontL2</font>
+      <textcolor>eaeaea</textcolor>
+      <visible>facadeview.coverflow+!control.isvisible(1238)</visible>
+    </control>
+	
+	<!--
+	<control Style="NoShadow">
+      <description>episode count coverflow</description>
+      <type>textbox</type>
+      <id>1</id>
+      <posX>1500</posX>
+      <posY>1035</posY>
+      <width>750</width>
+      <height>495</height>
+      <label>#TVSeries.Series.DataPanelLine6Value #TVSeries.Title</label>
+      <font>font9</font>
+      <textcolor>eaeaea</textcolor>
+      <visible>facadeview.coverflow+!control.isvisible(1238)</visible>
+    </control>
+	<control Style="NoShadow">
+      <description>episode count coverflow</description>
+      <type>textbox</type>
+      <id>1</id>
+      <posX>1687</posX>
+      <posY>1035</posY>
+      <width>750</width>
+      <height>495</height>
+      <label>#TVSeries.Series.DataPanelLine7Value</label>
+      <font>font9</font>
+      <textcolor>eaeaea</textcolor>
+      <visible>facadeview.coverflow+!control.isvisible(1238)</visible>
+    </control>
+	<control>
+      <description>Series watched/unwatched logo coverflow</description>
+      <id>1</id>
+      <type>image</type>
+      <posX>1455</posX>
+      <posY>1035</posY>
+      <width>30</width>
+      <height>30</height>
+      <texture>tvseries_Watched.png</texture>
+      <visible>facadeview.coverflow+!control.isvisible(1238)</visible>
+    </control>
+	<control>
+      <description>Series watched/unwatched logo coverflow</description>
+      <id>1</id>
+      <type>image</type>
+      <posX>1650</posX>
+      <posY>1035</posY>
+      <width>30</width>
+      <height>30</height>
+      <texture>tvseries_UnWatched.png</texture>
+      <visible>facadeview.coverflow+!control.isvisible(1238)</visible>
+    </control>
+	-->
+    
+		<!--
+		**//// Episode View ////**
+		-->
+		<control>
+			<description>Episode Rating</description>
+      <type>imagelist</type>
+      <id>1</id>
+      <posX>780</posX>
+      <posY>635</posY>
+      <width>453</width>
+      <height>55</height>
+      <textureWidth>25</textureWidth>
+      <textureHeight>25</textureHeight>
+      <subitems>
+        <subitem>greystar.png</subitem>
+        <subitem>star.png</subitem>
+      </subitems>
+      <orientation>horizontal</orientation>
+      <align>right</align>
+      <imagesToDraw>10</imagesToDraw>
+      <percentage>#TVSeries.Episode.Rating</percentage>
+      <visible>facadeview.list+control.isvisible(1239)</visible>
+    </control>
+    <control>
+      <description>Episode Text Rating/Votes Value</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>800</posX>
+      <posY>665</posY>
+      <label>#TVSeries.Episode.DataPanelLine31Value</label>
+			<width>480</width>
+      <font>font11</font>
+      <align>right</align>
+      <textcolor>eaeaea</textcolor>
+      <visible>facadeview.list+control.isvisible(1239)+!string.equals(#TVSeries.Episode.RatingCount,0)</visible>
+    </control>
+		<control>
+			<description>Episode image</description>
+			<type>image</type>
+			<id>67</id>
+			<posX>150</posX>
+			<posY>235</posY>
+			<width>650</width>
+			<height>300</height>
+			<align>left</align>
+			<keepaspectratio>yes</keepaspectratio>
+            <zoom>yes</zoom>
+			<texture>#TVSeries.EpisodeImage</texture>
+			<visible>facadeview.list+control.isvisible(1239)</visible>
+		</control>
+		<control>
+      <description>Episode Guest Stars txt</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>800</posX>
+      <posY>710</posY>
+      <label>#TVSeries.Translation.GuestStars.Label:</label>
+      <font>font11</font>
+      <align>right</align>
+      <textcolor>eaeaea</textcolor>
+      <visible>facadeview.list+control.isvisible(1239)</visible>
+    </control>
+    <control Style="NoShadow">
+      <description>Episode Guest Stars value</description>
+      <type>fadelabel</type>
+      <id>1</id>
+      <posX>800</posX>
+      <posY>750</posY>
+      <width>450</width>
+	  <align>right</align>
+      <label>#(iif(eq(#TVSeries.Episode.GuestStars,''),'N/A','#TVSeries.Episode.GuestStars'))</label>
+      <font>font11</font>
+      <textcolor>eaeaea</textcolor>
+      <visible>facadeview.list+control.isvisible(1239)</visible>
+    </control>
+		<control Style="NoShadow">
+      <description>Episode Directors txt</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>800</posX>
+      <posY>790</posY>
+      <label>#TVSeries.Translation.Directors.Label:</label>
+      <font>font11</font>
+      <align>right</align>
+      <textcolor>eaeaea</textcolor>
+      <visible>facadeview.list+control.isvisible(1239)</visible>
+    </control>
+    <control Style="NoShadow">
+      <description>Episode Directors value</description>
+      <type>fadelabel</type>
+      <id>1</id>
+      <posX>800</posX>
+      <posY>830</posY>
+      <label>#(iif(eq(#TVSeries.Episode.Director,''),'N/A','#TVSeries.Episode.Director'))</label>
+      <font>font11</font>
+      <width>450</width>
+	  <align>right</align>
+      <textcolor>eaeaea</textcolor>
+      <visible>facadeview.list+control.isvisible(1239)</visible>
+    </control>
+
+
+    <control Style="NoShadow">
+      <description>Runtime plus Episode Audio Video Details txt</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>800</posX>
+      <posY>930</posY>
+      <label>Runtime #TVSeries.Episode.PrettyLocalPlaytime</label>
+      <font>fontL2</font>
+      <align>right</align>
+      <textcolor>eaeaea</textcolor>
+      <visible>facadeview.list+control.isvisible(1239)+!string.equals(#TVSeries.Episode.EpisodeFilename,)</visible>
+    </control>
+    
+	
+<control Style="NoShadow">
+      <description>Plot value</description>
+      <type>textboxscrollup</type>
+      <id>1</id>
+      <posX>880</posX>
+      <posY>630</posY>
+	  <textalign>left</textalign>
+      <width>750</width>
+      <height>55</height>
+      <textcolor>eaeaea</textcolor>
+      <font>fontL1</font>
+      <label>#TVSeries.Title</label>
+      <visible>facadeview.list+control.isvisible(1239)+!string.equals(#TVSeries.Episode.EpisodeFilename,)</visible>
+    </control>
+	
+	<control Style="NoShadow">
+      <description>Plot value</description>
+      <type>textboxscrollup</type>
+      <id>1</id>
+      <posX>880</posX>
+      <posY>700</posY>
+	  <textalign>left</textalign>
+      <width>870</width>
+      <height>265</height>
+      <textcolor>eaeaea</textcolor>
+      <font>font12</font>
+      <label>#TVSeries.Description</label>
+      <visible>facadeview.list+control.isvisible(1239)+!string.equals(#TVSeries.Episode.EpisodeFilename,)</visible>
+    </control>
+	<!--
+		<control Style="NoShadow">
+      <description>Episode Logos</description>
+      <type>image</type>
+      <id>66</id>
+      <posX>150</posX>
+      <posY>1030</posY>
+      <width>1290</width>
+      <height>48</height>
+      <texture>#TVSeries.Logos</texture>
+      <keepaspectratio>yes</keepaspectratio>
+      <spaceBetweenItems>0</spaceBetweenItems>
+      <visible>[facadeview.list|facadeview.largeicons]</visible>
+    </control>
+	-->
+		<control>
+      <description>Import Animation</description>
+      <type>animation</type>
+      <id>51</id>
+			<posX>888</posX>
+			<posY>468</posY>
+			<width>144</width>
+			<height>144</height>      
+      <textures>common.waiting.1.png;common.waiting.2.png;common.waiting.3.png;common.waiting.4.png;common.waiting.5.png;common.waiting.6.png;common.waiting.7.png;common.waiting.8.png</textures>
+			<Duration>0:0:01.5</Duration>
+      <keepaspectratio>yes</keepaspectratio>
+    </control>
+	<import>TVSeries.overlay.xml</import>
+  </controls>
+</window>

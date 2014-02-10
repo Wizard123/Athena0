@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+This file should contain the list view
+-->
+<window>
+  <controls>
+	
+	
+	<control>
+      <description>Rotating Movie disc</description>
+      <type>image</type>
+      <id>69674</id>
+      <posX>140</posX>
+      <posY>340</posY>
+      <width>579</width>
+      <height>525</height>
+      <texture>..\..\..\thumbs\MovingPictures\DVDArt\FullSize\#MovingPictures.SelectedMovie.imdb_id.png</texture>
+      <keepaspectratio>yes</keepaspectratio>
+      <visible>facadeview.list+control.isvisible(50)</visible>
+	  <animation effect="fade" time="250" delay="0">WindowClose</animation>
+      <animation effect="rotate" delay="0" end="-360" centre="475,258" time="38000" loop="true" condition="true">Conditional</animation>
+    </control>
+	
+	<control>
+      <description>Cover Art shadow</description>
+      <type>image</type>
+      <id>0</id>
+      <posX>295</posX>
+      <posY>225</posY>
+      <width>507</width>
+      <height>755</height>
+      <texture>0013_shadow.png</texture>
+      <visible>facadeview.list+control.isvisible(50)</visible>
+      <animation effect="fade" time="250" delay="0">WindowClose</animation>
+	  <animation effect="fade" time="70" reversible="false">visible</animation>
+    </control>
+	
+	<control>
+      <description>Cover Art</description>
+      <type>image</type>
+      <id>60</id>
+      <posX>302</posX>
+      <posY>232</posY>
+      <width>494</width>
+      <height>741</height>
+      <texture mask="0014_mask.png">defaultVideoBig.png</texture>
+      <visible>facadeview.list+control.isvisible(50)</visible>
+      <animation effect="fade" time="250" delay="0">WindowClose</animation>
+	  <animation effect="fade" time="70" reversible="false">visible</animation>
+    </control>
+	
+    <control>
+      <description>Cover Art</description>
+      <type>image</type>
+      <id>60</id>
+      <posX>302</posX>
+      <posY>232</posY>
+      <width>494</width>
+      <height>741</height>
+      <texture mask="0014_mask.png">#MovingPictures.Coverart</texture>
+      <visible>facadeview.list+control.isvisible(50)</visible>
+      <animation effect="fade" time="250" delay="0">WindowClose</animation>
+	  <animation effect="fade" time="70" reversible="false">visible</animation>
+    </control>
+	
+	<control>
+      <description>Cover Art</description>
+      <type>image</type>
+      <id>0</id>
+      <posX>870</posX>
+      <posY>290</posY>
+      <width>394</width>
+      <height>570</height>
+      <texture></texture>
+      <visible>facadeview.list+control.isvisible(50)</visible>
+      <animation effect="fade" time="250" delay="0">WindowClose</animation>
+	  <animation effect="fade" time="70" reversible="false">visible</animation>
+    </control>
+	
+	<control>
+      <description>title</description>
+      <type>fadelabel</type>
+      <id>0</id>
+      <posX>880</posX>
+      <posY>630</posY>
+	  <textalign>left</textalign>
+      <width>750</width>
+      <height>50</height>
+      <textcolor>eaeaea</textcolor>
+      <font>fontL1</font>
+      <label>#MovingPictures.SelectedMovie.title</label>
+      <visible>facadeview.list+control.isvisible(50)</visible>
+      <animation effect="fade" time="250" delay="0">WindowClose</animation>
+    </control>
+	
+	<control>
+      <description>title</description>
+      <type>fadelabel</type>
+      <id>0</id>
+      <posX>200</posX>
+      <posY>930</posY>
+	  <textalign>right</textalign>
+      <width>100</width>
+      <height>50</height>
+      <textcolor>eaeaea</textcolor>
+      <font>fontL2</font>
+      <label>#MovingPictures.SelectedMovie.extra.runtime.short</label>
+      <visible>facadeview.list+control.isvisible(50)</visible>
+      <animation effect="fade" time="250" delay="0">WindowClose</animation>
+    </control>
+   
+    <control>
+      <description>tagline</description>
+      <type>textboxscrollup</type>
+      <id>0</id>
+      <posX>880</posX>
+      <posY>700</posY>
+	  <textalign>left</textalign>
+      <width>870</width>
+      <height>265</height>
+      <textcolor>eaeaea</textcolor>
+      <font>font12</font>
+      <label>#MovingPictures.SelectedMovie.summary</label>
+      <visible>facadeview.list+control.isvisible(50)</visible>
+      <animation effect="fade" time="250" delay="0">WindowClose</animation>
+    </control>
+<!--
+	<control>
+      <description>subtitlesIcon</description>
+      <type>image</type>
+      <id>0</id>
+      <posX>480</posX>
+      <posY>150</posY>
+      <width>45</width>
+      <height>49</height>
+      <texture>Logos\#MovingPictures.LocalMedia.Subtitles.png</texture>
+      <visible>facadeview.list+control.isvisible(50)</visible>
+      <animation effect="fade" time="250" delay="0">WindowClose</animation>
+	  <animation effect="fade" delay="300" time="700">visible</animation>
+      <animation effect="fade" time="300" delay="200">hidden</animation>
+    </control>
+	-->
+
+    <control>
+      <description>Watched Icon</description>
+      <type>image</type>
+      <id>0</id>
+      <posX>202</posX>
+      <posY>890</posY>
+      <width>47</width>
+      <height>32</height>
+      <texture>watched_icon.png</texture>
+      <visible>facadeview.list+control.isvisible(50)+control.isvisible(9)</visible>
+      <animation effect="fade" time="250" delay="0">WindowClose</animation>
+	  <animation effect="fade" delay="300" time="700">visible</animation>
+        <animation effect="fade" time="300" delay="200">hidden</animation>
+    </control>
+    <control>
+      <description>Un-Watched Icon</description>
+      <type>image</type>
+      <id>0</id>
+      <posX>202</posX>
+      <posY>890</posY>
+      <width>47</width>
+      <height>32</height>
+      <texture>unwatched_icon.png</texture>
+      <visible>facadeview.list+control.isvisible(50)+!control.isvisible(9)</visible>
+      <animation effect="fade" time="250" delay="0">WindowClose</animation>
+	  <animation effect="fade" delay="300" time="700">visible</animation>
+        <animation effect="fade" time="300" delay="200">hidden</animation>
+		<!--<animation time="300" effect="slide" condition="control.hasthumb(69674)" end="-130,0" start="0,0">Conditional</animation>-->
+    </control>  	
+  </controls>
+</window>

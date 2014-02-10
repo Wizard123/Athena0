@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+This file should contain the thumbs view
+-->
+<window>
+  <controls>    
+    <control Style="NoShadow">
+      <description>Movie Title</description>
+      <type>label</type>
+      <id>0</id>
+      <posX>0</posX>
+      <posY>880</posY>
+	  <align>center</align>
+      <width>1920</width>
+      <font>fontL2</font>
+      <label>#MovingPictures.SelectedMovie.title</label>
+      <textcolor>eaeaea</textcolor>
+      <visible>[facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)</visible>
+      <animation effect="fade" time="250" delay="0">WindowClose</animation>
+    </control>
+    <control Style="NoShadow">
+      <description>Genres</description>
+      <type>label</type>
+      <label>#MovingPictures.SelectedMovie.genres</label>
+      <id>0</id>
+      <posX>0</posX>
+      <posY>920</posY>
+	  <align>center</align>
+      <width>1920</width>
+      <font>font11</font>
+      <textcolor>eaeaea</textcolor>
+      <visible>[facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)</visible>
+      <animation effect="fade" time="250" delay="0">WindowClose</animation>
+    </control>
+<!--
+    <control>
+      <description>Certification Label</description>
+      <id>0</id>
+      <type>label</type>
+      <label>#MovingPictures.Translation.Certification.Label</label>
+      <posX>1560</posX>
+      <posY>975</posY>
+	  <align>right</align>
+      <width>210</width>
+			<font>font10</font>
+			<textcolor>ff666666</textcolor>
+      <visible>[facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)</visible>
+      <animation effect="fade" time="250" delay="0">WindowClose</animation>
+    </control>
+    <control>
+      <description>Certification</description>
+      <id>1004</id>
+      <type>label</type>
+      <label>#(iif(neq(#MovingPictures.SelectedMovie.certification,''),#MovingPictures.SelectedMovie.certification,'N/A'))</label>
+      <posX>1860</posX>
+      <posY>975</posY>
+	  <align>right</align>
+      <width>300</width>
+			<font>font10</font>
+      <visible>[facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)</visible>
+      <animation effect="fade" time="250" delay="0">WindowClose</animation>
+	  <textcolor>ff808080</textcolor>
+    </control>    
+	-->
+
+    <control>
+      <description>Runtime</description>
+      <id>1005</id>
+      <type>label</type>
+      <label>#(iif(neq(#MovingPictures.SelectedMovie.extra.runtime.en.pretty,''),#MovingPictures.SelectedMovie.extra.runtime.en.pretty,'N/A'))</label>
+      <posX>0</posX>
+      <posY>970</posY>
+	  <align>center</align>
+      <width>1920</width>
+			<font>fontL2</font>
+      <visible>[facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)</visible>
+      <animation effect="fade" time="250" delay="0">WindowClose</animation>
+	  <textcolor>eaeaea</textcolor>
+    </control>        
+    <!--<control>
+      <description>Year Label</description>
+      <type>label</type>
+      <label>#MovingPictures.Translation.Year.Label</label>
+      <posX>30</posX>
+      <posY>892</posY>
+      <width>210</width>
+			<font>font10</font>
+			<textcolor>ff666666</textcolor>
+      <visible>[facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)</visible>
+      <animation effect="fade" time="250" delay="0">WindowClose</animation>
+    </control>
+    <control>
+      <description>Year</description>
+      <id>1006</id>
+      <type>label</type>
+      <label>#(iif(neq(#MovingPictures.SelectedMovie.year,''),#MovingPictures.SelectedMovie.year,'N/A'))</label>
+      <posX>300</posX>
+      <posY>893</posY>
+			<font>font10</font>
+      <visible>[facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)</visible>
+      <animation effect="fade" time="250" delay="0">WindowClose</animation>
+	  <textcolor>ff808080</textcolor>
+    </control>-->  
+  </controls>
+</window>

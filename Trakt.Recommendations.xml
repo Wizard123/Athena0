@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+  <id>87261</id>
+  <defaultcontrol>2</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+  <rememberLastFocusedControl>yes</rememberLastFocusedControl>
+  <define>#currentmodule:#Trakt.Translation.Recommendations.Label</define>
+  <define>#selecteditem:#highlightedbutton</define>
+  <define>#defaultcontrol:2</define>
+  <define>#defaultcontrol.onleft:9993</define>
+  <controls>
+    <import>trakt.common.imports.xml</import>
+    <import>Trakt.Common.xml</import>
+	
+	<control>
+      <description>Current window</description>
+      <type>label</type>
+      <id>0</id>
+      <posX>1810</posX>
+      <posY>33</posY>
+      <align>right</align>
+      <width>1800</width>
+      <font>fontL</font>		  
+      <label>#currentmodule</label>
+      <textcolor>eaeaea</textcolor>		  
+      <animation effect="fade" time="250">WindowOpen</animation>
+      <animation effect="fade" time="250">WindowClose</animation>
+    </control>
+	
+	
+    <control>
+      <type>group</type>
+      <description>group element</description>
+      <posX>525</posX>
+      <posY>241</posY>
+      <width>559</width>
+      <height>568</height>
+      <layout>StackLayout(Vertical)</layout>
+      <control>
+        <type>button</type>
+        <description>Recommended Movies</description>
+        <id>2</id>
+        <label>#Trakt.Translation.RecommendedMovies.Label</label>
+        <hyperlink>87263</hyperlink>
+        <onup>17</onup>
+        <width>559</width>
+        <onleft>#defaultcontrol.onleft</onleft>
+      </control>
+      <control>
+        <description>Recommended Shows</description>
+        <type>button</type>
+        <id>3</id>
+        <label>#Trakt.Translation.RecommendedShows.Label</label>
+        <hyperlink>87262</hyperlink>
+        <width>559</width>
+        <onleft>#defaultcontrol.onleft</onleft>
+        <ondown>2</ondown>
+      </control>
+    </control>
+  </controls>
+</window>

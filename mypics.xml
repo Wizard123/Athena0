@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+  <id>2</id>
+  <defaultcontrol>2</defaultcontrol>
+  <allowoverlay>yes</allowoverlay>
+  <controls>
+    <control>
+      <description>BG</description>
+      <type>image</type>
+      <id>1</id>
+      <texture>background_02.jpg</texture>
+      <width>1920</width>
+      <height>1080</height>      
+    </control>
+    <!--<import>common.window.xml</import>--> 
+    <control>
+      <description>General Overlay</description>
+      <id>0</id>
+      <type>image</type>
+      <posX>0</posX>
+      <posY>0</posY>
+      <width>1920</width>
+      <height>1080</height>
+      <texture>background_02.jpg</texture>
+      <colordiffuse>ffffffff</colordiffuse>
+    </control> 
+    <control>
+		  <description>Backdrop Overlay - thumbs View</description>
+          <type>image</type>
+          <id>0</id>
+          <posX>40</posX>
+          <posY>135</posY>
+          <width>1832</width>
+          <height>943</height>
+          <texture>0011.png</texture>
+		</control>
+		
+		<control>
+		  <description>Current window</description>
+		  <type>label</type>
+		  <id>16</id>
+		  <posX>1810</posX>
+		  <posY>33</posY>
+		  <align>right</align>
+		  <width>1800</width>
+		  <font>fontL</font>		  
+		  <label>#(iif(and(neq(L(102012), #currentmodule), neq(L(102002), #currentmodule), neq(L(100100), #currentmodule), neq(L(102015), #currentmodule)), #currentmodule, ' '))</label>
+		  <textcolor>eaeaea</textcolor>		  
+		  <animation effect="fade" time="250">WindowOpen</animation>
+		  <animation effect="fade" time="250">WindowClose</animation>
+		</control>
+		
+		<control>
+		  <description>Date / Time</description>
+		  <type>label</type>
+		  <id>0</id>
+		  <posX>1810</posX>
+		  <posY>113</posY>
+		  <label>#time #date #itemcount Files</label>
+		  <align>right</align>
+		  <font>fontL2</font>
+		  <textcolor>eaeaea</textcolor>
+		  <animation effect="fade" time="250">WindowOpen</animation>
+		  <animation effect="fade" time="250">WindowClose</animation>
+		</control> 
+    <control>
+      <description>list_back</description>
+      <type>image</type>
+      <id>0</id>
+      <posX>300</posX>
+      <posY>255</posY>
+      <width>902</width>
+      <height>655</height>
+      <texture>music_bk.png</texture>
+      <visible>[facadeview.list|facadeview.album]+[Control.HasFocus(50)+control.hasthumb(500)]+!control.isvisible(604)</visible>
+	  <colordiffuse>ffffffff</colordiffuse>
+      <animation effect="fade" time="250" delay="0">WindowClose</animation>
+    </control>
+    
+  <control>
+    <type>actiongroup</type>
+    <description>action menu</description>
+    <defaultcontrol>2</defaultcontrol>
+    <onexit>50</onexit>
+    <buttonX>0</buttonX>
+    <buttonY>0</buttonY>
+    <buttonwidth>45</buttonwidth>
+    <buttonheight>525</buttonheight>
+    <textureFocus>-</textureFocus>
+    <textureNoFocus>Action_nofocus.png</textureNoFocus>
+    <width>412</width>
+    <height>1080</height>
+    <dimColor>00ffffff</dimColor>
+    <control>
+      <type>image</type>
+      <id>0</id>
+      <width>1920</width>
+      <height>1080</height>
+      <texture>white.png</texture>
+      <colordiffuse>201e90ff</colordiffuse>
+    </control>
+    <control>
+      <type>image</type>
+      <posX>39</posX>
+      <posY>117</posY>
+      <width>480</width>
+      <height>886</height>
+      <texture>Backslide.png</texture>
+      <colorDiffuse>fffffffff</colorDiffuse>
+      <visible>!Control.HasFocus(50)</visible>
+      <animation effect="slide" time="70" start="-450,0" reversible="false">visible</animation>
+      <animation effect="slide" time="70" end="-450,0" reversible="false">hidden</animation>
+    </control>
+    <control>
+      <description>group element</description>
+      <type>group</type>
+      <animation effect="slide" time="70" start="-450,0" reversible="false">visible</animation>
+      <animation effect="slide" time="70" end="-450,0" reversible="false">hidden</animation>
+      <posX>75</posX>
+      <posY>181</posY>
+      <layout>StackLayout</layout>
+      <visible>!Control.HasFocus(50)</visible>
+      <control>
+        <description>View-As</description>
+        <type>menubutton</type>
+        <id>2</id>
+        <label></label>
+        <onright>50</onright>
+        <onup>17</onup>
+        <ondown>3</ondown>
+        <mode>dialoglist</mode>
+        <dialogTitle>792</dialogTitle>
+        <valueTextInButton>yes</valueTextInButton>
+        <valuePrefixText>95</valuePrefixText>
+      </control>
+      <control>
+        <description>Sort</description>
+        <type>sortbutton</type>
+        <id>3</id>
+        <label>103</label>
+		<offsetSortButtonY>-8</offsetSortButtonY>
+        <onright>50</onright>
+        <ondown>5</ondown>
+        <onup>2</onup>
+      </control>
+      <control>
+        <description>Switch View</description>
+        <type>menubutton</type>
+        <id>5</id>
+        <label></label>
+        <onright>50</onright>
+        <ondown>6</ondown>
+        <onup>3</onup>
+        <mode>dialoglist</mode>
+        <dialogTitle>499</dialogTitle>
+        <valueTextInButton>yes</valueTextInButton>
+        <valuePrefixText>97</valuePrefixText>
+      </control>
+      <control>
+        <description>SlideShow button</description>
+        <type>button</type>
+        <id>6</id>
+        <label>108</label>
+        <onright>50</onright>
+        <ondown>7</ondown>
+        <onup>5</onup>
+      </control>
+      <control>
+        <description>Recursive Slideshow</description>
+        <type>button</type>
+        <id>7</id>
+        <label>361</label>
+        <onright>50</onright>
+        <ondown>9876</ondown>
+        <onup>6</onup>
+      </control>
+      <control>
+        <description>Picture Settings</description>
+        <type>button</type>
+        <id>9876</id>
+        <label>5</label>
+        <hyperlink>12</hyperlink>
+        <onup>7</onup>
+        <ondown>2</ondown>
+        <onright>50</onright>
+      </control>
+    </control>
+  </control>
+  
+  <import>common.facade.pictures.xml</import>  
+
+  <control>
+    <id>500</id>
+    <type>image</type>
+    <posX>310</posX>
+    <posY>265</posY>
+    <width>880</width>
+    <height>632</height>
+    <keepaspectratio>yes</keepaspectratio>
+    <centered>yes</centered>
+    <texture>#selectedthumb</texture>
+    <visible>[facadeview.list|facadeview.album]+[Control.HasFocus(50)]</visible>
+    <animation effect="fade" time="70" reversible="false">visible</animation>
+  </control>  
+</controls>
+</window>
+

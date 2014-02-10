@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+  <id>874006</id>
+  <defaultcontrol>50</defaultcontrol>
+  <allowoverlay>yes</allowoverlay>
+  <controls>
+    <import>trakt.common.imports.xml</import>
+	
+     <control>
+      <description>Current window</description>
+      <type>label</type>
+      <id>0</id>
+      <posX>1810</posX>
+      <posY>33</posY>
+      <align>right</align>
+      <width>1800</width>
+      <font>fontL</font>		  
+      <label>#Trakt.Translation.SearchUsers.Label | #Trakt.Search.SearchTerm</label>
+      <textcolor>eaeaea</textcolor>		  
+      <animation effect="fade" time="250">WindowOpen</animation>
+      <animation effect="fade" time="250">WindowClose</animation>
+    </control>
+
+    <control>
+      <description>group element</description>
+      <type>group</type>
+      <control>
+        <type>facadeview</type>
+        <id>50</id>
+        <control>
+          <description>listcontrol</description>
+          <type>listcontrol</type>
+          <id>50</id>
+		  <posX>130</posX>
+		  <posY>230</posY>
+          <width>823</width>
+          <playedColor>ffffffff</playedColor>
+          <playedColor2>ffffffff</playedColor2>
+          <textcolor>ff99f9ff</textcolor>
+          <textcolorNoFocus>ff99f9ff</textcolorNoFocus>
+          <textXOff2>823</textXOff2>
+          <textYOff2>3</textYOff2>
+          <textXOff3>3816</textXOff3>
+          <textYOff3>12</textYOff3>
+		      <PinIconXOff>750</PinIconXOff>
+          <PinIconYOff>0</PinIconYOff>
+          <PinIconWidth>48</PinIconWidth>
+          <PinIconHeight>48</PinIconHeight>
+          <textalign3>right</textalign3>
+          <font3>font9</font3>
+          <font2>font11</font2>
+          <scrollOffset>2</scrollOffset>
+          <spinCanFocus>yes</spinCanFocus>
+          <unfocusedAlpha>160</unfocusedAlpha>
+          <folderPrefix />
+          <folderSuffix />
+        </control>
+        <control>
+          <description>Thumbnail Panel</description>
+          <type>thumbnailpanel</type>
+          <dimColor>90ffffff</dimColor>
+          <id>50</id>
+          <textureUp>-</textureUp>
+					<textureDown>-</textureDown>
+					<textXOff>0</textXOff>
+					<textYOff>2250</textYOff>
+					<posX>120</posX>
+					<posY>220</posY>
+					<width>1700</width>
+					<height>800</height>
+					<!-- Small Icons 0.66 aspect ratio -->
+					<itemWidth>139</itemWidth>
+				<itemHeight>204</itemHeight>
+				<textureWidth>139</textureWidth>
+				<textureHeight>204</textureHeight>
+				<thumbWidth>139</thumbWidth>
+				<thumbHeight>204</thumbHeight>
+				<thumbPosX>0</thumbPosX>
+				<thumbPosY>0</thumbPosY>				
+					<!-- Large Icons 0.66 aspect ratio -->
+					<textureWidthBig>185</textureWidthBig>
+					<textureHeightBig>278</textureHeightBig>
+					<itemWidthBig>185</itemWidthBig>
+					<itemHeightBig>278</itemHeightBig>
+					<thumbWidthBig>182</thumbWidthBig>
+					<thumbHeightBig>278</thumbHeightBig>
+					<thumbPosXBig>0</thumbPosXBig>
+					<thumbPosYBig>0</thumbPosYBig>
+					<font>font11</font>
+					<suffix>|</suffix>			
+					<enableFocusZoom>no</enableFocusZoom>
+					<frameFocus>videothumbframe1.png</frameFocus>
+					<spinWidth>45</spinWidth>
+					<spinHeight>45</spinHeight>
+					<spinPosX>1660</spinPosX>
+					<spinPosY>950</spinPosY>
+					<spinAlign>left</spinAlign>
+					<spinColor>ffffffff</spinColor>
+					<spinCanFocus>no</spinCanFocus>
+					<textureUp>page_up_nofocus.png</textureUp>
+					<textureDown>page_down_nofocus.png</textureDown>
+					<textureUpFocus>page_up_focus.png</textureUpFocus>
+					<textureDownFocus>page_down_focus.png</textureDownFocus>	
+					<keepaspectratio>no</keepaspectratio>
+					<unfocusedAlpha>140</unfocusedAlpha>
+					<dimColor>30ffffff</dimColor>
+					<thumbAnimation effect="zoom" start="100,100" end="110,110" time="110">focus</thumbAnimation>
+        </control>
+        <control>
+          <description>Filmstrip view</description>
+          <type>filmstrip</type>
+          <colordiffuse>90ffffff</colordiffuse>
+          <dimColor>90ffffff</dimColor>
+          <id>50</id>
+          <posX>110</posX>
+          <posY>360</posY>
+          <width>1770</width>
+          <height>750</height>
+          <spinPosX>-1200</spinPosX>
+          <spinPosY>832</spinPosY>
+          <onleft>2</onleft>
+          <onright>2</onright>
+          <onup>2</onup>
+          <ondown>2</ondown>
+          <frame>-</frame>
+          <frameFocus>-</frameFocus>
+          <itemWidth>240</itemWidth>
+          <itemHeight>600</itemHeight>
+          <textureWidth>250</textureWidth>
+          <textureHeight>361</textureHeight>
+          <thumbWidth>250</thumbWidth>
+          <thumbHeight>361</thumbHeight>
+          <thumbPosX>0</thumbPosX>
+          <thumbPosY>0</thumbPosY>
+          <showFrame>yes</showFrame>
+          <showFolder>no</showFolder>
+          <showBackGround>no</showBackGround>
+          <showInfoImage>no</showInfoImage>
+          <enableFocusZoom>no</enableFocusZoom>
+          <scrollOffset>5</scrollOffset>
+          <keepaspectratio>no</keepaspectratio>
+          <suffix>|</suffix>
+          <folderPrefix />
+          <folderSuffix />
+          <spinCanFocus>no</spinCanFocus>
+          <scrollbarBackground>bar_hor.png</scrollbarBackground>
+          <scrollbarLeft>mouse_left_horizontal.png</scrollbarLeft>
+          <scrollbarRight>mouse_right_horizontal.png</scrollbarRight>
+          <scrollbarYOff>480</scrollbarYOff>
+          <showScrollbar>yes</showScrollbar>
+          <thumbs mask="0014_mask.png">-</thumbs>
+          <thumbAnimation effect="zoom" start="100,100" end="150,150" time="200" tween="circle" ease="inout">focus</thumbAnimation>
+          <thumbAnimation effect="zoom" start="150,150" end="100,100" time="200" tween="back" ease="inout">unfocus</thumbAnimation>
+		  <textcolorNoFocus>ff808080</textcolorNoFocus>
+		  <textcolour>ffffffff</textcolour>
+        </control>
+      </control>
+    </control>
+	<!-- Hidden Menu -->
+    <control>
+      <type>actiongroup</type>
+      <description>action menu</description>
+      <defaultcontrol>2</defaultcontrol>
+      <onexit>50</onexit>
+      <buttonX>0</buttonX>
+      <buttonY>0</buttonY>
+      <buttonwidth>45</buttonwidth>
+      <buttonheight>525</buttonheight>
+      <textureFocus>-</textureFocus>
+      <textureNoFocus>Action_nofocus.png</textureNoFocus>
+      <width>411</width>
+      <height>1350</height>
+      <dimColor>00ffffff</dimColor>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <width>1920</width>
+        <height>1080</height>
+        <texture>white.png</texture>
+        <colordiffuse>201e90ff</colordiffuse>
+      </control>
+      <control>
+        <type>image</type>
+        <posX>37</posX>
+        <posY>117</posY>
+        <width>559</width>
+        <height>886</height>
+        <texture>Backslide.png</texture>
+        <colorDiffuse>ffffffff</colorDiffuse>
+        <visible>!Control.HasFocus(50)</visible>
+        <animation effect="slide" time="70" start="-450,0" reversible="false">visible</animation>
+        <animation effect="slide" time="70" end="-450,0" reversible="false">hidden</animation>
+      </control>
+      <control>
+        <description>group element</description>
+        <type>group</type>
+        <animation effect="slide" time="70" start="-450,0" reversible="false">visible</animation>
+        <animation effect="slide" time="70" end="-450,0" reversible="false">hidden</animation>
+        <visible>!Control.HasFocus(50)</visible>
+        <posX>73</posX>
+        <posY>181</posY>
+        <layout>StackLayout</layout>
+        <visible>!Control.HasFocus(50)</visible>
+        <control>
+          <description>button group</description>
+          <type>group</type>
+          <posX>90</posX>
+          <posY>181</posY>
+          <width>439</width>
+          <layout>StackLayout</layout>
+          <visible>!Control.HasFocus(50)</visible>
+          <animation effect="slide" time="70" start="-450,0" reversible="false">visible</animation>
+          <animation effect="slide" time="70" end="-450,0" reversible="false">hidden</animation>
+          <control>
+            <description>Change Layout</description>
+            <type>button</type>
+            <id>2</id>
+            <width>439</width>
+            <label>-</label>
+            <onleft>50</onleft>
+            <onright>50</onright>
+            <onup>21</onup>
+          </control>
+        </control>
+      </control>
+	  </control>
+    <import>Trakt.Common.Properties.Users.xml</import>
+  </controls>
+</window>
+

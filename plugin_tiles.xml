@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+  <controls>
+    <control>
+      <description>group element</description>
+      <type>group</type>
+      <animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+    <control>
+      <description>tile 1</description>
+      <hyperlink>31415</hyperlink>
+      <label></label>
+      <textureNoFocus mask="side_tilemask.png">side_tile_imdb.jpg</textureNoFocus>
+      <textureFocus mask="side_tilemask.png">side_tile_imdbfocus.jpg</textureFocus>
+      <type>button</type>
+      <id>77785</id>
+      <posX>185</posX>
+      <posY>145</posY>
+      <height>400</height>
+      <width>230</width>
+      <align>left</align>
+      <textYOff>240</textYOff>
+      <textcolorNoFocus>ffffffff</textcolorNoFocus>
+      <textcolor>ffffffff</textcolor>
+      <font></font>
+      <onup>5005</onup>
+      <onleft>5</onleft>
+      <onright>77787</onright>
+      <ondown>77786</ondown>
+      <animation effect="zoom" end="102,102" center="0,0" time="200">Focus</animation>
+      <animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
+      <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
+      <animation effect="fade" delay="0" time="700">visible</animation>
+      <animation effect="fade" time="100" delay="0">hidden</animation>
+      <visible allowhiddenfocus="true">control.hasfocus(5005) | control.hasfocus(77785) | control.hasfocus(77786) | control.hasfocus(77787) | control.hasfocus(77788) | control.hasfocus(77789) | control.hasfocus(77790) | control.hasfocus(99901) | control.hasfocus(99902) | control.hasfocus(77801)</visible>
+    </control>
+
+    	
+	<control>
+      <description>tile 3</description>
+      <hyperlink>87258</hyperlink>
+      <label></label>
+      <textureNoFocus mask="series_tile_mask.png">trakt_tile.jpg</textureNoFocus>
+      <textureFocus mask="series_tile_mask.png">trakt_tilefocus.jpg</textureFocus>
+      <type>button</type>
+      <id>77787</id>
+      <posX>440</posX>
+      <posY>145</posY>
+      <height>400</height>
+      <width>630</width>
+      <align>left</align>
+      <textYOff>240</textYOff>
+      <textcolorNoFocus>ffffffff</textcolorNoFocus>
+      <textcolor>ffffffff</textcolor>
+      <font></font>
+      <onup>5005</onup>
+	  <onright>#skin.tilenav3</onright>
+      <onleft>77785</onleft>
+      <ondown>#skin.tilenav5</ondown>
+      <animation effect="zoom" end="102,102" center="0,0" time="200">Focus</animation>
+      <animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
+      <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
+      <animation effect="fade" delay="0" time="700">visible</animation>
+      <animation effect="fade" time="100" delay="0">hidden</animation>
+      <visible>control.hasfocus(5005) | control.hasfocus(77785) | control.hasfocus(77786) | control.hasfocus(77787) | control.hasfocus(77788) | control.hasfocus(77789) | control.hasfocus(77790) | control.hasfocus(99901) | control.hasfocus(99902) | control.hasfocus(77801)</visible>
+    </control>
+
+	
+	    <control>
+      <description>tile 5</description>
+      <hyperlink>16000</hyperlink>
+      <label></label>
+      <textureNoFocus mask="series_tile_mask.png">infoservice.jpg</textureNoFocus>
+      <textureFocus mask="series_tile_mask.png">infoservicetile_focus.jpg</textureFocus>
+      <type>button</type>
+      <id>77789</id>
+      <posX>1090</posX>
+      <posY>145</posY>
+      <height>400</height>
+      <width>630</width>
+      <align>left</align>
+      <textYOff>240</textYOff>
+      <textcolorNoFocus>ffffffff</textcolorNoFocus>
+      <textcolor>ffffffff</textcolor>
+      <font></font>
+	  <ondown>#skin.tilenav6</ondown>
+      <onup>5005</onup>
+      <onright>0011223</onright>
+	  <onleft>#skin.tilenav2</onleft>
+      <animation effect="zoom" end="102,102" center="0,0" time="200">Focus</animation>
+      <animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
+      <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
+      <animation effect="fade" delay="0" time="700">visible</animation>
+      <animation effect="fade" time="100" delay="0">hidden</animation>
+      <visible>[control.hasfocus(5005) | control.hasfocus(77785) | control.hasfocus(77786) | control.hasfocus(77787) | control.hasfocus(77788) | control.hasfocus(77789) | control.hasfocus(77790) | control.hasfocus(99901) | control.hasfocus(77801)]+!string.equals(#skin.tilenav3,99902)</visible>
+    </control>
+	
+	
+	<control>
+      <description>tile 3</description>
+      <hyperlink>3001</hyperlink>
+      <label></label>
+      <textureNoFocus mask="series_tile_mask.png">playdisc.jpg</textureNoFocus>
+      <textureFocus mask="series_tile_mask.png">playdisc_focus.jpg</textureFocus>
+      <type>button</type>
+      <id>99902</id>
+      <posX>1090</posX>
+      <posY>145</posY>
+      <height>400</height>
+      <width>630</width>
+      <align>left</align>
+      <textYOff>240</textYOff>
+      <textcolorNoFocus>ffffffff</textcolorNoFocus>
+      <textcolor>ffffffff</textcolor>
+      <font></font>
+	  <ondown>#skin.tilenav6</ondown>
+      <onup>5005</onup>
+      <onright>0011223</onright>
+	  <onleft>#skin.tilenav2</onleft>
+      <animation effect="zoom" end="102,102" center="0,0" time="200">Focus</animation>
+      <animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
+      <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
+      <animation effect="fade" delay="0" time="700">visible</animation>
+      <animation effect="fade" time="100" delay="0">hidden</animation>
+      <visible>[control.hasfocus(5005) | control.hasfocus(77785) | control.hasfocus(77786) | control.hasfocus(77787) | control.hasfocus(77788) | control.hasfocus(77789) | control.hasfocus(77790) | control.hasfocus(99901) | control.hasfocus(99902) | control.hasfocus(77801)]+!string.equals(#skin.tilenav3,77789)</visible>
+    </control>
+    
+	
+
+
+	 <control>
+      <description>tile 2</description>
+      <hyperlink>84623</hyperlink>
+      <label></label>
+      <textureNoFocus mask="side_tilemask.png">subs.jpg</textureNoFocus>
+      <textureFocus mask="side_tilemask.png">subs_focus.jpg</textureFocus>
+      <type>button</type>
+      <id>77786</id>
+      <posX>185</posX>
+      <posY>567</posY>
+      <width>230</width>
+      <height>400</height>
+      <align>left</align>
+      <textYOff>240</textYOff>
+      <textcolorNoFocus>ffffffff</textcolorNoFocus>
+      <textcolor>ffffffff</textcolor>
+      <font></font>
+      <onup>77785</onup>
+      <onleft>77786</onleft>
+      <onright>#skin.tilenav5</onright>
+      <ondown>77786</ondown>
+      <animation effect="zoom" end="102,102" center="0,0" time="200">Focus</animation>
+      <animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
+      <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
+      <animation effect="fade" delay="0" time="700">visible</animation>
+      <animation effect="fade" time="100" delay="0">hidden</animation>
+      <visible>control.hasfocus(5005) | control.hasfocus(77785) | control.hasfocus(77786) | control.hasfocus(77787) | control.hasfocus(77788) | control.hasfocus(77789) | control.hasfocus(77790) | control.hasfocus(99901) | control.hasfocus(99902) | control.hasfocus(77801)</visible>
+    </control>
+	
+	<control>
+      <description>tile 4</description>
+      <hyperlink>47286</hyperlink>
+      <label></label>
+      <textureNoFocus mask="series_tile_mask.png">rockstar.jpg</textureNoFocus>
+      <textureFocus mask="series_tile_mask.png">rockstar_focus.jpg</textureFocus>
+      <type>button</type>
+      <id>77788</id>
+      <posX>440</posX>
+      <posY>567</posY>
+      <height>400</height>
+      <width>630</width>
+      <align>left</align>
+      <textYOff>240</textYOff>
+      <textcolorNoFocus>ffffffff</textcolorNoFocus>
+      <textcolor>ffffffff</textcolor>
+      <font></font>
+      <onup>77787</onup>
+      <onleft>77786</onleft>
+      <ondown>77788</ondown>
+	  <onright>#skin.tilenav6</onright>
+      <animation effect="zoom" end="102,102" center="0,0" time="200">Focus</animation>
+      <animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
+      <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
+      <animation effect="fade" delay="0" time="700">visible</animation>
+      <animation effect="fade" time="100" delay="0">hidden</animation>
+      <visible>control.hasfocus(5005) | control.hasfocus(77785) | control.hasfocus(77786) | control.hasfocus(77787) | control.hasfocus(77788) | control.hasfocus(77789) | control.hasfocus(77790) | control.hasfocus(99901) | control.hasfocus(99902)]+!string.equals(#skin.tilenav5,77801)</visible>
+    </control>
+	
+	<control>
+      <description>tile 4</description>
+      <hyperlink>25650</hyperlink>
+      <label></label>
+      <textureNoFocus mask="series_tile_mask.png">tune.png</textureNoFocus>
+      <textureFocus mask="series_tile_mask.png">tune_focus.png</textureFocus>
+      <type>button</type>
+      <id>77801</id>
+      <posX>440</posX>
+      <posY>567</posY>
+      <height>400</height>
+      <width>630</width>
+      <align>left</align>
+      <textYOff>240</textYOff>
+      <textcolorNoFocus>ffffffff</textcolorNoFocus>
+      <textcolor>ffffffff</textcolor>
+      <font></font>
+      <onup>77787</onup>
+      <onleft>77786</onleft>
+      <ondown>77801</ondown>
+	  <onright>#skin.tilenav6</onright>
+      <animation effect="zoom" end="102,102" center="0,0" time="200">Focus</animation>
+      <animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
+      <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
+      <animation effect="fade" delay="0" time="700">visible</animation>
+      <animation effect="fade" time="100" delay="0">hidden</animation>
+      <visible>[control.hasfocus(5005) | control.hasfocus(77785) | control.hasfocus(77786) | control.hasfocus(77787) | control.hasfocus(77789) | control.hasfocus(77790) | control.hasfocus(99901) | control.hasfocus(99902) | control.hasfocus(77801)]+!string.equals(#skin.tilenav5,77788)</visible>
+    </control>
+	
+    <control>
+      <description>tile 6</description>
+      <hyperlink>30885</hyperlink>
+      <label></label>
+      <textureNoFocus mask="series_tile_mask.png">globalm.jpg</textureNoFocus>
+      <textureFocus mask="series_tile_mask.png">globalm_focus.jpg</textureFocus>
+      <type>button</type>
+      <id>77790</id>
+      <posX>1090</posX>
+      <posY>567</posY>
+      <height>400</height>
+      <width>630</width>
+      <align>left</align>
+      <textYOff>240</textYOff>
+      <textcolorNoFocus>ffffffff</textcolorNoFocus>
+      <textcolor>ffffffff</textcolor>
+      <font></font>
+	  <onup>#skin.tilenav3</onup>
+      <onleft>#skin.tilenav5</onleft>
+      <onright>0011223</onright>
+      <ondown>77790</ondown>
+      <animation effect="zoom" end="102,102" center="0,0" time="200">Focus</animation>
+      <animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
+      <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
+      <animation effect="fade" delay="0" time="700">visible</animation>
+      <animation effect="fade" time="100" delay="0">hidden</animation>
+      <visible>[control.hasfocus(5005) | control.hasfocus(77785) | control.hasfocus(77786) | control.hasfocus(77787) | control.hasfocus(77788) | control.hasfocus(77789) | control.hasfocus(77790) | control.hasfocus(99902) | control.hasfocus(77801)]+!string.equals(#skin.tilenav6,99901)</visible>
+    </control>
+	
+	
+	<!-- ******Alternate Plugin Tiles******* -->
+	
+	<control>
+      <description>tile 6</description>
+      <hyperlink>801</hyperlink>
+      <label></label>
+      <textureNoFocus mask="series_tile_mask.png">ext.png</textureNoFocus>
+      <textureFocus mask="series_tile_mask.png">ext_focus.png</textureFocus>
+      <type>button</type>
+      <id>99901</id>
+      <posX>1090</posX>
+      <posY>567</posY>
+      <height>400</height>
+      <width>630</width>
+      <align>left</align>
+      <textYOff>240</textYOff>
+      <textcolorNoFocus>ffffffff</textcolorNoFocus>
+      <textcolor>ffffffff</textcolor>
+      <font></font>
+	  <onup>#skin.tilenav3</onup>
+      <onleft>#skin.tilenav5</onleft>
+      <onright>0011223</onright>
+      <ondown>99901</ondown>
+      <animation effect="zoom" end="102,102" center="0,0" time="200">Focus</animation>
+      <animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
+      <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
+      <animation effect="fade" delay="0" time="700">visible</animation>
+      <animation effect="fade" time="100" delay="0">hidden</animation>
+      <visible>[control.hasfocus(5005) | control.hasfocus(77785) | control.hasfocus(77786) | control.hasfocus(77787) | control.hasfocus(77788) | control.hasfocus(77789) | control.hasfocus(77790) | control.hasfocus(99901) | control.hasfocus(99902) | control.hasfocus(77801)]+!string.equals(#skin.tilenav6,77790)</visible>
+    </control>
+    </control>
+  </controls>
+</window>

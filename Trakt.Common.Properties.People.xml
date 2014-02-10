@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+  <controls>
+    <!-- People List Layout -->
+    <control>
+      <description>Cover Art shadow</description>
+      <type>image</type>
+      <id>0</id>
+      <posX>295</posX>
+      <posY>225</posY>
+      <width>507</width>
+      <height>755</height>
+      <texture>0013_shadow.png</texture>
+      <visible>facadeview.list+control.isvisible(50)</visible>
+      <animation effect="fade" time="250" delay="0">WindowClose</animation>
+	  <animation effect="fade" time="70" reversible="false">visible</animation>
+    </control>
+    <control>
+      <description>Headshot</description>
+      <id>0</id>
+      <type>image</type>
+      <posX>302</posX>
+      <posY>232</posY>
+      <width>494</width>
+      <height>741</height>
+	  <keepaspectratio>no</keepaspectratio>
+      <zoom>no</zoom>
+      <texture mask="videothumbmask.png">#selectedthumb</texture>
+      <visible>facadeview.list</visible>
+    </control>
+
+    <control>
+      <description>Birthplace</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>255</posX>
+      <posY>960</posY>
+      <label>#Trakt.Person.Birthplace</label>
+      <font>font11</font>
+      <textcolor>eaeaea</textcolor>
+      <visible>facadeview.list+!string.equals(#Trakt.Person.Birthplace,)</visible>
+	  <animation effect="rotate" delay="0" end="90" time="0" loop="false" condition="true">Conditional</animation>
+    </control>
+
+    <control>
+      <description>Birthday Year</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>220</posX>
+      <posY>960</posY>
+      <label>#Trakt.Person.Birthday</label>
+      <font>font11</font>
+      <textcolor>eaeaea</textcolor>
+      <visible>facadeview.list+!string.equals(#Trakt.Person.Birthday,)</visible>
+	  <animation effect="rotate" delay="0" end="90" time="0" loop="false" condition="true">Conditional</animation>
+    </control>
+	
+	<control>
+      <description>title</description>
+      <type>fadelabel</type>
+      <id>0</id>
+      <posX>880</posX>
+      <posY>630</posY>
+	  <textalign>left</textalign>
+      <width>750</width>
+      <height>50</height>
+      <textcolor>eaeaea</textcolor>
+      <font>fontL1</font>
+      <label>#Trakt.Person.Name</label>
+      <visible>facadeview.list</visible>
+      <animation effect="fade" time="250" delay="0">WindowClose</animation>
+    </control>
+	
+	
+    <control Style="NoShadow">
+      <description>Biography value</description>
+      <type>textboxscrollup</type>
+      <id>1</id>
+      <posX>880</posX>
+      <posY>700</posY>
+	  <textalign>left</textalign>
+      <width>870</width>
+      <height>265</height>
+      <textcolor>eaeaea</textcolor>
+      <font>font12</font>
+      <label>#Trakt.Person.Biography</label>
+      <visible>facadeview.list</visible>
+    </control>
+
+  </controls>
+</window>

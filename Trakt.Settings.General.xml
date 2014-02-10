@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+  <id>87274</id>
+  <defaultcontrol>2</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+  <define>#currentmodule:#Trakt.Translation.GeneralSettings.Label</define>
+  <define>#selecteditem:#highlightedbutton</define>
+  <define>#defaultcontrol:2</define>
+  <define>#defaultcontrol.onleft:9997</define>
+  <controls>
+  
+    <import>trakt.common.imports.xml</import>
+    <import>Trakt.Common.xml</import>
+	
+	<control>
+      <description>Current window</description>
+      <type>label</type>
+      <id>0</id>
+      <posX>1810</posX>
+      <posY>33</posY>
+      <align>right</align>
+      <width>1800</width>
+      <font>fontL</font>		  
+      <label>General Settings</label>
+      <textcolor>eaeaea</textcolor>		  
+      <animation effect="fade" time="250">WindowOpen</animation>
+      <animation effect="fade" time="250">WindowClose</animation>
+    </control>
+	
+    <control>
+      <type>group</type>
+      <description>group element</description>
+      <posX>525</posX>
+      <posY>241</posY>
+      <width>559</width>
+      <height>568</height>
+      <layout>StackLayout(Vertical)</layout>
+      <control>
+        <description>Download Fanart</description>
+        <type>checkbutton</type>
+        <id>2</id>
+        <width>1260</width>
+        <label>#Trakt.Translation.DownloadFanart.Label</label>
+        <onleft>#defaultcontrol.onleft</onleft>
+        <onup>8</onup>
+      </control>
+      <control>
+        <description>Download FullSize Fanart</description>
+        <type>checkbutton</type>
+        <id>3</id>
+        <width>1260</width>
+        <label>#Trakt.Translation.DownloadFullSizeFanart.Label</label>
+        <onleft>#defaultcontrol.onleft</onleft>
+      </control>
+      <control>
+        <description>Get Friend Requests on startup</description>
+        <type>checkbutton</type>
+        <id>4</id>
+        <width>1260</width>
+        <label>#Trakt.Translation.GetFriendRequestsOnStartup.Label</label>
+        <onleft>#defaultcontrol.onleft</onleft>
+      </control>
+      <control>
+        <description>Create Moving Pictures Categories</description>
+        <type>checkbutton</type>
+        <id>5</id>
+        <width>1260</width>
+        <label>#Trakt.Translation.CreateMovingPicturesCategories.Label</label>
+        <onleft>#defaultcontrol.onleft</onleft>
+      </control>
+      <control>
+        <description>Create Moving Pictures Filters</description>
+        <type>checkbutton</type>
+        <id>6</id>
+        <width>1260</width>
+        <label>#Trakt.Translation.CreateMovingPicturesFilters.Label</label>
+        <onleft>#defaultcontrol.onleft</onleft>
+      </control>
+      <control>
+        <description>Create My Films Categories</description>
+        <type>checkbutton</type>
+        <id>9</id>
+        <width>1260</width>
+        <label>#Trakt.Translation.CreateMyFilmsCategories.Label</label>
+        <onleft>#defaultcontrol.onleft</onleft>
+      </control>
+      <control>
+        <description>Show Rate Dialog On Watched</description>
+        <type>checkbutton</type>
+        <id>7</id>
+        <width>1260</width>
+        <label>#Trakt.Translation.ShowRateDialogOnWatched.Label</label>
+        <onleft>#defaultcontrol.onleft</onleft>
+      </control>
+      <control>
+        <description>Sync Ratings</description>
+        <type>checkbutton</type>
+        <id>8</id>
+        <width>1260</width>
+        <label>#Trakt.Translation.SettingSyncRatingsName.Label</label>
+        <onleft>#defaultcontrol.onleft</onleft>
+        <ondown>2</ondown>
+      </control>
+    </control>
+  </controls>
+</window>

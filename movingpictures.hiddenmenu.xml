@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--            :: HIDDEN MENU ::            -->
+<window>
+	<controls>
+		<control>
+			<type>image</type>
+			<posX>0</posX>
+			<posY>-100</posY>
+			<width>45</width>
+			<height>525</height>
+			<texture>Action_nofocus.png</texture>
+			<colorDiffuse>fffffffff</colorDiffuse>
+			<visible>!control.isvisible(51)</visible>
+			<animation effect="fade" time="250">WindowClose</animation>
+		</control>
+		<control>
+		  <type>actiongroup</type>
+		  <description>action menu</description>
+		  <defaultcontrol>4</defaultcontrol>
+		  <onexit>50</onexit>
+		  <buttonX>0</buttonX>
+		  <buttonY>0</buttonY>
+		  <buttonwidth>159</buttonwidth>
+      <buttonheight>1080</buttonheight>
+      <textureFocus>-</textureFocus>
+      <textureNoFocus>-</textureNoFocus>
+		  <width>852</width>
+		  <height>1350</height>
+		  <dimColor>00ffffff</dimColor>
+			<control>
+				<type>image</type>
+				<posX>39</posX>
+				<posY>237</posY>
+				<width>532</width>
+				<height>840</height>
+				<texture>Backslide.png</texture>
+				<colorDiffuse>fffffffff</colorDiffuse>
+				<visible>!Control.HasFocus(50)+control.isvisible(50)</visible>
+				<animation effect="slide" time="70" start="-450,0" reversible="false">visible</animation>
+				<animation effect="slide" time="70" end="-450,0" reversible="false">hidden</animation>
+			</control>
+			<control>
+				<description>group element</description>
+				<type>group</type>
+				<animation effect="slide" time="70" start="-450,0" reversible="false">visible</animation>
+				<animation effect="slide" time="70" end="-450,0" reversible="false">hidden</animation>
+				<visible>!Control.HasFocus(50)+control.isvisible(50)</visible>     			
+				<control>
+					<description>button group</description>
+					<type>group</type>
+					<animation effect="slide" time="70" start="-450,0" reversible="false">visible</animation>
+					<animation effect="slide" time="70" end="-450,0" reversible="false">hidden</animation>
+					<posX>106</posX>
+					<posY>286</posY>
+					<!-- Remove and Gaps when buttons are not visible -->
+					<layout>StackLayout(0, Vertical, true)</layout>
+					<visible>!Control.HasFocus(50)</visible>
+					<control>
+						<description>Filter</description>
+						<type>button</type>
+						<id>4</id>
+						<label>#MovingPictures.Translation.FilterBy.Label ...</label>
+						<onright>50</onright>
+						<onup>17</onup>
+						<ondown>19</ondown>
+					</control>
+					<control>
+						<description>Search</description>
+						<type>button</type>
+						<id>19</id>
+						<label>#MovingPictures.Translation.SearchBy.Label ...</label>
+						<onright>50</onright>
+						<onup>4</onup>
+						<ondown>20</ondown>
+					</control>
+					<control>
+						<description>Scan</description>
+						<type>button</type>
+						<id>20</id>
+						<label>#MovingPictures.Translation.ScanForNewMovies.Label</label>
+						<onright>50</onright>
+						<onup>19</onup>
+						<ondown>3</ondown>
+						<visible>!string.equals(#MovingPictures.ScanForNewMovies.Visible, false)</visible>
+					</control>
+					<control>
+						<description>Change View</description>
+						<type>button</type>
+						<id>3</id>
+						<label>#MovingPictures.Translation.ChangeView.Label ...</label>
+						<onright>50</onright>
+						<onup>20</onup>
+						<ondown>14</ondown>
+					</control>
+					<control>
+						<description>Sort By</description>
+						<type>button</type>
+						<id>14</id>
+						<label>#MovingPictures.Translation.SortBy.Label: #MovingPictures.Sort.Field</label>					
+						<onright>50</onright>
+						<onup>3</onup>
+						<ondown>15</ondown>
+					</control>
+					<control>
+						<description>Parental Controls</description>
+						<type>button</type>
+						<id>15</id>
+						<label>#MovingPictures.Translation.ToggleParentalLock.Label</label>
+						<onright>50</onright>
+						<ondown>10</ondown>
+						<onup>14</onup>
+						<ondown>66610</ondown>
+						<scrollStartDelaySec>1</scrollStartDelaySec>
+						<scrollWrapString> | </scrollWrapString>
+					</control>
+					<control>
+						<description>Video Settings</description>
+						<type>button</type>
+						<id>66610</id>
+						<hyperlink>703</hyperlink>
+						<label>Video Settings</label>
+						<onup>15</onup>
+						<onright>50</onright>
+						<ondown>999</ondown>
+					</control>
+					<control>
+            <description>Importer</description>
+            <type>button</type>
+            <id>999</id>
+            <label>Importer (#MovingPictures.Importer.NeedInput.Count Pending)</label>
+            <hyperlink>96743</hyperlink>
+            <onup>66610</onup>
+            <ondown>99991</ondown>
+            <onright>50</onright>
+          </control>
+		  <control>
+						<description>Trakt</description>
+						<type>button</type>
+						<id>99991</id>
+						<label>Trakt</label>
+						<hyperlink>87258</hyperlink>
+						<onup>999</onup>
+						<ondown>4</ondown>
+						<onright>50</onright>
+						<visible>plugin.isenabled(Trakt)</visible>
+						<textcolorNoFocus>ff666666</textcolorNoFocus>
+		                <textcolour>ff666666</textcolour>
+					</control>
+				</control>
+				<!-- Sort By Direction Image, take into consideration shift up of buttons in stack
+						 when buttons are hidden
+  			-->
+				<control>
+					<id>0</id>
+					<label>#MovingPictures.Translation.SortDirection.Label</label>
+					<type>image</type>
+					<width>24</width>
+					<height>24</height>
+					<posX>450</posX>
+					<posY>438</posY>
+					<texture>movingpictures_Sort#MovingPictures.Sort.Direction.png</texture>
+					<visible>!Control.HasFocus(50)+control.isvisible(50)</visible>
+					<animation effect="slide" time="70" start="-450,0" reversible="false">visible</animation>
+					<animation effect="slide" time="70" end="-450,0" reversible="false">hidden</animation>
+					<visible>control.isvisible(20)</visible>
+				</control>
+				<control>
+					<id>0</id>
+					<label>#MovingPictures.Translation.SortDirection.Label</label>
+					<type>image</type>
+					<width>24</width>
+					<height>24</height>
+					<posX>450</posX>
+					<posY>378</posY>
+					<texture>movingpictures_Sort#MovingPictures.Sort.Direction.png</texture>
+					<visible>!Control.HasFocus(50)+control.isvisible(50)</visible>
+					<animation effect="slide" time="70" start="-450,0" reversible="false">visible</animation>
+					<animation effect="slide" time="70" end="-450,0" reversible="false">hidden</animation>
+					<visible>!control.isvisible(20)</visible>
+				</control>
+		  </control>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+  <id>35</id>
+  <defaultcontrol>30</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+  <disabletopbar>no</disabletopbar>
+  <rememberLastFocusedControl>yes</rememberLastFocusedControl>
+  <define>#selecteditem:</define>
+  <define>#selectedindex:</define>
+  <define>#indexcount:</define>
+  <define>#usePlayFanart:Yes</define>
+  <define property="true" evaluateNow="true">#skin.weather.nav:#(cint(iif(not(#skin.weather.swap), '7977', '79770')))</define>
+  <define property="true" evaluateNow="true">#skin.movietilenav:#(cint(iif(not(#skin.movie.swap), '77766', '77779')))</define>
+  <define property="true" evaluateNow="true">#skin.movietilenav2:#(cint(iif(not(#skin.movie.swap), '76673', '76672')))</define>
+  <define property="true" evaluateNow="true">#skin.rec1.nav:#(cint(iif(not(#skin.movie.swap), '91919991', '15991')))</define>
+  <define property="true" evaluateNow="true">#skin.rec2.nav:#(cint(iif(not(#skin.movie.swap), '91919992', '15992')))</define>
+  <define property="true" evaluateNow="true">#skin.rec3.nav:#(cint(iif(not(#skin.movie.swap), '91919993', '15993')))</define>
+  <define property="true" evaluateNow="true">#skin.tilenav1:#(cint(string.trim(#skin.tile1.plugin,'a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,-')))</define>
+  <define property="true" evaluateNow="true">#skin.tilenav2:#(cint(string.trim(#skin.tile2.plugin,'a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,-')))</define>
+  <define property="true" evaluateNow="true">#skin.tilenav3:#(cint(string.trim(#skin.tile3.plugin,'a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,-')))</define>
+  <define property="true" evaluateNow="true">#skin.tilenav4:#(cint(string.trim(#skin.tile4.plugin,'a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,-')))</define>
+  <define property="true" evaluateNow="true">#skin.tilenav5:#(cint(string.trim(#skin.tile5.plugin,'a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,-')))</define>
+  <define property="true" evaluateNow="true">#skin.tilenav6:#(cint(string.trim(#skin.tile6.plugin,'a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,-')))</define>
+  <controls>
+
+
+	<control>
+      <description>background</description>
+      <type>image</type>
+      <id>0</id>
+      <posX>0</posX>
+      <posY>0</posY>
+      <width>1920</width>
+      <height>1080</height>
+      <texture>background_02.jpg</texture>
+      <colordiffuse>ffffffff</colordiffuse>
+    </control>
+	
+		<control>
+      <description>background overlay</description>
+      <type>image</type>
+      <id>0</id>
+      <posX>0</posX>
+      <posY>0</posY>
+      <width>1920</width>
+      <height>1080</height>
+      <texture>white.png</texture>
+      <colordiffuse>10ffffff</colordiffuse>
+    </control>
+	
+	<control>
+      <description>background overlay</description>
+      <type>image</type>
+      <id>0</id>
+      <posX>0</posX>
+      <posY>110</posY>
+      <width>1920</width>
+      <height>890</height>
+      <texture>black.png</texture>
+      <colordiffuse>70ffffff</colordiffuse>
+    </control>
+	
+	<control>
+      <description>background overlay</description>
+      <type>image</type>
+      <id>0</id>
+      <posX>0</posX>
+      <posY>35</posY>
+      <width>1920</width>
+      <height>50</height>
+      <texture>black.png</texture>
+      <colordiffuse>80ffffff</colordiffuse>
+    </control>
+
+	<!-- Expression test box (labels do not work with cint !! -->
+	<!--
+	<control>
+      <type>textbox</type>
+      <id>1</id>
+      <posX>185</posX>
+      <posY>20</posY>
+      <width>1000</width>
+      <height>120</height>
+      <label>#skin.weather.nav</label>
+      <align>left</align>
+      <font>font9</font>
+      <textcolor>99ffffff</textcolor>
+    </control>
+	-->
+
+		
+    <import>main_menu.xml</import>
+	<import>home_settings.xml</import>
+	<import>Mediahub_tiles.xml</import>
+	<import>Tv_tiles.xml</import>
+	
+	
+    <!--     *******************************************************************************************  -->
+    <!--     *************************             ACTION MENU          ********************************  -->
+    <!--     *******************************************************************************************  -->
+    <control>
+      <type>actiongroup</type>
+      <description>action menu</description>
+      <defaultcontrol>8</defaultcontrol>
+      <onexit>2</onexit>
+      <buttonX>0</buttonX>
+      <buttonY>0</buttonY>
+      <buttonwidth>45</buttonwidth>
+      <buttonheight>525</buttonheight>
+      <textureFocus>-</textureFocus>
+      <textureNoFocus>Action_nofocus.png</textureNoFocus>
+      <width>15</width>
+      <height>870</height>
+      <dimColor>00ffffff</dimColor>
+      <control>
+        <type>image</type>
+        <posX>39</posX>
+        <posY>117</posY>
+        <width>480</width>
+        <height>700</height>
+        <texture>Backslide.png</texture>
+        <colordiffuse>50ffffff</colordiffuse>
+        <visible>!Control.hasFocus(2)+!Control.hasFocus(3)+!Control.hasFocus(4)+!Control.hasFocus(5)+!Control.hasFocus(6)|!Control.hasFocus(7)]</visible>
+        <animation effect="slide" time="70" start="-450,0" reversible="true">visiblechange</animation>
+      </control>
+
+      <control>
+        <description>group element</description>
+        <type>group</type>
+        <animation effect="slide" time="70" start="-450,0" reversible="true">visiblechange</animation>
+        <posX>75</posX>
+        <posY>181</posY>
+        <layout>StackLayout(0,Vertical,true)</layout>
+        <visible>!Control.hasFocus(2)+!Control.hasFocus(3)+!Control.hasFocus(4)+!Control.hasFocus(5)+!Control.hasFocus(6)|!Control.hasFocus(7)]</visible>
+        <control Style="NoShadow">
+          <description>Home Menu</description>
+          <type>button</type>
+          <id>8</id>
+          <label>974</label>
+          <hyperlink>0</hyperlink>
+          <onup>16</onup>
+		  <onright>2</onright>
+          <ondown>9</ondown>
+		  <textcolorNoFocus>ff808080</textcolorNoFocus>
+		<textcolor>eaeaea</textcolor>
+        </control>
+        <control Style="NoShadow">
+          <description>Radio</description>
+          <type>button</type>
+          <id>9</id>
+          <hyperlink>30</hyperlink>
+          <label>665</label>
+		  <onright>2</onright>
+          <onup>8</onup>
+          <ondown>10</ondown>
+          <visible>plugin.isenabled(World Weather)+plugin.isenabled(Radio)</visible>
+		  <textcolorNoFocus>ff808080</textcolorNoFocus>
+		<textcolor>eaeaea</textcolor>
+        </control>
+        <control Style="NoShadow">
+          <description>Last.Fm</description>
+          <type>button</type>
+          <id>10</id>
+          <posX>75</posX>
+          <hyperlink>7890</hyperlink>
+          <label>Last.FM</label>
+          <onup>9</onup>
+		  <onright>2</onright>
+          <ondown>11</ondown>
+          <visible>plugin.isenabled(Last.fm Radio)</visible>
+		  <textcolorNoFocus>ff808080</textcolorNoFocus>
+		<textcolor>eaeaea</textcolor>
+        </control>
+        <control Style="NoShadow">
+          <description>RSS Feeds</description>
+          <type>button</type>
+          <id>11</id>
+          <hyperlink>2700</hyperlink>
+          <label>RSS</label>
+          <onright>2</onright>
+          <onup>10</onup>
+          <ondown>12</ondown>
+          <visible>plugin.isenabled(RSS news)</visible>
+		  <textcolorNoFocus>ff808080</textcolorNoFocus>
+		<textcolor>eaeaea</textcolor>
+        </control>
+        <control Style="NoShadow">
+          <description>Wikipedia</description>
+          <type>button</type>
+          <id>12</id>
+          <hyperlink>4711</hyperlink>
+          <label>Wikipedia</label>
+          <onup>11</onup>
+		  <onright>2</onright>
+          <ondown>13</ondown>
+          <visible>plugin.isenabled(Wikipedia)</visible>
+		  <textcolorNoFocus>ff808080</textcolorNoFocus>
+		<textcolor>eaeaea</textcolor>
+        </control>
+        <control Style="NoShadow">
+          <description>Tetris</description>
+          <type>button</type>
+          <id>13</id>
+          <hyperlink>7776</hyperlink>
+          <label>19001</label>
+          <onup>12</onup>
+		  <onright>2</onright>
+          <ondown>14</ondown>
+          <visible>plugin.isenabled(Tetris)</visible>
+		  <textcolorNoFocus>ff808080</textcolorNoFocus>
+		<textcolor>eaeaea</textcolor>
+        </control>
+        <control Style="NoShadow">
+          <description>Sudoku</description>
+          <type>button</type>
+          <id>14</id>
+          <hyperlink>7777</hyperlink>
+          <label>19101</label>
+          <onup>13</onup>
+		  <onright>2</onright>
+          <ondown>15</ondown>
+          <visible>plugin.isenabled(Sudoku)</visible>
+		  <textcolorNoFocus>ff808080</textcolorNoFocus>
+		<textcolor>eaeaea</textcolor>
+        </control>
+        <control Style="NoShadow">
+          <description>Settings</description>
+          <type>button</type>
+          <id>15</id>
+          <hyperlink>4</hyperlink>
+          <label>5</label>
+          <onup>14</onup>
+		  <onright>2</onright>
+          <ondown>16</ondown>
+		  <textcolorNoFocus>ff808080</textcolorNoFocus>
+		<textcolor>eaeaea</textcolor>
+        </control>
+
+        <control Style="NoShadow">
+          <description>blank</description>
+          <type>image</type>
+          <id>0</id>
+          <width>390</width>
+          <height>45</height>
+          <texture></texture>
+          <colordiffuse>30ffffff</colordiffuse>
+        </control>
+       
+        <control Style="NoShadow">
+          <description>EXIT</description>
+          <type>button</type>
+          <id>16</id>
+          <action>99</action>
+          <label>EXIT</label>
+          <onup>15</onup>
+		  <onright>2</onright>
+          <ondown>8</ondown>
+          <!--<colordiffuse>red</colordiffuse>-->
+		  <textcolorNoFocus>ff808080</textcolorNoFocus>
+		<textcolor>eaeaea</textcolor>
+        </control>
+
+      </control>
+    </control>
+    <import>BasicHomeExtraInfos.xml</import>
+		
+	<!--     extra latest info import  -->
+	<import>BasicHomeLatestInfo.xml</import>
+	<import>plugin_tiles.xml</import>
+	
+	
+    <!--     *******************************************************************************************  -->
+    <!--     *************************    NOW PLAYING OVERLAYS          ********************************  -->
+    <!--     *******************************************************************************************  -->
+    <!-- ******************************************************************************************* -->
+    <!-- ************************* INFOS ON BASIC HOME (NOW PLAYING VIDEO) ********************* -->
+    <!-- ******************************************************************************************* -->
+    
+    <control>
+      <description>video preview window</description>
+      <type>videowindow</type>
+      <id>99</id>
+      <posX>0</posX>
+      <posY>1000</posY>
+      <width>135</width>
+      <height>80</height>
+      <visible>player.HasVideo + !control.hasfocus(91919991)+!control.hasfocus(91919994)</visible>
+      <action>18</action>
+      <textureFocus>tv_green_border.png</textureFocus>
+    </control>
+    <control>
+      <description>scrolling info label Video</description>
+      <type>fadelabel</type>
+      <id>0</id>
+      <posX>185</posX>
+      <posY>1030</posY>
+      <width>345</width>
+      <align>left</align>
+      <font>font9</font>
+      <textcolor>99ffffff</textcolor>
+      <label>#Play.Current.Title</label>
+      <visible>player.HasVideo + !control.hasfocus(91919991)+!control.hasfocus(91919994)</visible>
+    </control>
+    
+    <!--     *******************************************************************************************  -->
+    <!--     ******************   INFOS ON BASIC HOME (NOW PLAYING AUDIO) W FANART  ********************  -->
+    <!--     *******************************************************************************************  -->
+    
+    <control>
+      <description>music logo when no thumb</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>0</posX>
+      <posY>1000</posY>
+      <width>80</width>
+      <height>80</height>
+      <centered>no</centered>
+      <keepaspectratio>no</keepaspectratio>
+      <visible>Player.HasAudio+!Player.HasVideo+!control.hasthumb(12345)+!control.hasthumb(77)+!control.hasfocus(91919991)+!control.hasfocus(91919994)</visible>
+      <texture>defaultArtistBig.png</texture>
+    </control>
+	<control>
+      <id>1</id>
+      <type>image</type>
+      <posX>35</posX>
+      <posY>1000</posY>
+      <width>80</width>
+      <height>80</height>
+      <texture>cd-51_small.png</texture>
+      <visible>Player.HasAudio+!Player.HasVideo+!control.hasfocus(91919991)+!control.hasfocus(91919994)</visible>
+      <animation effect="fade" time="70" reversible="false">visible</animation>
+	  <animation effect="slide" start="-100,0" end="0,0" time="300">visible</animation>
+    </control>
+    <control>
+      <description>music logo</description>
+      <type>image</type>
+      <id>12345</id>
+      <posX>0</posX>
+      <posY>1000</posY>
+      <width>80</width>
+      <height>80</height>
+      <centered>no</centered>
+      <keepaspectratio>no</keepaspectratio>
+      <visible>Player.HasAudio+!Player.HasVideo+!control.hasfocus(91919991)+!control.hasfocus(91919994)</visible>
+      <texture overlay="cdshine.png">#Play.Current.Thumb</texture>
+    </control>
+    <control>
+      <description>music logo</description>
+      <type>image</type>
+      <id>77</id>
+      <posX>0</posX>
+      <posY>1000</posY>
+      <width>80</width>
+      <height>80</height>
+      <keepaspectratio>no</keepaspectratio>
+      <texture overlay="cdshine.png">#Play.Current.ArtistThumb</texture>
+      <visible>Player.HasAudio+!Player.HasVideo+!control.hasthumb(12345)+!control.hasfocus(91919991)+!control.hasfocus(91919994)</visible>
+    </control>
+    
+    <control>
+      <type>fadelabel</type>
+      <id>1</id>
+      <posX>135</posX>
+      <posY>1025</posY>
+      <width>1500</width>
+      <height>120</height>
+      <visible>Player.HasAudio+!Player.HasVideo+!control.hasfocus(91919991)+!control.hasfocus(91919994)</visible>
+      <label>#Play.Current.Artist | #Play.Current.Album | #Play.Current.Title</label>
+      <align>left</align>
+      <font>font10</font>
+      <textcolor>99ffffff</textcolor>
+    </control>
+    <control>
+      <type>fadelabel</type>
+      <id>1</id>
+      <posX>960</posX>
+      <posY>1020</posY>
+      <width>600</width>
+      <height>120</height>
+      <visible>Player.HasAudio+!Player.HasVideo+!control.hasfocus(91919991)+!control.hasfocus(91919994)</visible>
+      <label></label>
+      <align>left</align>
+      <font>font10</font>
+      <textcolor>99ffffff</textcolor>
+    </control>
+   
+  </controls>
+</window>
+
+

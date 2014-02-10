@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+  <controls>
+    <!--     *******************************************************************************************  -->
+    <!--     *************************   INFOS ON BASIC HOME (RECENTLY ADDED)   ************************  -->
+    <!--     *******************************************************************************************  -->
+    <control>
+      <description>group element</description>
+      <type>group</type>
+      <animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+      <visible>!skin.hassetting(#skin.no.latestmedia)</visible>
+      <!--     *******************************************************************************************  -->
+      <!--     *************************   RECENTLY ADDED - MUSIC   **************************************  -->
+      <!--     *******************************************************************************************  -->
+
+      <control Style="BasicHomeFade">
+        <description>Music Updates</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>185</posX>
+        <posY>145</posY>
+		<height>400</height>
+		<width>400</width>
+        <texture mask="musicthumbmask.png">#latestMediaHandler.music.latest1.thumb</texture>
+        <align>left</align>
+        <font>font10</font>
+        <visible>control.hasfocus(77769) | control.hasfocus(77768) | control.hasfocus(53) | control.hasfocus(91919997) | control.hasfocus(91919998) | control.hasfocus(5)+plugin.isenabled(Latest Media Handler)+string.equals(#latestMediaHandler.music.latest.enabled,true)</visible>
+        <textcolor>ffffffff</textcolor>
+      </control>
+	  
+	  
+	  <control Style="BasicHomeFade">
+        <description>art overlay</description>
+        <type>button</type>
+        <id>91919997</id>
+		<posX>242</posX>
+        <posY>220</posY>
+		<height>215</height>
+		<width>279</width>
+		<textureFocus>artoverlay.png</textureFocus>
+		<textureNoFocus>artoverlay.png</textureNoFocus>
+		<label></label>
+		<onup>5</onup>
+		<onleft>4</onleft>
+		<onright>53</onright>
+		<ondown>91919998</ondown>
+		<visible allowhiddenfocus="true">control.hasfocus(77769) | control.hasfocus(77768) | control.hasfocus(53) | control.hasfocus(91919997) | control.hasfocus(91919998) | control.hasfocus(5)+plugin.isenabled(Latest Media Handler)+string.equals(#latestMediaHandler.music.latest.enabled,true)</visible>
+        <animation effect="zoom" end="105,105" center="0,0" time="200">Focus</animation>
+		<animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
+        <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
+	    <animation effect="fade" delay="0" time="700">visible</animation>
+        <animation effect="fade" time="100" delay="0">hidden</animation>
+	  </control>
+	  
+	  <control Style="BasicHomeFade">
+        <description>Music Updates</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>185</posX>
+        <posY>567</posY>
+		<height>400</height>
+		<width>400</width>
+        <texture mask="musicthumbmask.png">#latestMediaHandler.music.latest2.thumb</texture>
+        <align>left</align>
+        <font>font10</font>
+        <visible>control.hasfocus(77769) | control.hasfocus(77768) | control.hasfocus(53) | control.hasfocus(91919997) | control.hasfocus(91919998) | control.hasfocus(5)+plugin.isenabled(Latest Media Handler)+string.equals(#latestMediaHandler.music.latest.enabled,true)</visible>
+        <textcolor>ffffffff</textcolor>
+      </control>
+	  
+	  
+	  <control Style="BasicHomeFade">
+        <description>art overlay</description>
+        <type>button</type>
+        <id>91919998</id>
+		<posX>242</posX>
+        <posY>660</posY>
+		<height>215</height>
+		<width>279</width>
+		<textureFocus>artoverlay.png</textureFocus>
+		<textureNoFocus>artoverlay.png</textureNoFocus>
+		<label></label>
+		<onup>91919997</onup>
+		<onleft>4</onleft>
+		<onright>77768</onright>
+		<ondown>91919998</ondown>
+		<visible allowhiddenfocus="true">control.hasfocus(77769) | control.hasfocus(77768) | control.hasfocus(53) | control.hasfocus(91919997) | control.hasfocus(91919998) | control.hasfocus(5)+plugin.isenabled(Latest Media Handler)+string.equals(#latestMediaHandler.music.latest.enabled,true)</visible>
+        <animation effect="zoom" end="105,105" center="0,0" time="200">Focus</animation>
+		<animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
+        <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
+	    <animation effect="fade" delay="0" time="700">visible</animation>
+        <animation effect="fade" time="100" delay="0">hidden</animation>
+	  </control>
+	  
+	  <control Style="BasicHomeFade">
+        <description>radio thumb tile</description>
+        <type>button</type>
+        <id>53</id>
+		<hyperlink>30</hyperlink>
+		<posX>605</posX>
+        <posY>145</posY>
+		<height>400</height>
+		<width>630</width>
+		<textureFocus mask="series_tile_mask.png">radio_focus.jpg</textureFocus>
+		<textureNoFocus mask="series_tile_mask.png">radio_nofocus.jpg</textureNoFocus>
+		<label></label>
+		<align>left</align>
+		<textYOff>240</textYOff>
+		<textcolorNoFocus>ffffffff</textcolorNoFocus>
+		<textcolor>ffffffff</textcolor>
+		<onup>5</onup>
+		<onleft>91919997</onleft>
+		<onright>77769</onright>
+		<ondown>77768</ondown>
+		<visible>control.hasfocus(77769) | control.hasfocus(77768) | control.hasfocus(53) | control.hasfocus(91919997) | control.hasfocus(91919998) | control.hasfocus(5)+plugin.isenabled(Latest Media Handler)+string.equals(#latestMediaHandler.music.latest.enabled,true)</visible>
+        <animation effect="zoom" end="102,102" center="0,0" time="200">Focus</animation>
+		<animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
+        <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
+	    <animation effect="fade" delay="0" time="700">visible</animation>
+        <animation effect="fade" time="100" delay="0">hidden</animation>
+	  </control>
+	  
+	  <control Style="BasicHomeFade">
+        <description>MyMusic thumb tile</description>
+        <type>button</type>
+        <id>77768</id>
+		<hyperlink>501</hyperlink>
+		<posX>605</posX>
+        <posY>567</posY>
+		<height>400</height>
+		<width>630</width>
+		<textureFocus mask="series_tile_mask.png">music_focus.jpg</textureFocus>
+		<textureNoFocus mask="series_tile_mask.png">music_nofocus.jpg</textureNoFocus>
+		<label></label>
+		<align>left</align>
+		<textYOff>240</textYOff>
+		<textcolorNoFocus>ffffffff</textcolorNoFocus>
+		<textcolor>ffffffff</textcolor>
+		<onup>53</onup>
+		<onleft>91919998</onleft>
+		<onright>77769</onright>
+		<ondown>77768</ondown>
+		<visible>control.hasfocus(77769) | control.hasfocus(77768) | control.hasfocus(53) | control.hasfocus(91919997) | control.hasfocus(91919998) | control.hasfocus(5)+plugin.isenabled(Latest Media Handler)+string.equals(#latestMediaHandler.music.latest.enabled,true)</visible>
+      <animation effect="zoom" end="102,102" center="0,0" time="200">Focus</animation>
+		<animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
+        <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
+	    <animation effect="fade" delay="0" time="700">visible</animation>
+        <animation effect="fade" time="100" delay="0">hidden</animation>
+	  </control>
+	  
+	  <control Style="BasicHomeFade">
+        <description>Settings thumb tile</description>
+        <type>button</type>
+        <id>77769</id>
+		<posX>1260</posX>
+        <posY>140</posY>
+		<hyperlink>14</hyperlink>
+		<height>825</height>
+		<width>450</width>
+		<align>left</align>
+		<textYOff>562</textYOff>
+		<textcolorNoFocus>ffffffff</textcolorNoFocus>
+		<textcolor>ffffffff</textcolor>
+		<textureFocus mask="musicmask.png">musicsettingsfocus.jpg</textureFocus>
+		<textureNoFocus mask="musicmask.png">musicsettings1.jpg</textureNoFocus>
+		<label></label>
+		<onup>5</onup>
+		<onleft>77768</onleft>
+		<onright>5005</onright>
+		<ondown>77769</ondown>
+		<visible>control.hasfocus(77769) | control.hasfocus(77768) | control.hasfocus(53) | control.hasfocus(91919997) | control.hasfocus(91919998) | control.hasfocus(5)+plugin.isenabled(Latest Media Handler)+string.equals(#latestMediaHandler.music.latest.enabled,true)</visible>
+      <animation effect="zoom" end="102,102" center="0,0" time="200">Focus</animation>
+		<animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
+        <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
+	    <animation effect="fade" delay="0" time="700">visible</animation>
+        <animation effect="fade" time="100" delay="0">hidden</animation>
+	  </control>
+      
+	  
+	  
+      <!--     *******************************************************************************************  -->
+      <!--     *************************   RECENTLY ADDED - PICTURES   ***********************************  -->
+      <!--     *******************************************************************************************  -->
+      
+	  
+	  <control Style="BasicHomeFade">
+        <description>pic1 thumb tile</description>
+        <type>image</type>
+        <id>0</id>
+		<posX>185</posX>
+        <posY>145</posY>
+		<height>400</height>
+		<width>630</width>
+		<texture mask="series_tile_mask.png">blanktile.png</texture>
+		<label>Latest Additions</label>
+		<visible>[control.hasfocus(77771) | control.hasfocus(77770) | control.hasfocus(2)]+!skin.hassetting(#skin.pics.enable)</visible>
+      </control>
+	  <control Style="BasicHomeFade">
+        <description>pic1 thumb tile</description>
+        <type>image</type>
+        <id>0</id>
+		<posX>185</posX>
+        <posY>145</posY>
+		<height>400</height>
+		<width>630</width>
+		<texture mask="series_tile_mask.png">#latestMediaHandler.picture.latest1.thumb</texture>
+		<keepaspectratio>yes</keepaspectratio>
+		<zoomfromtop>yes</zoomfromtop>
+		<label></label>
+		<visible>[[control.hasfocus(77771) | control.hasfocus(77770) | control.hasfocus(2)]+!skin.hassetting(#skin.pics.enable)]+!skin.hassetting(#skin.latest.pics)</visible>
+      </control>
+	  <control Style="BasicHomeFade">
+        <description>pic2 thumb tile</description>
+        <type>image</type>
+        <id>0</id>
+		<posX>830</posX>
+        <posY>145</posY>
+		<height>400</height>
+		<width>630</width>
+		<texture mask="series_tile_mask.png">blanktile.png</texture>
+		<label>Latest Additions</label>
+		<visible>[control.hasfocus(77771) | control.hasfocus(77770) | control.hasfocus(2)]+!skin.hassetting(#skin.pics.enable)</visible>
+      </control>
+	  <control Style="BasicHomeFade">
+        <description>pic2 thumb tile</description>
+        <type>image</type>
+        <id>0</id>
+		<posX>830</posX>
+        <posY>145</posY>
+		<height>400</height>
+		<width>630</width>
+		<texture mask="series_tile_mask.png">#latestMediaHandler.picture.latest2.thumb</texture>
+		<keepaspectratio>yes</keepaspectratio>
+		<zoomfromtop>yes</zoomfromtop>
+		<label></label>
+		<visible>[[control.hasfocus(77771) | control.hasfocus(77770) | control.hasfocus(2)]+!skin.hassetting(#skin.pics.enable)]+!skin.hassetting(#skin.latest.pics)</visible>
+      </control>
+	  <control Style="BasicHomeFade">
+        <description>pic3 thumb tile</description>
+        <type>image</type>
+        <id>0</id>
+		<posX>185</posX>
+        <posY>567</posY>
+		<height>400</height>
+		<width>630</width>
+		<texture mask="series_tile_mask.png">blanktile.png</texture>
+		<label>Latest Additions</label>
+		<visible>[control.hasfocus(77771) | control.hasfocus(77770) | control.hasfocus(2)]+!skin.hassetting(#skin.pics.enable)</visible>
+      </control>
+	  <control Style="BasicHomeFade">
+        <description>pic3 thumb tile</description>
+        <type>image</type>
+        <id>0</id>
+		<posX>185</posX>
+        <posY>567</posY>
+		<height>400</height>
+		<width>630</width>
+		<texture mask="series_tile_mask.png">#latestMediaHandler.picture.latest3.thumb</texture>
+		<keepaspectratio>yes</keepaspectratio>
+		<zoomfromtop>yes</zoomfromtop>
+		<label></label>
+		<visible>[[control.hasfocus(77771) | control.hasfocus(77770) | control.hasfocus(2)]+!skin.hassetting(#skin.pics.enable)]+!skin.hassetting(#skin.latest.pics)</visible>
+      </control>
+	  <control Style="BasicHomeFade">
+        <description>settings thumb tile</description>
+        <type>button</type>
+        <id>77771</id>
+		<posX>830</posX>
+        <posY>567</posY>
+		<height>400</height>
+		<width>630</width>
+		<align>left</align>
+		<hyperlink>12</hyperlink>
+		<textYOff>240</textYOff>
+		<textcolorNoFocus>ffffffff</textcolorNoFocus>
+		<textcolor>ffffffff</textcolor>
+		<textureFocus mask="series_tile_mask.png">picset_focus.jpg</textureFocus>
+		<textureNoFocus mask="series_tile_mask.png">picset.jpg</textureNoFocus>
+		<label></label>
+		<onup>2</onup>
+		<onleft>5</onleft>
+		<onright>77770</onright>
+		<visible>[control.hasfocus(77771) | control.hasfocus(77770) | control.hasfocus(2)]+!skin.hassetting(#skin.pics.enable)</visible>
+        <animation effect="zoom" end="102,102" center="0,0" time="200">Focus</animation>
+		<animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
+        <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
+	    <animation effect="fade" delay="0" time="700">visible</animation>
+        <animation effect="fade" time="100" delay="0">hidden</animation>
+	  </control>
+      <control Style="BasicHomeFade">
+        <description>mypics tile</description>
+        <type>button</type>
+        <id>77770</id>
+		<posX>1480</posX>
+        <posY>145</posY>
+		<hyperlink>2</hyperlink>
+		<height>822</height>
+		<width>230</width>
+		<align>left</align>
+		<textYOff>562</textYOff>
+		<textcolorNoFocus>ffffffff</textcolorNoFocus>
+		<textcolor>ffffffff</textcolor>
+		<textureFocus mask="weathertile_mask.png">mypic_focus.png</textureFocus>
+		<textureNoFocus mask="weathertile_mask.png">mypic.jpg</textureNoFocus>
+		<label></label>
+		<onup>2</onup>
+		<ondown>77769</ondown>
+		<onleft>77771</onleft>
+		<onright>6</onright>
+		<visible>[control.hasfocus(77771) | control.hasfocus(77770) | control.hasfocus(2)]+!skin.hassetting(#skin.pics.enable)</visible>
+      <animation effect="zoom" end="102,102" center="0,0" time="200">Focus</animation>
+		<animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
+        <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
+	    <animation effect="fade" delay="0" time="700">visible</animation>
+        <animation effect="fade" time="100" delay="0">hidden</animation>
+	  </control>
+      
+      <!--     *******************************************************************************************  -->
+      <!--     *************************   WEATHER INFO ON BASIC HOME   **********************************  -->
+      <!--     *******************************************************************************************  -->
+      
+	  
+	  <control Style="BasicHomeFade">
+        <description>thumb tile 1</description>
+        <type>image</type>
+        <id>0</id>
+		<posX>185</posX>
+        <posY>145</posY>
+		<height>400</height>
+		<width>630</width>
+		<texture mask="series_tile_mask.png">weathertile1.jpg</texture>
+		<label>Latest Additions</label>
+		<visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
+      </control>
+	  
+      <control Style="BasicHomeFade">
+        <description>Weather image</description>
+        <type>image</type>
+        <id>1</id>
+        <posX>210</posX>
+        <posY>400</posY>
+        <width>96</width>
+        <height>96</height>
+        <texture>#WorldWeather.ForecastDay1IconImage</texture>
+        <visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
+      </control>
+      <control Style="BasicHomeFade">
+        <description>Location</description>
+        <type>fadelabel</type>
+        <id>1</id>
+        <posX>320</posX>
+        <posY>430</posY>
+        <width>480</width>
+        <font>font11</font>
+		<align>left</align>
+        <textcolor>ffffffff</textcolor>
+        <label>#WorldWeather.ForecastDay1Day  #WorldWeather.ForecastDay1Low | #WorldWeather.ForecastDay1High  #WorldWeather.ForecastDay1Condition</label>
+        <visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
+      </control>
+
+	  <control Style="BasicHomeFade">
+        <description>thumb tile 2</description>
+        <type>image</type>
+        <id>0</id>
+		<posX>185</posX>
+        <posY>567</posY>
+		<height>400</height>
+		<width>630</width>
+		<texture mask="series_tile_mask.png">weathertile1.jpg</texture>
+		<label>Latest Additions</label>
+		<visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
+      </control>
+	  
+      <control Style="BasicHomeFade">
+        <description>Weather image</description>
+        <type>image</type>
+        <id>1</id>
+        <posX>210</posX>
+        <posY>825</posY>
+        <width>96</width>
+        <height>96</height>
+        <texture>#WorldWeather.ForecastDay2IconImage</texture>
+        <visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
+      </control>
+      <control Style="BasicHomeFade">
+        <description>Location</description>
+        <type>fadelabel</type>
+        <id>1</id>
+        <posX>320</posX>
+        <posY>855</posY>
+        <width>480</width>
+        <font>font11</font>
+		<align>left</align>
+        <textcolor>ffffffff</textcolor>
+        <label>#WorldWeather.ForecastDay2Day  #WorldWeather.ForecastDay2Low | #WorldWeather.ForecastDay2High  #WorldWeather.ForecastDay2Condition</label>
+        <visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
+      </control>
+
+	  
+	  <control Style="BasicHomeFade">
+        <description>thumb tile 3</description>
+        <type>image</type>
+        <id>0</id>
+		<posX>1090</posX>
+        <posY>145</posY>
+		<height>400</height>
+		<width>630</width>
+		<texture mask="series_tile_mask.png">weathertile1.jpg</texture>
+		<label>Latest Additions</label>
+		<visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
+      </control>
+	  
+      <control Style="BasicHomeFade">
+        <description>Weather image</description>
+        <type>image</type>
+        <id>1</id>
+        <posX>1120</posX>
+        <posY>400</posY>
+        <width>96</width>
+        <height>96</height>
+        <texture>#WorldWeather.ForecastDay3IconImage</texture>
+        <visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
+      </control>
+      <control Style="BasicHomeFade">
+        <description>Location</description>
+        <type>fadelabel</type>
+        <id>1</id>
+        <posX>1230</posX>
+        <posY>430</posY>
+        <width>480</width>
+        <font>font11</font>
+		<align>left</align>
+        <textcolor>ffffffff</textcolor>
+        <label>#WorldWeather.ForecastDay3Day  #WorldWeather.ForecastDay3Low | #WorldWeather.ForecastDay3High  #WorldWeather.ForecastDay3Condition</label>
+        <visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
+      </control>
+
+	  
+	  <control Style="BasicHomeFade">
+        <description>thumb tile 4</description>
+        <type>image</type>
+        <id>0</id>
+		<posX>1090</posX>
+        <posY>567</posY>
+		<height>400</height>
+		<width>630</width>
+		<texture mask="series_tile_mask.png">weathertile1.jpg</texture>
+		<label>Latest Additions</label>
+		<visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
+      </control>
+	  
+      <control Style="BasicHomeFade">
+        <description>Weather image</description>
+        <type>image</type>
+        <id>1</id>
+        <posX>1120</posX>
+        <posY>825</posY>
+        <width>96</width>
+        <height>96</height>
+        <texture>#WorldWeather.ForecastDay4IconImage</texture>
+        <visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
+      </control>
+      <control Style="BasicHomeFade">
+        <description>Location</description>
+        <type>fadelabel</type>
+        <id>1</id>
+        <posX>1230</posX>
+        <posY>855</posY>
+        <width>480</width>
+        <font>font11</font>
+		<align>left</align>
+        <textcolor>ffffffff</textcolor>
+        <label>#WorldWeather.ForecastDay4Day  #WorldWeather.ForecastDay4Low | #WorldWeather.ForecastDay4High  #WorldWeather.ForecastDay4Condition</label>
+        <visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
+      </control>
+
+	  <!--Weather button-->
+	  <control Style="BasicHomeFade">
+        <description>weather tile</description>
+        <type>button</type>
+        <id>77772</id>
+		<posX>835</posX>
+        <posY>145</posY>
+		<height>820</height>
+		<width>230</width>
+		<hyperlink>#skin.weather.nav</hyperlink>
+		<align>left</align>
+		<textYOff>562</textYOff>
+		<textcolorNoFocus>ffffffff</textcolorNoFocus>
+		<textcolor>ffffffff</textcolor>
+		<textureFocus mask="weathertile_mask.png">weathertilefocus.jpg</textureFocus>
+		<textureNoFocus mask="weathertile_mask.png">weatherbtn.jpg</textureNoFocus>
+		<label></label>
+		<onright>30</onright>
+		<onleft>2</onleft>
+		<onup>6</onup>
+		<visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
+		<animation effect="zoom" end="102,102" center="0,0" time="200">Focus</animation>
+		<animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
+        <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
+	    <animation effect="fade" delay="0" time="700">visible</animation>
+        <animation effect="fade" time="100" delay="0">hidden</animation>
+      </control>
+	  
+    </control>
+
+	
+    <!--     *******************************************************************************************  -->
+    <!--     *************************   RSS-FEED ON BASIC HOME   **************************************  -->
+    <!--     *******************************************************************************************  -->
+    <control Style="BasicHomeFade">
+      <description>RSS Feed Background</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>120</posX>
+      <posY>1005</posY>
+      <width>1650</width>
+      <height>45</height>
+      <texture>-</texture>
+      <colordiffuse>ffffffff</colordiffuse>
+      <visible>plugin.isenabled(InfoService)+string.equals(#infoservice.feed.enabled, true)</visible>
+    </control>
+    <control Style="BasicHomeFade">
+      <description>Feed items</description>
+      <type>fadelabel</type>
+      <id>1</id>
+      <posX>160</posX>
+      <posY>1026</posY>
+      <width>1610</width>
+      <align>left</align>
+      <font>font10</font>
+      <textcolor>ff666666</textcolor>
+      <label>#infoservice.feed.titles</label>
+      <wrapString> :-: </wrapString>
+      <shadowAngle>0</shadowAngle>
+      <shadowDistance>1</shadowDistance>
+      <shadowColor></shadowColor>
+      <visible>[!control.hasfocus(91919985)+!control.hasfocus(91919984)+!control.hasfocus(91919994) + !control.hasfocus(91919991) + !player.hasmedia]+string.equals(#infoservice.feed.enabled, true)</visible>
+    </control>
+  </controls>
+</window>
+
+
+

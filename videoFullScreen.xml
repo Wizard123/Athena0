@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+  <id>2005</id>
+  <defaultcontrol>13</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+  <disabletopbar>false</disabletopbar>
+  <controls>
+    <control>
+      <description>background image (not used!)</description>
+      <type>image</type>
+      <id>105</id>
+      <posX>3270</posX>
+      <posY>942</posY>
+      <width>1500</width>
+      <height>133</height>
+      <texture mask="osd_mask.png">black.png</texture>
+      <colordiffuse>dd1a2e55</colordiffuse>
+      <visible>window.ispauseosdvisible|player.rewinding|player.forwarding</visible>
+    </control>
+	
+	<control>
+      <description>TVSeries ClearArt</description>
+      <type>image</type>
+      <id>0</id>
+      <posX>1376</posX>
+      <posY>677</posY>
+      <width>349</width>
+      <height>175</height>
+      <texture>#TVSeries.Play.ClearArt</texture>
+      <visible>control.isVisible(111)</visible>
+    </control>
+	
+    <control>
+      <description>bar image</description>
+      <type>image</type>
+      <id>111</id>
+      <posX>101</posX>
+      <posY>849</posY>
+      <height>199</height>
+      <width>1734</width>
+      <texture>tvosd_back1.png</texture>
+      <colordiffuse>ffffffff</colordiffuse>
+      <visible>!window.isosdvisible+[window.ispauseosdvisible+player.paused|player.rewinding|player.forwarding|control.isVisible(10)|control.isVisible(11)|control.isVisible(12)]</visible>
+    </control>
+	
+	
+    <control>
+      <description>divider</description>
+      <type>image</type>
+      <id>130</id>
+      <posX>1530</posX>
+      <posY>875</posY>
+      <height>135</height>
+      <texture>slider_vertical.png</texture>
+      <visible>control.isVisible(111)</visible>
+      <colordiffuse>60ffffff</colordiffuse>
+    </control>
+	
+	<control>
+      <description>Time BG</description>
+      <type>image</type>
+      <id>0</id>
+      <posX>1560</posX>
+      <posY>875</posY>
+      <width>216</width>
+      <height>52</height>
+      <texture>-</texture>
+      <colordiffuse>90ffffff</colordiffuse>
+      <visible>control.isVisible(111)</visible>
+    </control>
+    <control>
+      <description>Time Info</description>
+      <type>label</type>
+      <id>0</id>
+      <posX>1745</posX>
+      <posY>877</posY>
+      <label>#time</label>
+      <align>right</align>
+      <font>font12</font>
+      <textcolor>ff666666</textcolor>
+      <visible>control.isVisible(111)</visible>
+    </control>
+	
+    <control>
+      <description>movie title</description>
+      <type>label</type>
+      <id>120</id>
+      <posX>322</posX>
+      <posY>871</posY>
+      <width>1000</width>
+      <label>#Play.Current.Title</label>
+      <align>left</align>
+      <font>font12</font>
+      <textcolor>ff666666</textcolor>
+      <visible>control.isVisible(111)</visible>
+    </control>
+	
+	<control>
+      <description>movie title</description>
+      <type>label</type>
+      <id>0</id>
+      <posX>322</posX>
+      <posY>911</posY>
+      <width>1000</width>
+      <label>#Play.Current.VideoResolution | #Play.Current.AudioChannels | #Play.Current.Genre</label>
+      <align>left</align>
+      <font>font12</font>
+      <textcolor>ff666666</textcolor>
+      <visible>control.isVisible(111)</visible>
+    </control>
+	
+    <control>
+      <description>progress bar background</description>
+      <type>image</type>
+      <id>102</id>
+      <posX>322</posX>
+      <posY>987</posY>
+      <width>1111</width>
+      <height>31</height>
+      <texture>tvosd_pg.png</texture>
+      <visible>control.isVisible(111)</visible>
+    </control>
+	    <control>
+      <description>Start Time Info</description>
+      <type>label</type>
+      <id>101</id>
+      <posX>322</posX>
+      <posY>950</posY>
+      <label>#currentplaytime</label>
+      <align>left</align>
+      <font>font12</font>
+      <textcolor>ff666666</textcolor>
+      <visible>control.isVisible(111)</visible>
+    </control>
+    <control>
+      <description>Remaining time</description>
+      <type>label</type>
+      <id>102</id>
+      <posX>1332</posX>
+      <posY>950</posY>
+      <label>#currentremaining</label>
+      <align>left</align>
+      <font>font12</font>
+      <textcolor>ff666666</textcolor>
+      <visible>control.isVisible(111)</visible>
+    </control>
+  
+	<control>
+      <description>playing thumb</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>175</posX>
+      <posY>853</posY>
+      <width>130</width>
+      <height>191</height>
+      <texture>#Play.Current.Thumb</texture>
+	  <keepaspectratio>no</keepaspectratio>
+      <visible>control.isVisible(111)</visible>
+    </control>
+	<control>
+      <description>Progress Bar</description>
+      <type>progress</type>
+      <id>1</id>
+      <posX>328</posX>
+      <posY>994</posY>
+      <width>1101</width>
+      <offset>0</offset>
+      <height>17</height>
+      <innerheight>17</innerheight>
+      <lefttexture>osd_progress_left.png</lefttexture>
+      <midtexture>osd_progress_mid.png</midtexture>
+      <righttexture><!--osd_progress_right.png--></righttexture>
+      <label>#percentage</label>
+      <visible>control.isVisible(111)</visible>
+    </control>
+	<import>common.play.xml</import>
+    <control>
+      <description>Progress Bar</description>
+      <type>tvprogress</type>
+      <id>1</id>
+      <posX>328</posX>
+      <posY>994</posY>
+      <width>1101</width>
+      <height>17</height>
+      <toptexture>osd_progress_indicator.png</toptexture>
+      <TextureOffsetY>23</TextureOffsetY>
+      <lefttexture>osd_progress_left.png</lefttexture>
+      <fillbgxoff>-3</fillbgxoff>
+      <fillbgyoff>0</fillbgyoff>
+      <filltexture1>osd_progress_mid.png</filltexture1>
+      <filltexture2>osd_progress_mid.png</filltexture2>
+      <filltexture3>osd_progress_mid_orange.png</filltexture3>
+      <markertexture>osd_progress_mid_orange.png</markertexture>
+      <fillheight>17</fillheight>
+      <label>#percentage</label>
+      <labelmarkerstarts>#jumppoints</labelmarkerstarts>
+      <labelmarkerends>#chapters</labelmarkerends>
+      <visible>control.isVisible(111)</visible>
+    </control>
+
+  </controls>
+</window>

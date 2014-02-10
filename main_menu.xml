@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+  <controls>
+    <!--     *******************************************************************************************  -->
+    <!--     *************************     Horizontal Menu      ****************************************  -->
+    <!--     *******************************************************************************************  -->
+
+	
+    <control>
+      <description>group element</description>
+      <type>group</type>
+      <animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+      <layout>StackLayout(5, Horizontal, true)</layout>
+	  <posX>300</posX>
+      <posY>38</posY>
+	  <height>20</height>
+	  <align>center</align>
+	  <control>
+            <id>201</id>
+            <description>Time</description>
+            <type>label</type>
+            <posX>250</posX>
+            <posY>37</posY>
+			<height>45</height>
+		<width>130</width>
+            <font>fontL2</font>
+            <textcolor>ffffffff</textcolor>
+            <textalign>left</textalign>
+            <label>#time</label>
+            <shadowDistance>0</shadowDistance>
+        </control>
+      <control Style="BasicHomeButton">
+        <description>BasicHome Pictures</description>
+        <type>button</type>
+		<posX>315</posX>
+        <posY>120</posY>
+		<height>45</height>
+		<width>200</width>
+        <id>2</id>
+        <label>1</label>
+		<textcolorNoFocus>ff666666</textcolorNoFocus>
+		<textcolor>ffffffff</textcolor>
+		<textureFocus>-</textureFocus>
+		<textureNoFocus></textureNoFocus>
+		<textalign>left</textalign>
+		<font>fontL2</font>
+        <onup>22</onup>
+        <onleft>8</onleft>
+        <ondown>77770</ondown>
+		<visible>!skin.hassetting(#skin.pics.enable)</visible>
+		<!--<animation effect="zoom" end="120,120" time="200">Focus</animation>
+		<animation effect="rotate" end="10" time="200">Focus</animation>
+		-->
+      </control>
+	  <control Style="BasicHomeButton">
+        <description>BasicHomeWeather</description>
+        <type>button</type>
+        <id>6</id>
+		<posX>570</posX>
+        <posY>120</posY>
+		<height>45</height>
+		<width>200</width>
+        <label>8</label>
+		<textcolorNoFocus>ff666666</textcolorNoFocus>
+		<textcolor>ffffffff</textcolor>
+		<textureFocus>-</textureFocus>
+		<textureNoFocus>-</textureNoFocus>
+		<textalign>left</textalign>
+		<font>fontL2</font>
+        <onleft>2</onleft>
+        <onright>30</onright>
+        <onup>22</onup>
+        <ondown>77772</ondown>
+        <visible>plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)</visible>
+		<!--<animation effect="zoom" end="120,120" time="200">Focus</animation>
+		<animation effect="rotate" end="10" time="200">Focus</animation>
+		-->
+      </control>
+      <control Style="BasicHomeButton">
+        <description>BasicHome Radio</description>
+        <type>button</type>
+        <id>7</id>
+		<posX>570</posX>
+        <posY>120</posY>
+		<height>45</height>
+		<width>180</width>
+        <label>665</label>
+		<textcolorNoFocus>ff666666</textcolorNoFocus>
+		<textcolor>ffffffff</textcolor>
+		<textureFocus>-</textureFocus>
+		<textureNoFocus>-</textureNoFocus>
+		<textalign>left</textalign>
+		<font>fontL2</font>
+        <onleft>2</onleft>
+        <onright>30</onright>
+        <onup>22</onup>
+        <ondown>4</ondown>
+        <visible>!plugin.isenabled(World Weather)+!plugin.isenabled(World Weather Lite)</visible>
+		<!--<animation effect="zoom" end="120,120" time="200">Focus</animation>
+		<animation effect="rotate" end="10" time="200">Focus</animation>
+		-->
+      </control>
+	  <control Style="BasicHomeButton">
+        <description>BasicHome MediaHub</description>
+        <type>button</type>
+        <id>30</id>
+		<posX>870</posX>
+        <posY>120</posY>
+		<height>45</height>
+		<width>210</width>
+        <label>MediaHub</label>
+		<textcolorNoFocus>ff666666</textcolorNoFocus>
+		<textcolor>ffffffff</textcolor>
+		<textureFocus>-</textureFocus>
+		<textureNoFocus>-</textureNoFocus>
+		<textalign>left</textalign>
+		<font>fontL2</font>
+        <onright>4</onright>
+        <onup>22</onup>
+        <ondown>77767</ondown>
+		<!--<animation effect="zoom" end="120,120" time="200">Focus</animation>
+		<animation effect="rotate" end="10" time="200">Focus</animation>
+		-->
+      </control>
+	  <control Style="BasicHomeButton">
+        <description>BasicHome TV</description>
+        <type>button</type>
+        <id>4</id>
+		<posX>1125</posX>
+        <posY>120</posY>
+		<height>45</height>
+		<width>120</width>
+        <label>605</label>
+		<textcolorNoFocus>ff666666</textcolorNoFocus>
+		<textcolor>ffffffff</textcolor>
+		<textureFocus>-</textureFocus>
+		<textureNoFocus>-</textureNoFocus>
+		<textalign>left</textalign>
+		<font>fontL2</font>
+        <onleft>30</onleft>
+        <onright>5</onright>
+        <onup>22</onup>
+        <ondown>42</ondown>
+		<visible>!skin.hassetting(#skin.tv.enable)</visible>
+      </control>
+	  
+      <control Style="BasicHomeButton">
+        <description>BasicHome Music</description>
+        <type>button</type>
+        <id>5</id>
+		<posX>1350</posX>
+        <posY>120</posY>
+		<height>20</height>
+		<width>180</width>
+        <label>2</label>
+		<textcolorNoFocus>ff666666</textcolorNoFocus>
+		<textcolor>ffffffff</textcolor>
+		<textureFocus>-</textureFocus>
+		<textureNoFocus>-</textureNoFocus>
+		<textalign>left</textalign>
+		<font>fontL2</font>
+        <onleft>4</onleft>
+        <onup>22</onup>
+        <ondown>53</ondown>
+		<onright>5005</onright>
+		<!--<animation effect="zoom" end="120,120" time="200">Focus</animation>
+		<animation effect="rotate" end="10" time="200">Focus</animation>
+		-->
+      </control>
+	  
+	  <control Style="BasicHomeButton">
+        <description>BasicHome plugins</description>
+        <type>button</type>
+        <id>5005</id>
+		<posX>1350</posX>
+        <posY>120</posY>
+		<hyperlink>34</hyperlink>
+		<height>45</height>
+		<width>180</width>
+        <label>Plugins</label>
+		<textcolorNoFocus>ff666666</textcolorNoFocus>
+		<textcolor>ffffffff</textcolor>
+		<textureFocus>-</textureFocus>
+		<textureNoFocus>-</textureNoFocus>
+		<textalign>left</textalign>
+		<font>fontL2</font>
+        <onleft>5</onleft>
+        <onup>22</onup>
+		<ondown>77785</ondown>
+		<onright>0011223</onright>
+		<!--<animation effect="zoom" end="120,120" time="200">Focus</animation>
+		<animation effect="rotate" end="10" time="200">Focus</animation>
+		-->
+      </control>
+	  
+	  <control Style="BasicHomeButton">
+        <description>BasicHome settings</description>
+        <type>button</type>
+        <id>0011223</id>
+		<posX>1680</posX>
+        <posY>42</posY>
+		<hyperlink>34</hyperlink>
+		<height>45</height>
+		<width>45</width>
+        <label></label>
+		<textcolorNoFocus>ff666666</textcolorNoFocus>
+		<textcolor>ffffffff</textcolor>
+		<textureFocus>setting_icon_small.png</textureFocus>
+		<textureNoFocus>setting_icon_small.png</textureNoFocus>
+		<align>center</align>
+		<font>fontL2</font>
+        <onleft>5005</onleft>
+        <onup>0011223</onup>
+		<ondown>0011224</ondown>
+		<onright>2</onright>
+		<animation effect="rotate" delay="0" end="-360" centre="475,258" time="20000" loop="true" condition="control.hasFocus(0011223)">Conditional</animation>
+      </control>
+	  
+    </control>
+	  
+  </controls>
+</window>

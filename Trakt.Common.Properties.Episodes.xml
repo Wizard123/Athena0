@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+  <controls>
+
+    <control>
+      <description>Episode image</description>
+      <type>image</type>
+      <id>0</id>
+      <posX>185</posX>
+      <posY>690</posY>
+      <width>450</width>
+      <height>255</height>
+      <keepaspectratio>yes</keepaspectratio>
+      <zoom>yes</zoom>
+      <texture>#selectedthumb</texture>
+      <visible>facadeview.list</visible>
+    </control>
+    <control>
+      <description>Rating txt</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>1093</posX>
+      <posY>230</posY>
+      <label>#Trakt.Translation.Rating.Label</label>
+      <font>fontL2</font>
+      <align>left</align>
+      <textcolor>EAEAEA</textcolor>
+      <visible>facadeview.list+!string.equals(#Trakt.Episode.Ratings.Votes,)</visible>
+    </control>
+    <control>
+      <description>Rating Icon</description>
+      <type>image</type>
+      <id>1</id>
+      <width>34</width>
+      <height>30</height>
+      <posX>1093</posX>
+      <posY>280</posY>
+      <texture>#Trakt.Episode.Ratings.Icon.png</texture>
+      <visible>facadeview.list+!string.equals(#Trakt.Episode.Ratings.Votes,)</visible>
+    </control>
+    <control>
+      <description>Rating value</description>
+      <type>fadelabel</type>
+      <id>1</id>
+      <posX>1149</posX>
+      <posY>275</posY>
+      <width>399</width>
+      <label>#Trakt.Episode.Ratings.Percentage% (#Trakt.Episode.Ratings.Votes #Trakt.Translation.Votes.Label)</label>
+      <font>font11</font>
+      <textcolor>EAEAEA</textcolor>
+      <visible>facadeview.list+!string.equals(#Trakt.Episode.Ratings.Votes,)</visible>
+    </control>
+    <control>
+      <description>Genre txt</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>1093</posX>
+      <posY>320</posY>
+      <label>#Trakt.Translation.Genre.Label</label>
+      <font>fontL2</font>
+      <align>left</align>
+      <textcolor>EAEAEA</textcolor>
+      <visible>facadeview.list+!string.equals(#Trakt.Show.Genres,)</visible>
+    </control>
+    <control>
+      <description>Genre value</description>
+      <type>fadelabel</type>
+      <id>1</id>
+      <posX>1093</posX>
+      <posY>370</posY>
+      <label>#Trakt.Show.Genres</label>
+      <font>font11</font>
+      <width>420</width>
+      <textcolor>EAEAEA</textcolor>
+      <visible>facadeview.list+!string.equals(#Trakt.Show.Genres,)</visible>
+    </control>
+    <control>
+      <description>Series Airs txt</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>1093</posX>
+      <posY>412</posY>
+      <label>#Trakt.Translation.AirTime.Label</label>
+      <font>fontL2</font>
+      <align>left</align>
+      <textcolor>EAEAEA</textcolor>
+      <visible>facadeview.list+!string.equals(#Trakt.Show.AirDay,)</visible>
+    </control>
+    <control>
+      <description>Series Airs</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>1093</posX>
+      <posY>451</posY>
+      <width>420</width>
+      <label>#Trakt.Show.AirDay #Trakt.Show.AirTime</label>
+      <font>font11</font>
+      <textcolor>EAEAEA</textcolor>
+      <visible>facadeview.list+!string.equals(#Trakt.Show.AirDay,)+string.equals(#Trakt.Episode.FirstAiredLocalizedDayOfWeek,)</visible>
+    </control>
+		<control>
+      <description>Series Airs</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>1093</posX>
+      <posY>456</posY>
+      <width>420</width>
+      <label>#Trakt.Episode.FirstAiredLocalizedDayOfWeek #Trakt.Show.AirTimeLocalized</label>
+      <font>font11</font>
+      <textcolor>EAEAEA</textcolor>
+      <visible>facadeview.list+!string.equals(#Trakt.Episode.FirstAiredLocalizedDayOfWeek,)</visible>
+    </control>
+    <control>
+      <description>Series Network txt</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>1093</posX>
+      <posY>498</posY>
+      <label>#Trakt.Translation.Network.Label</label>
+      <font>fontL2</font>
+      <align>left</align>
+      <textcolor>EAEAEA</textcolor>
+      <visible>facadeview.list+!string.equals(#Trakt.Show.Network,)</visible>
+    </control>
+    <control>
+      <description>Series Network</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>1093</posX>
+      <posY>540</posY>
+      <width>420</width>
+      <label>#Trakt.Show.Network #Trakt.Show.Country</label>
+      <font>font11</font>
+      <textcolor>EAEAEA</textcolor>
+      <visible>facadeview.list+!string.equals(#Trakt.Show.Network,)</visible>
+    </control>
+    <control>
+      <description>Series Runtime txt</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>1093</posX>
+      <posY>580</posY>
+      <label>#Trakt.Translation.Runtime.Label</label>
+      <font>fontL2</font>
+      <align>left</align>
+      <textcolor>EAEAEA</textcolor>
+      <visible>facadeview.list+!string.equals(#Trakt.Show.Runtime,)</visible>
+    </control>
+    <control>
+      <description>Series Runtime</description>
+      <type>fadelabel</type>
+      <id>1</id>
+      <posX>1093</posX>
+      <posY>620</posY>
+      <width>420</width>
+      <label>#Trakt.Show.Runtime mins</label>
+      <font>font12</font>
+      <align>left</align>
+      <textcolor>ivory</textcolor>
+      <visible>facadeview.list+!string.equals(#Trakt.Show.Runtime,)</visible>
+    </control>
+    
+    <control Style="NoShadow">
+      <description>Plot value</description>
+      <type>textboxscrollup</type>
+      <id>1</id>
+      <posX>1093</posX>
+      <posY>680</posY>
+      <width>680</width>
+      <height>270</height>
+      <label>#Trakt.Episode.Overview</label>
+      <font>font11</font>
+      <textcolor>EAEAEA</textcolor>
+      <visible>facadeview.list</visible>
+    </control>
+    
+    <control>
+      <description>Certification Logo</description>
+      <type>image</type>
+      <id>0</id>
+      <posX>1650</posX>
+      <posY>230</posY>
+      <width>127</width>
+      <height>48</height>
+      <texture>Logos\#Trakt.Show.Certification.png</texture>
+      <keepaspectratio>no</keepaspectratio>
+      <visible>facadeview.list</visible>
+    </control>
+  </controls>
+</window>

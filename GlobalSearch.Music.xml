@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+  <id>30885</id>
+  <defaultcontrol>2</defaultcontrol>
+  <allowoverlay>yes</allowoverlay>
+  <define>#usePlayFanart:Yes</define>
+  <define>#useSelectedFanart:Yes</define>
+  <controls>
+    <control>
+      <description>BG</description>
+      <type>image</type>
+      <id>1</id>
+      <texture>background_02.jpg</texture>
+      <width>1920</width>
+      <height>1080</height>
+    </control>
+	<!--
+	<import>common.music.fanart.xml</import>
+	-->
+	<control>
+      <description>Backdrop Overlay - thumbs View</description>
+      <type>image</type>
+      <id>0</id>
+      <posX>40</posX>
+      <posY>135</posY>
+      <width>1832</width>
+      <height>943</height>
+      <texture>0011.png</texture>
+    </control>	
+	
+    <control>
+      <description>Current window</description>
+      <type>label</type>
+      <id>0</id>
+      <posX>1810</posX>
+      <posY>33</posY>
+      <align>right</align>
+      <width>1800</width>
+      <font>fontL</font>		  
+      <label>#(iif(and(neq(L(102012), #currentmodule), neq(L(102002), #currentmodule), neq(L(100100), #currentmodule), neq(L(102015), #currentmodule)), #currentmodule, ' '))</label>
+      <textcolor>eaeaea</textcolor>		  
+      <animation effect="fade" time="250">WindowOpen</animation>
+      <animation effect="fade" time="250">WindowClose</animation>
+    </control>
+		
+    <control>
+      <description>Date / Time</description>
+      <type>label</type>
+      <id>0</id>
+      <posX>1810</posX>
+      <posY>113</posY>
+      <label>#time #date #itemcount Files</label>
+      <align>right</align>
+      <font>fontL2</font>
+      <textcolor>eaeaea</textcolor>
+      <animation effect="fade" time="250">WindowOpen</animation>
+      <animation effect="fade" time="250">WindowClose</animation>
+    </control>
+
+    <control>
+      <type>group</type>
+      <description>group element</description>
+      <posX>160</posX>
+      <posY>270</posY>
+      <width>450</width>
+      <height>568</height>
+      <layout>StackLayout</layout>
+      <control>
+        <type>button</type>
+        <description>Search Phrase Button</description>
+        <id>2</id>
+        <onup>17</onup>
+        <width>450</width>
+        <label>#GlobalSearch.Translation.SearchPhrase.Label</label>
+        <onleft>2</onleft>
+        <onright>50</onright>
+      </control>
+      <control>
+        <type>button</type>
+        <description>Search History</description>
+        <id>7</id>
+        <width>450</width>
+        <label>#GlobalSearch.Translation.SearchHistory.Label</label>
+        <onleft>7</onleft>
+        <onright>50</onright>
+      </control>
+      <control>
+        <type>button</type>
+        <description>Search Fields</description>
+        <id>6</id>
+        <width>450</width>
+        <label>#GlobalSearch.Translation.SearchFields.Label</label>
+        <onleft>6</onleft>
+        <onright>50</onright>
+      </control>
+      <control>
+        <type>button</type>
+        <description>Search Type</description>
+        <id>10</id>
+        <width>450</width>
+        <label>#GlobalSearch.Translation.SearchType.Label</label>
+        <onleft>10</onleft>
+        <onright>50</onright>
+      </control>
+      <control>
+        <type>checkbutton</type>
+        <description>Case Sensitivity</description>
+        <id>3</id>
+        <width>450</width>
+        <label>#GlobalSearch.Translation.CaseSensitive.Label</label>
+        <onleft>3</onleft>
+        <onright>50</onright>
+        <ondown>99</ondown>
+      </control>
+      <control>
+        <type>button</type>
+        <description>JumpTo Now Playing</description>
+        <id>99</id>
+        <width>450</width>
+        <label>4540</label>
+        <onleft>99</onleft>
+        <onup>3</onup>
+        <onright>50</onright>
+        <ondown>2</ondown>
+        <hyperlink>510</hyperlink>
+        <visible>player.hasmedia</visible>
+      </control>
+    </control>
+    <control>
+      <type>image</type>
+      <description>album art image</description>
+      <id>1</id>
+      <posX>175</posX>
+      <posY>585</posY>
+      <width>330</width>
+      <height>330</height>
+      <texture>#selectedthumb</texture>
+      <keepaspectratio>yes</keepaspectratio>
+      <centered>yes</centered>
+      <zoom>yes</zoom>
+      <visible>!player.hasmedia</visible>
+    </control>
+    <control>
+      <description>group element</description>
+      <type>group</type>
+      <visible>!Control.HasFocus(50)</visible>
+      <control>
+        <description>composite control consisting of a list control and a thumbnail panel</description>
+        <type>facadeview</type>
+        <id>50</id>
+        <control style="NoShadow">
+          <description>listcontrol</description>
+          <type>listcontrol</type>
+          <id>50</id>
+          <posX>770</posX>
+          <posY>270</posY>
+          <width>900</width>
+          <height>720</height>
+		  <textureHeight>40</textureHeight>	
+		  <IconXOff>3000</IconXOff> 
+          <onleft>2</onleft>
+          <onright>2</onright>
+          <scrollOffset>2</scrollOffset>
+          <unfocusedAlpha>160</unfocusedAlpha>
+        </control>
+      </control>
+    </control>
+  </controls>
+</window>

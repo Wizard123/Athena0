@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+  <id>47286</id>
+  <defaultcontrol>2</defaultcontrol>
+  <allowoverlay>false</allowoverlay>
+  <define>#useSelectedFanart:Yes</define>
+  <controls>
+
+    <control>
+      <description>Main Background</description>
+      <type>image</type>
+      <id>1</id>
+      <texture>Background_02.jpg</texture>
+      <width>1920</width>
+      <height>1080</height>
+    </control>
+	
+	<control>
+      <description>Backdrop Overlay - thumbs View</description>
+      <type>image</type>
+      <id>0</id>
+      <posX>40</posX>
+      <posY>135</posY>
+      <width>1832</width>
+      <height>943</height>
+      <texture>0011.png</texture>
+    </control>	
+	
+	<control>
+      <description>Current window</description>
+      <type>label</type>
+      <id>0</id>
+      <posX>1810</posX>
+      <posY>33</posY>
+      <align>right</align>
+      <width>1800</width>
+      <font>fontL</font>		  
+      <label>#(iif(and(neq(L(102012), #currentmodule), neq(L(102002), #currentmodule), neq(L(100100), #currentmodule), neq(L(102015), #currentmodule)), #currentmodule, ' '))</label>
+      <textcolor>eaeaea</textcolor>		  
+      <animation effect="fade" time="250">WindowOpen</animation>
+      <animation effect="fade" time="250">WindowClose</animation>
+    </control>
+		
+    <control>
+      <description>Date / Time</description>
+      <type>label</type>
+      <id>0</id>
+      <posX>1810</posX>
+      <posY>113</posY>
+      <label>#time #date #itemcount Files</label>
+      <align>right</align>
+      <font>fontL2</font>
+      <textcolor>eaeaea</textcolor>
+      <animation effect="fade" time="250">WindowOpen</animation>
+      <animation effect="fade" time="250">WindowClose</animation>
+    </control>
+	
+	<control>
+      <description>list_back</description>
+      <type>image</type>
+      <id>0</id>
+      <posX>300</posX>
+      <posY>255</posY>
+      <width>902</width>
+      <height>655</height>
+      <texture>music_bk.png</texture>
+      <colordiffuse>ffffffff</colordiffuse>
+	  <visible>!Control.isVisible(300)</visible>
+      <animation effect="fade" time="250" delay="0">WindowClose</animation>
+    </control>	
+
+    <control>
+      <id>300</id>
+      <description>Playlist</description>
+      <type>playlistcontrol</type>
+      <onleft>2</onleft>
+     <posX>1000</posX>
+    <posY>230</posY>
+    <width>800</width>
+    <height>750</height>
+    <spinWidth>46</spinWidth>
+    <spinHeight>33</spinHeight>
+    <spinPosX>2160</spinPosX>
+    <spinPosY>662</spinPosY>
+    <spinAlign>right</spinAlign>
+    <spinColor>FF000000</spinColor>
+    <textureHeight>40</textureHeight>
+    <image>-</image>
+    <font>font11</font>
+    <shadedColor>ffffffff</shadedColor>
+    <selectedColor>FFB2D4F5</selectedColor>
+    <textcolor>ff666666</textcolor>
+    <textcolor2>ff666666</textcolor2>
+    <textcolor3>ff666666</textcolor3>
+    <colordiffuse>ffffffff</colordiffuse>
+    <remoteColor>FFFC7B19</remoteColor>
+    <downloadColor>fffc7b19</downloadColor>
+    <spaceBetweenItems>2</spaceBetweenItems>
+    <textXOff>4</textXOff>
+    <textYOff>0</textYOff>
+    <textXOff2>0</textXOff2>
+    <textYOff2>0</textYOff2>
+    <IconXOff>2000</IconXOff>
+    <IconYOff>0</IconYOff>
+    <itemWidth>0</itemWidth>
+    <itemHeight>0</itemHeight>
+    <suffix>|</suffix>
+    <upBtnWidth>40</upBtnWidth>
+    <downBtnWidth>40</downBtnWidth>
+    <deleteBtnWidth>40</deleteBtnWidth>
+    <upBtnHeight>40</upBtnHeight>
+    <downBtnHeight>40</downBtnHeight>
+    <deleteBtnHeight>40</deleteBtnHeight>
+    <upBtnXOffset>649</upBtnXOffset>
+    <downBtnXOffset>702</downBtnXOffset>
+    <deleteBtnXOffset>755</deleteBtnXOffset>
+    <upBtnYOffset>0</upBtnYOffset>
+    <downBtnYOffset>0</downBtnYOffset>
+    <deleteBtnYOffset>0</deleteBtnYOffset>
+    <textureFocus>0012_btn.png</textureFocus>
+    <textureNoFocus>-</textureNoFocus>
+    <textureMoveUp>playlist_item_up_nofocus.png</textureMoveUp>
+    <textureMoveUpFocused>playlist_item_up_focus.png</textureMoveUpFocused>
+    <textureMoveDown>playlist_item_down_nofocus.png</textureMoveDown>
+    <textureMoveDownFocused>playlist_item_down_focus.png</textureMoveDownFocused>
+    <textureDelete>playlist_item_delete_nofocus.png</textureDelete>
+    <textureDeleteFocused>playlist_item_delete_focus.png</textureDeleteFocused>
+    <spaceBetweenItems>2</spaceBetweenItems>
+    <unfocusedAlpha>130</unfocusedAlpha>
+    </control>
+    <control>
+      <id>200</id>
+      <description>Track listing</description>
+      <type>listcontrol</type>
+      <onleft>2</onleft>
+      <posX>1230</posX>
+	  <posY>260</posY>
+	  <width>560</width>
+      <height>700</height>
+	  <itemWidth>32</itemWidth>
+      <itemHeight>32</itemHeight>
+      <selectedColor>ffa0d0ff</selectedColor>
+    </control>
+	<!--
+    <control>
+      <id>0</id>
+      <description>Track Name</description>
+      <type>fadelabel</type>
+      <visible>[Control.HasFocus(200)|Control.HasFocus(300)]</visible>
+      <posX>78</posX>
+      <posY>503</posY>
+      <width>383</width>
+      <label>#Rockstar.SelectedTrack.TrackName</label>
+    </control>
+    <control>
+      <id>0</id>
+      <description>Album Year</description>
+      <type>fadelabel</type>
+      <visible>[Control.HasFocus(200)|Control.HasFocus(300)]</visible>
+      <posX>78</posX>
+      <posY>473</posY>
+      <width>383</width>
+      <label>#Rockstar.SelectedTrack.AlbumYear</label>
+    </control>
+    <control>
+      <id>0</id>
+      <description>Album Name</description>
+      <type>fadelabel</type>
+      <visible>[Control.HasFocus(200)|Control.HasFocus(300)]</visible>
+      <posX>78</posX>
+      <posY>443</posY>
+      <width>383</width>
+      <label>#Rockstar.SelectedTrack.AlbumName</label>
+    </control>
+    <control>
+      <id>0</id>
+      <description>Artist Name</description>
+      <type>fadelabel</type>
+      <visible>[Control.HasFocus(200)|Control.HasFocus(300)]</visible>
+      <posX>78</posX>
+      <posY>413</posY>
+      <width>383</width>
+      <label>#Rockstar.SelectedTrack.ArtistName</label>
+    </control>
+	
+	-->
+	
+	<control>
+      <id>1</id>
+      <type>image</type>
+      <posX>550</posX>
+      <posY>280</posY>
+      <width>625</width>
+      <height>603</height>
+      <texture>cdfx.png</texture>
+      <visible>[control.hasthumb(10)+Control.HasFocus(200)]+!Control.isVisible(300)</visible>
+      <animation effect="fade" time="70" reversible="false">visible</animation>
+      <colordiffuse>ffffffff</colordiffuse>
+    </control>	
+	
+	<control>
+      <id>0</id>
+      <type>image</type>
+      <posX>310</posX>
+      <posY>255</posY>
+      <width>642</width>
+      <height>652</height>
+      <texture>largeart_shadow.png</texture>
+      <visible>[control.hasthumb(10)+Control.HasFocus(200)]+!Control.isVisible(300)</visible>
+      <animation effect="fade" time="70" reversible="false">visible</animation>
+    </control>	
+	
+    <control>
+      <id>10</id>
+      <type>image</type>
+      <visible>[Control.HasFocus(200)|Control.HasFocus(300)]</visible>
+       <posX>310</posX>
+      <posY>265</posY>
+      <width>630</width>
+      <height>632</height>
+      <texture>missing_Coverart.png</texture>
+      <animation effect="Fade" reversible="FALSE" time="250">Visible</animation>
+    </control>
+	
+	 <!-- Now playing info -->
+	
+    <control>
+      <type>fadelabel</type>
+      <id>1</id>
+      <posX>110</posX>
+      <posY>800</posY>
+      <width>200</width>
+      <visible>Player.HasAudio+!Player.HasVideo</visible>
+      <label>Now Playing...</label>
+      <align>left</align>
+      <font>fontL2</font>
+      <textcolor>99ffffff</textcolor>
+      <animation effect="rotate" delay="0" end="90" time="0" loop="false" condition="true">Conditional</animation>
+    </control>	
+	
+	<control>
+      <type>fadelabel</type>
+      <id>1</id>
+      <posX>215</posX>
+      <posY>945</posY>
+      <width>150</width>
+      <label>#currentplaytime &gt; #currentremaining</label>
+      <align>left</align>
+      <textcolor>99ffffff</textcolor>
+      <font>font11</font>
+      <visible>Player.HasAudio+!Player.HasVideo</visible>
+    </control>	
+	
+	<control>
+      <type>label</type>
+      <id>1</id>
+      <posX>265</posX>
+      <posY>900</posY>
+      <visible>Player.HasAudio+!Player.HasVideo</visible>
+      <label>#Play.Current.Artist</label>
+      <align>left</align>
+      <font>font10</font>
+      <textcolor>99ffffff</textcolor>
+      <animation effect="rotate" delay="0" end="90" centre="0,0" time="0" loop="false" condition="true">Conditional</animation>
+    </control>           	
+    <control>
+      <type>fadelabel</type>
+      <id>1</id>
+      <posX>215</posX>
+      <posY>910</posY>
+      <visible>Player.HasAudio+!Player.HasVideo</visible>
+      <label>#Play.Current.Title</label>
+      <width>900</width>
+       <align>left</align>
+      <font>font10</font>
+      <textcolor>99FFFFFF</textcolor>
+    </control>	
+    <control>
+      <description>music logo when no thumb</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>308</posX>
+      <posY>684</posY>
+      <width>215</width>
+      <height>215</height>
+      <centered>no</centered>
+      <keepaspectratio>no</keepaspectratio>
+      <visible>Player.HasAudio+!Player.HasVideo</visible>
+      <texture>smallart_shadow.png</texture>
+    </control>	
+    <control>
+      <description>music logo when no thumb</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>310</posX>
+      <posY>692</posY>
+      <width>205</width>
+      <height>205</height>
+      <centered>no</centered>
+      <keepaspectratio>no</keepaspectratio>
+      <visible>Player.HasAudio+!Player.HasVideo+!control.hasthumb(12345)+!control.hasthumb(77)</visible>
+      <texture>defaultArtistBig.png</texture>
+    </control>
+    <control>
+      <description>music logo</description>
+      <type>image</type>
+      <id>12345</id>
+      <posX>310</posX>
+      <posY>692</posY>
+      <width>205</width>
+      <height>205</height>
+      <centered>no</centered>
+      <keepaspectratio>no</keepaspectratio>
+      <visible>Player.HasAudio+!Player.HasVideo</visible>
+      <texture>#Play.Current.Thumb</texture>
+    </control>
+    <control>
+      <description>music logo</description>
+      <type>image</type>
+      <id>77</id>
+      <posX>310</posX>
+      <posY>692</posY>
+      <width>205</width>
+      <height>205</height>
+      <centered>no</centered>
+      <keepaspectratio>no</keepaspectratio>
+      <texture>#Play.Current.ArtistThumb</texture>
+      <visible>Player.HasAudio+!Player.HasVideo+!control.hasthumb(12345)</visible>
+    </control>	
+	
+	
+    <control>
+      <description>action menu</description>
+      <type>actiongroup</type>
+      <visible/>
+      <dimColor>00ffffff</dimColor>
+      <width>367</width>
+      <height>591</height>
+      <buttonX>0</buttonX>
+      <buttonY>0</buttonY>
+      <buttonwidth>45</buttonwidth>
+      <buttonheight>525</buttonheight>
+      <onexit>50</onexit>
+      <defaultcontrol>2</defaultcontrol>
+      <textureFocus>Action_focus.png</textureFocus>
+      <textureNoFocus>Action_nofocus.png</textureNoFocus>
+      <animation effect="Slide" reversible="FALSE" start="-300,0" time="250">Visible</animation>
+      <control>
+        <type>image</type>
+        <posX>26</posX>
+        <posY>78</posY>
+        <width>500</width>
+        <height>730</height>
+        <texture>Backslide.png</texture>
+        <colorDiffuse>fffffffff</colorDiffuse>
+      </control>
+      <control>
+        <description>group element</description>
+        <type>group</type>
+        <control>
+          <description>group element</description>
+          <type>group</type>
+          <visible/>
+          <posX>71</posX>
+          <posY>121</posY>
+          <layout>StackLayout</layout>
+          <animation effect="Slide" reversible="FALSE" start="-300,0" time="250">Visible</animation>
+          <animation effect="Slide" end="-300,0" reversible="FALSE" time="250">Hidden</animation>
+          <control>
+            <id>2</id>
+            <description>Search Music</description>
+            <type>button</type>
+            <onright>200</onright>
+            <ondown>3</ondown>
+            <visible/>
+            <label>Search Music</label>
+          </control>
+          <control>
+            <id>3</id>
+            <description>Default Playlist</description>
+            <type>button</type>
+            <onright>200</onright>
+            <onup>2</onup>
+            <ondown>4</ondown>
+            <visible/>
+            <label>Default Playlist</label>
+          </control>
+          <control>
+            <id>4</id>
+            <description>Playlists</description>
+            <type>button</type>
+            <onright>200</onright>
+            <onup>3</onup>
+            <ondown>20</ondown>
+            <visible/>
+            <label>Playlists</label>
+          </control>
+          <control>
+            <id>20</id>
+            <description>Popular Songs</description>
+            <type>button</type>
+            <onright>200</onright>
+            <onup>4</onup>
+            <ondown>32</ondown>
+            <visible/>
+            <label>Popular Songs</label>
+          </control>
+          <control>
+            <id>32</id>
+            <description>Shuffle on/off button</description>
+            <type>checkbutton</type>
+            <onright>200</onright>
+            <onup>20</onup>
+            <ondown>30</ondown>
+            <label>Shuffle</label>
+          </control>
+          <control>
+            <id>30</id>
+            <description>Repeat on/off button</description>
+            <type>checkbutton</type>
+            <onright>200</onright>
+            <onup>32</onup>
+            <label>Repeat</label>
+          </control>
+          <control>
+            <id>40</id>
+            <description>Settings button</description>
+            <type>button</type>
+            <onright>200</onright>
+            <onup>30</onup>
+            <label>Settings</label>
+          </control>
+        </control>
+      </control>
+    </control>
+
+  </controls>
+</window>

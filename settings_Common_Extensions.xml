@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+  <id>1001</id>
+  <defaultcontrol>2</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+  <rememberLastFocusedControl>yes</rememberLastFocusedControl>
+  <controls>
+    <import>common.settings.xml</import>
+		
+    <!--Add/Remove/Default-->
+    <control>
+      <description>background</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>682</posX>
+      <posY>180</posY>
+      <height>757</height>
+      <width>637</width>
+      <texture>backslide.png</texture>
+      <colordiffuse>aaffffff</colordiffuse>
+    </control>
+    <control>
+      <description>buttons</description>
+      <type>group</type>
+      <animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
+      <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+      <posX>105</posX>
+      <posY>240</posY>
+      <layout>StackLayout(0, Horizontal, True)</layout>
+      <control>
+        <description>Add</description>
+        <type>button</type>
+        <id>3</id>
+        <onright>2</onright>
+        <onup>17</onup>
+        <label>300063</label>
+      </control>
+      <control>
+        <description>Remove</description>
+        <type>button</type>
+        <id>4</id>
+        <onright>2</onright>
+        <label>300064</label>
+      </control>
+      <control>
+        <description>Default</description>
+        <type>button</type>
+        <id>5</id>
+        <onright>2</onright>
+        <ondown>3</ondown>
+        <label>886</label>
+      </control>
+    </control>
+    <control>
+      <description>Extensions listcontrol</description>
+      <type>listcontrol</type>
+      <id>2</id>
+      <posX>712</posX>
+      <posY>240</posY>
+      <height>780</height>
+      <width>480</width>
+      <textXOff>120</textXOff>
+      <spinPosX>3945</spinPosX>
+      <spinPosY>960</spinPosY>
+      <onleft>3</onleft>
+      <onright>35</onright>
+      <spaceBetweenItems>0</spaceBetweenItems>
+      <unfocusedAlpha>160</unfocusedAlpha>
+    </control>
+  </controls>
+</window>
+

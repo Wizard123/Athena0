@@ -9,18 +9,6 @@
   <define>#selectedindex:</define>
   <define>#indexcount:</define>
   <define>#usePlayFanart:Yes</define>
-  <define property="true" evaluateNow="true">#skin.weather.nav:#(cint(iif(not(#skin.weather.swap), '7977', '79770')))</define>
-  <define property="true" evaluateNow="true">#skin.movietilenav:#(cint(iif(not(#skin.movie.swap), '77766', '77779')))</define>
-  <define property="true" evaluateNow="true">#skin.movietilenav2:#(cint(iif(not(#skin.movie.swap), '76673', '76672')))</define>
-  <define property="true" evaluateNow="true">#skin.rec1.nav:#(cint(iif(not(#skin.movie.swap), '91919991', '15991')))</define>
-  <define property="true" evaluateNow="true">#skin.rec2.nav:#(cint(iif(not(#skin.movie.swap), '91919992', '15992')))</define>
-  <define property="true" evaluateNow="true">#skin.rec3.nav:#(cint(iif(not(#skin.movie.swap), '91919993', '15993')))</define>
-  <define property="true" evaluateNow="true">#skin.tilenav1:#(cint(string.trim(#skin.tile1.plugin,'a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,-')))</define>
-  <define property="true" evaluateNow="true">#skin.tilenav2:#(cint(string.trim(#skin.tile2.plugin,'a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,-')))</define>
-  <define property="true" evaluateNow="true">#skin.tilenav3:#(cint(string.trim(#skin.tile3.plugin,'a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,-')))</define>
-  <define property="true" evaluateNow="true">#skin.tilenav4:#(cint(string.trim(#skin.tile4.plugin,'a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,-')))</define>
-  <define property="true" evaluateNow="true">#skin.tilenav5:#(cint(string.trim(#skin.tile5.plugin,'a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,-')))</define>
-  <define property="true" evaluateNow="true">#skin.tilenav6:#(cint(string.trim(#skin.tile6.plugin,'a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,-')))</define>
   <controls>
 
 
@@ -81,12 +69,26 @@
       <posY>20</posY>
       <width>1000</width>
       <height>120</height>
-      <label>#skin.weather.nav</label>
+      <label>#tile1.hyperlink</label>
       <align>left</align>
       <font>font9</font>
       <textcolor>99ffffff</textcolor>
     </control>
+	
+	<control>
+      <description>background overlay</description>
+      <type>image</type>
+      <id>0</id>
+      <posX>500</posX>
+      <posY>35</posY>
+      <width>150</width>
+      <height>150</height>
+      <texture>#tile1plugin.hyperlink.jpg</texture>
+      <colordiffuse>80ffffff</colordiffuse>
+    </control>
 	-->
+	
+	<import>PluginDefines.xml</import>
 
 		
     <import>main_menu.xml</import>

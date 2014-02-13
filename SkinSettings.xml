@@ -27,12 +27,18 @@
     <entry name="name">No Animation on BasicHome</entry>
   </section>
   <section name="stringsettings">
-    <entry name="#skin.tile1.plugin">imdb-77785</entry>
-    <entry name="#skin.tile2.plugin">trakt-77787</entry>
-    <entry name="#skin.tile3.plugin">infoservice-77789</entry>
-    <entry name="#skin.tile4.plugin">subcentral-77786</entry>
-    <entry name="#skin.tile5.plugin">radiotime-77801</entry>
-    <entry name="#skin.tile6.plugin">extensions-99901</entry>
+    <entry name="#tile1plugin.hyperlink">Imdb+</entry>
+    <entry name="#tile2plugin.hyperlink">Trakt</entry>
+    <entry name="#tile3plugin.hyperlink">Infoservice</entry>
+    <entry name="#tile4plugin.hyperlink">Subcentral</entry>
+    <entry name="#tile5plugin.hyperlink">Radiotime</entry>
+    <entry name="#tile6plugin.hyperlink">Extensions</entry>
+    <entry name="#tile7plugin.hyperlink">NoPlugin</entry>
+    <entry name="#tile8plugin.hyperlink">Wikipedia</entry>
+    <entry name="#tile9plugin.hyperlink">MyLyrics</entry>
+    <entry name="#tile10plugin.hyperlink">NoPlugin</entry>
+    <entry name="#tile11plugin.hyperlink">Globalmusic</entry>
+    <entry name="#tile12plugin.hyperlink">Rockstar</entry>
   </section>
   <section name="tvguidecolors">
     <entry name="guidecolorchannelbutton">FFC0C0C0</entry>

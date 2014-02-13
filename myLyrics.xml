@@ -76,7 +76,7 @@
       <posX>165</posX>
       <posY>217</posY>
       <width>1140</width>
-      <height>690</height>
+      <height>770</height>
       <onleft>1957</onleft>
       <onright>1957</onright>
       <onup>20</onup>
@@ -96,7 +96,7 @@
       <posX>165</posX>
       <posY>217</posY>
       <width>1140</width>
-      <height>690</height>
+      <height>770</height>
       <onleft>1957</onleft>
       <onright>1957</onright>
       <onup>20</onup>
@@ -116,7 +116,7 @@
       <posX>165</posX>
       <posY>217</posY>
       <width>1140</width>
-      <height>650</height>
+      <height>770</height>
       <onleft>1957</onleft>
       <onright>1957</onright>
       <onup>20</onup>
@@ -136,7 +136,7 @@
       <posX>165</posX>
       <posY>217</posY>
       <width>1140</width>
-      <height>650</height>
+      <height>770</height>
       <onleft>1957</onleft>
       <onright>1957</onright>
       <onup>20</onup>
@@ -169,74 +169,64 @@
       <posY>880</posY>
       <width>1660</width>
       <height>180</height>
-      <texture>top1.png</texture>            
+      <texture></texture>            
     </control>
     <control>
       <type>fadelabel</type>
       <description>Title Value</description>
       <id>30</id>
-      <posX>150</posX>
-      <posY>900</posY>
-      <width>900</width>      
+      <posX>1350</posX>
+      <posY>750</posY>
+      <width>450</width>      
       <label>#Play.Current.Title</label>
-      <font>fontL2</font>
+      <font>font12</font>
       <textcolor>eaeaea</textcolor>      
     </control>
     <control>
       <type>fadelabel</type>
       <description>Artist Value</description>
       <id>32</id>
-      <posX>150</posX>
-      <posY>950</posY>
-      <width>900</width>      
+      <posX>1350</posX>
+      <posY>790</posY>
+      <width>450</width>      
       <label>#Play.Current.Artist</label>
-      <font>fontL2</font>
+      <font>font12</font>
       <textcolor>eaeaea</textcolor>      
     </control>    
-    <control>
-      <type>fadelabel</type>
-      <description>Year - Track value</description>
-      <id>33</id>
-      <posX>150</posX>
-      <posY>1000</posY>
-      <width>900</width>      
-      <label>#Play.Current.Year - #Play.Current.Track</label>
-      <font>fontL2</font>
-      <textcolor>eaeaea</textcolor>      
-    </control> 
+
     <control>
       <type>label</type>
       <description>playing next label</description>
       <id>20</id>
-      <posX>1765</posX>
-      <posY>913</posY>
+      <posX>1350</posX>
+      <posY>860</posY>
       <label>4541</label>
-      <font>font10</font>
-      <align>right</align>
+      <font>fontL2</font>
+      <align>left</align>
       <textcolor>eaeaea</textcolor>
     </control>    
     <control>
       <type>fadelabel</type>
       <description>next artist label</description>
       <id>123</id>
-      <posX>1765</posX>
-      <posY>950</posY>
-      <width>600</width>
+      <posX>1350</posX>
+      <posY>910</posY>
+      <width>450</width>
       <label>#Play.Next.Artist</label>
-      <font>fontL2</font> 
-      <align>right</align>
+      <font>font12</font> 
+      <align>left</align>
       <textcolor>eaeaea</textcolor>
     </control> 
     <control>
       <type>fadelabel</type>
       <description>next track label</description>
       <id>121</id>
-      <posX>1765</posX>
-      <posY>1000</posY>
-      <width>600</width>
+      <posX>1350</posX>
+      <posY>950</posY>
+      <width>450</width>
       <label>#Play.Next.Title</label>
-      <font>fontL2</font>
-      <align>right</align>
+      <font>font12</font>
+      <align>left</align>
       <textcolor>eaeaea</textcolor>
     </control>
   

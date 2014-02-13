@@ -16,8 +16,8 @@
       <texture>background_02.jpg</texture>
       <colordiffuse>ffffffff</colordiffuse>
     </control>
-	
-<control>
+
+    <control>
       <description>Backdrop Overlay - thumbs View</description>
       <type>image</type>
       <id>0</id>
@@ -27,7 +27,7 @@
       <height>943</height>
       <texture>0011.png</texture>
     </control>	
-	
+
     <control>
       <description>Current window</description>
       <type>label</type>
@@ -42,7 +42,7 @@
       <animation effect="fade" time="250">WindowOpen</animation>
       <animation effect="fade" time="250">WindowClose</animation>
     </control>
-		
+
     <control>
       <description>Date / Time</description>
       <type>label</type>
@@ -56,7 +56,7 @@
       <animation effect="fade" time="250">WindowOpen</animation>
       <animation effect="fade" time="250">WindowClose</animation>
     </control>
-	
+
     <control>
       <description>station logo</description>
       <type>image</type>
@@ -80,7 +80,7 @@
       <keepaspectratio>yes</keepaspectratio>
       <centered>yes</centered>
     </control>
-<!--
+       <!--
     <control>
       <id>0</id>
       <description>Title label</description>
@@ -126,7 +126,7 @@
       <label>#RadioTime.Play.Slogan</label>
     </control>
 	-->
-	
+
     <control>
       <id>0</id>
       <description>track label</description>
@@ -211,9 +211,8 @@
     <control>
       <id>166</id>
       <description>list genres</description>
-      <type>listcontrol</type>
-      <onright>155</onright>
-      <ondown>195</ondown>
+      <type>listcontrol</type>      
+      <ondown>155</ondown>
       <posX>175</posX>
       <posY>270</posY>
       <width>327</width>
@@ -235,29 +234,24 @@
     <control>
       <id>155</id>
       <description>list similar</description>
-      <type>listcontrol</type>
-      <onleft>166</onleft>
+      <type>listcontrol</type>      
       <onup>166</onup>
+      <ondown>53</ondown>      
       <posX>175</posX>
       <posY>496</posY>
       <width>327</width>
-      <height>328</height>
+      <height>330</height>
       <textXOff>-20</textXOff>
       <onright>53</onright>
       <onleft>53</onleft>
-    </control>
-    <control>
-      <type>fadelabel</type>
-      <posX>497</posX>
-      <posY>32</posY>
-      <width>666</width>
-    </control>
-    <control>
+    </control>    
+    <control Style="NoShadow">
+      <id>53</id>
       <description>Show Lyrics</description>
       <type>button</type>
       <posX>175</posX>
-      <posY>714</posY>
-      <id>53</id>
+      <posY>850</posY> 
+      <width>327</width>     
       <label>Lyrics</label>
       <visible>plugin.isenabled(My Lyrics)</visible>
       <hyperlink>90478</hyperlink>
@@ -266,5 +260,11 @@
       <onright>53</onright>
       <onleft>53</onleft>
     </control>
+     <control>
+      <type>fadelabel</type>
+      <posX>497</posX>
+      <posY>32</posY>
+      <width>666</width>
+    </control> 
   </controls>
 </window>

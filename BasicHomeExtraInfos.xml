@@ -319,158 +319,352 @@
       <!--     *************************   WEATHER INFO ON BASIC HOME   **********************************  -->
       <!--     *******************************************************************************************  -->
       
-	  
-	  <control Style="BasicHomeFade">
+      <!-- *** Tile 1 left side Current info *** -->	  
+      <control Style="BasicHomeFade">
         <description>thumb tile 1</description>
         <type>image</type>
         <id>0</id>
-		<posX>185</posX>
+	<posX>185</posX>
         <posY>145</posY>
-		<height>400</height>
-		<width>630</width>
-		<texture mask="series_tile_mask.png">weathertile1.jpg</texture>
-		<label>Latest Additions</label>
-		<visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
+	<height>820</height>
+	<width>630</width>
+	<texture mask="weathertile2mask.png">weathertile2m.jpg</texture>
+	<label>Latest Additions</label>
+	<visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
       </control>
-	  
-      <control Style="BasicHomeFade">
-        <description>Weather image</description>
-        <type>image</type>
-        <id>1</id>
-        <posX>210</posX>
-        <posY>400</posY>
-        <width>96</width>
-        <height>96</height>
-        <texture>#WorldWeather.ForecastDay1IconImage</texture>
-        <visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
-      </control>
+
       <control Style="BasicHomeFade">
         <description>Location</description>
         <type>fadelabel</type>
         <id>1</id>
-        <posX>320</posX>
-        <posY>430</posY>
+        <posX>770</posX>
+        <posY>170</posY>
         <width>480</width>
-        <font>font11</font>
-		<align>left</align>
+        <font>fontL1</font>
+	<align>right</align>
         <textcolor>ffffffff</textcolor>
-        <label>#WorldWeather.ForecastDay1Day  #WorldWeather.ForecastDay1Low | #WorldWeather.ForecastDay1High  #WorldWeather.ForecastDay1Condition</label>
-        <visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
-      </control>
-
-	  <control Style="BasicHomeFade">
-        <description>thumb tile 2</description>
-        <type>image</type>
-        <id>0</id>
-		<posX>185</posX>
-        <posY>567</posY>
-		<height>400</height>
-		<width>630</width>
-		<texture mask="series_tile_mask.png">weathertile1.jpg</texture>
-		<label>Latest Additions</label>
-		<visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
-      </control>
-	  
-      <control Style="BasicHomeFade">
-        <description>Weather image</description>
-        <type>image</type>
-        <id>1</id>
-        <posX>210</posX>
-        <posY>825</posY>
-        <width>96</width>
-        <height>96</height>
-        <texture>#WorldWeather.ForecastDay2IconImage</texture>
+        <label>#WorldWeather.Location</label>
         <visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
       </control>
       <control Style="BasicHomeFade">
-        <description>Location</description>
+        <description>Location Contry</description>
         <type>fadelabel</type>
         <id>1</id>
-        <posX>320</posX>
-        <posY>855</posY>
+        <posX>770</posX>
+        <posY>225</posY>
         <width>480</width>
-        <font>font11</font>
-		<align>left</align>
+        <font>font12</font>
+	<align>right</align>
         <textcolor>ffffffff</textcolor>
-        <label>#WorldWeather.ForecastDay2Day  #WorldWeather.ForecastDay2Low | #WorldWeather.ForecastDay2High  #WorldWeather.ForecastDay2Condition</label>
+        <label>#WorldWeather.LocationCountry</label>
         <visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
       </control>
-
-	  
-	  <control Style="BasicHomeFade">
+      <control Style="BasicHomeFade">
+        <description>current temp label</description>
+        <type>label</type>
+        <id>1</id>
+        <posX>770</posX>
+        <posY>260</posY>
+        <width>180</width>         
+        <font>fontL1</font> 
+        <align>right</align>
+        <textcolor>ffffffff</textcolor>      
+        <label>#WorldWeather.TodayTemperature</label>
+        <visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
+      </control>
+      <control Style="BasicHomeFade">
+        <description>current weather icon Image</description>
+        <type>image</type>
+        <id>1</id>
+        <posX>230</posX>
+        <posY>250</posY>
+        <width>220</width>
+        <height>220</height>
+        <texture>#WorldWeather.TodayIconImage</texture>
+        <colordiffuse>ffffffff</colordiffuse>
+        <visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
+      </control>
+      <control Style="BasicHomeFade">
+        <description>Current Condition Label</description>
+        <type>label</type>
+        <id>1</id>
+        <posX>230</posX>
+        <posY>450</posY>
+        <width>480</width> 
+        <font>fontL2</font> 
+        <textcolor>ffffffff</textcolor>      
+        <label>#WorldWeather.TodayCondition</label>
+        <visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
+      </control>      
+      <control Style="BasicHomeFade">
+        <type>group</type>
+        <description>group element</description>
+        <layout>StackLayout(0, Vertical, true)</layout>
+        <posX>230</posX>
+        <posY>780</posY>        
+        <control>
+          <description>current wind label</description>
+          <type>label</type>
+          <id>0</id>        
+          <label>#WorldWeather.TranslationWind:</label>
+          <font>fontL3</font>
+          <height>40</height>
+          <textcolor>eaeaea</textcolor>
+          <visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
+        </control>        
+        <control>
+          <description>current wind speed label</description>
+          <type>label</type>
+          <id>0</id>
+          <posX>500</posX>
+          <posY>570</posY>
+          <label>#WorldWeather.TranslationWindSpeed:</label>
+          <font>fontL3</font>
+          <height>40</height>
+          <textcolor>eaeaea</textcolor>
+          <visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
+        </control>        
+        <control>
+          <description>current humidity label</description>
+          <type>label</type>
+          <id>0</id>        
+          <label>#WorldWeather.TranslationHumidity:</label>
+          <font>fontL3</font>
+          <height>40</height>
+          <textcolor>eaeaea</textcolor>
+          <visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
+        </control>        
+        <control>
+          <description>Current Dewpoint label</description>
+          <type>label</type>
+          <id>0</id>        
+          <label>#WorldWeather.TranslationDewPoint:</label>
+          <font>fontL3</font>
+          <height>40</height>
+          <textcolor>eaeaea</textcolor>
+          <visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
+        </control>
+      </control>
+      <control Style="BasicHomeFade">
+        <type>group</type>
+        <description>group element</description>
+        <layout>StackLayout(0, Vertical, true)</layout>
+        <posX>500</posX>
+        <posY>780</posY>                   
+        <control>
+          <description>current wind value</description>
+          <type>label</type>
+          <id>0</id>        
+          <label>#WorldWeather.TodayWindDirection (#WorldWeather.TodayWindDirectionDegree)</label>
+          <font>fontL3</font>
+          <height>40</height>
+          <textcolor>eaeaea</textcolor>
+          <visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
+        </control>        
+        <control>
+          <description>current wind speed value</description>
+          <type>label</type>
+          <id>0</id>        
+          <label>#WorldWeather.TodayWindSpeed</label>
+          <font>fontL3</font>
+          <height>40</height>
+          <textcolor>eaeaea</textcolor>
+          <visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
+        </control>        
+        <control>
+          <description>current humidity value</description>
+          <type>label</type>
+          <id>0</id>        
+          <label>#WorldWeather.TodayHumidity</label>
+          <font>fontL3</font>
+          <height>40</height>
+          <textcolor>eaeaea</textcolor>
+          <visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
+        </control>        
+        <control>
+          <description>current dewpoint value</description>
+          <type>label</type>
+          <id>0</id>        
+          <label>#WorldWeather.TodayDewPoint</label>
+          <font>fontL3</font>
+          <height>40</height>
+          <textcolor>eaeaea</textcolor>
+          <visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
+        </control>
+      </control>  
+      <!-- *** Tile 3 right top side Current condition images *** -->	  
+      <control Style="BasicHomeFade">
         <description>thumb tile 3</description>
         <type>image</type>
         <id>0</id>
-		<posX>1090</posX>
+	<posX>1090</posX>
         <posY>145</posY>
-		<height>400</height>
-		<width>630</width>
-		<texture mask="series_tile_mask.png">weathertile1.jpg</texture>
-		<label>Latest Additions</label>
-		<visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
+	<height>400</height>
+	<width>630</width>
+	<texture mask="series_tile_mask.png">weathertile1.jpg</texture>
+	<label>Latest Additions</label>
+	<visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
       </control>
-	  
       <control Style="BasicHomeFade">
-        <description>Weather image</description>
+        <description>thumb tile 3 Condition images</description>
+        <type>image</type>
+        <id>0</id>
+	<posX>1090</posX>
+        <posY>145</posY>
+	<height>400</height>
+	<width>630</width>
+	<texture mask="series_tile_mask.png">Animations\weather_BG\#WorldWeather.TodayIconNumber.jpg</texture>
+        <colordiffuse>ffffffff</colordiffuse>
+	<label>Latest Additions</label>
+	<visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
+      </control>
+      <control Style="BasicHomeFade">
+        <description>thumb tile 3 overly</description>
+        <type>image</type>
+        <id>0</id>
+	<posX>1075</posX>
+        <posY>135</posY>
+	<height>420</height>
+	<width>660</width>
+	<texture>Backslide.png</texture>
+        <colordiffuse>20ffffff</colordiffuse>
+	<label>Latest Additions</label>
+	<visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
+      </control>
+      <control Style="BasicHomeFade">
+        <description>Date</description>
+        <type>fadelabel</type>
+        <id>1</id>
+        <posX>1260</posX>
+        <posY>170</posY>
+        <width>460</width>        
+        <font>fontL2</font>	
+        <textcolor>ffffffff</textcolor>        
+        <label>#date</label>
+        <visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
+      </control>      
+      <!-- *** Tile 4 right down side forecast info *** -->	  
+      <control Style="BasicHomeFade">
+        <description>thumb tile 4</description>
+        <type>image</type>
+        <id>0</id>
+	<posX>1090</posX>
+        <posY>567</posY>
+	<height>400</height>
+	<width>630</width>
+	<texture mask="series_tile_mask.png">weathertile1m.jpg</texture>
+	<label>Latest Additions</label>
+	<visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
+      </control>
+      <control Style="BasicHomeFade">
+        <description>thumb tile 4 overly</description>
+        <type>image</type>
+        <id>0</id>
+	<posX>1075</posX>
+        <posY>557</posY>
+	<height>420</height>
+	<width>660</width>
+	<texture>Backslide.png</texture>
+        <colordiffuse>20ffffff</colordiffuse>
+	<label>Latest Additions</label>
+	<visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
+      </control>
+      <control Style="BasicHomeFade">
+        <description>Weather image Day1</description>
         <type>image</type>
         <id>1</id>
         <posX>1120</posX>
-        <posY>400</posY>
+        <posY>575</posY>
+        <width>96</width>
+        <height>96</height>
+        <texture>#WorldWeather.ForecastDay1IconImage</texture>
+        <colordiffuse>ffffffff</colordiffuse>   
+        <visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
+      </control>
+      <control Style="BasicHomeFade">
+        <description>Forecast Day1</description>
+        <type>fadelabel</type>
+        <id>1</id>
+        <posX>1240</posX>
+        <posY>605</posY>
+        <width>480</width>        
+        <font>fontL3</font>
+	<align>left</align>
+        <textcolor>ffffffff</textcolor>
+        <label>#WorldWeather.ForecastDay1Day   #WorldWeather.ForecastDay1Low | #WorldWeather.ForecastDay1High   #WorldWeather.ForecastDay1Condition</label>
+        <visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
+      </control>
+      <control Style="BasicHomeFade">
+        <description>Weather image Day2</description>
+        <type>image</type>
+        <id>1</id>
+        <posX>1120</posX>
+        <posY>675</posY>
+        <width>96</width>
+        <height>96</height>
+        <texture>#WorldWeather.ForecastDay2IconImage</texture>
+        <colordiffuse>ffffffff</colordiffuse>
+        <visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
+      </control>
+      <control Style="BasicHomeFade">
+        <description>Forecast Day 2</description>
+        <type>fadelabel</type>
+        <id>1</id>
+        <posX>1240</posX>
+        <posY>705</posY>
+        <width>480</width>        
+        <font>fontL3</font>
+	<align>left</align>
+        <textcolor>ffffffff</textcolor>
+        <label>#WorldWeather.ForecastDay2Day   #WorldWeather.ForecastDay2Low | #WorldWeather.ForecastDay2High   #WorldWeather.ForecastDay2Condition</label>
+        <visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
+      </control>
+      <control Style="BasicHomeFade">
+        <description>Weather image Day3</description>
+        <type>image</type>
+        <id>1</id>
+        <posX>1120</posX>
+        <posY>775</posY>
         <width>96</width>
         <height>96</height>
         <texture>#WorldWeather.ForecastDay3IconImage</texture>
         <visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
       </control>
       <control Style="BasicHomeFade">
-        <description>Location</description>
+        <description>Forecast Day3</description>
         <type>fadelabel</type>
         <id>1</id>
-        <posX>1230</posX>
-        <posY>430</posY>
-        <width>480</width>
-        <font>font11</font>
-		<align>left</align>
+        <posX>1240</posX>
+        <posY>805</posY>
+        <width>480</width>        
+        <font>fontL3</font>
+	<align>left</align>
         <textcolor>ffffffff</textcolor>
-        <label>#WorldWeather.ForecastDay3Day  #WorldWeather.ForecastDay3Low | #WorldWeather.ForecastDay3High  #WorldWeather.ForecastDay3Condition</label>
+        <label>#WorldWeather.ForecastDay3Day   #WorldWeather.ForecastDay3Low | #WorldWeather.ForecastDay3High   #WorldWeather.ForecastDay3Condition</label>
         <visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
-      </control>
-
-	  
-	  <control Style="BasicHomeFade">
-        <description>thumb tile 4</description>
-        <type>image</type>
-        <id>0</id>
-		<posX>1090</posX>
-        <posY>567</posY>
-		<height>400</height>
-		<width>630</width>
-		<texture mask="series_tile_mask.png">weathertile1.jpg</texture>
-		<label>Latest Additions</label>
-		<visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
-      </control>
-	  
+      </control>	  
       <control Style="BasicHomeFade">
-        <description>Weather image</description>
+        <description>Weather image Day4</description>
         <type>image</type>
         <id>1</id>
         <posX>1120</posX>
-        <posY>825</posY>
+        <posY>875</posY>
         <width>96</width>
         <height>96</height>
         <texture>#WorldWeather.ForecastDay4IconImage</texture>
         <visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
       </control>
       <control Style="BasicHomeFade">
-        <description>Location</description>
+        <description>Forecast Day4</description>
         <type>fadelabel</type>
         <id>1</id>
-        <posX>1230</posX>
-        <posY>855</posY>
-        <width>480</width>
-        <font>font11</font>
-		<align>left</align>
+        <posX>1240</posX>
+        <posY>905</posY>
+        <width>480</width>        
+        <font>fontL3</font>
+	<align>left</align>
         <textcolor>ffffffff</textcolor>
-        <label>#WorldWeather.ForecastDay4Day  #WorldWeather.ForecastDay4Low | #WorldWeather.ForecastDay4High  #WorldWeather.ForecastDay4Condition</label>
+        <label>#WorldWeather.ForecastDay4Day   #WorldWeather.ForecastDay4Low | #WorldWeather.ForecastDay4High   #WorldWeather.ForecastDay4Condition</label>
         <visible>control.hasfocus(77772)|control.hasfocus(6)+[plugin.isenabled(World Weather)|plugin.isenabled(World Weather Lite)]</visible>
       </control>
 

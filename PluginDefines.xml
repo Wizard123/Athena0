@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+  
+  <!--     *******************************************************************************************  -->
+  <!--     ****************************  DEFINES FOR MOVIE SWAP ETC  *********************************  -->
+  <!--     *******************************************************************************************  -->
+  
+  <define property="true" evaluateNow="true">#skin.weather.nav:#(cint(iif(not(#skin.weather.swap), '7977', '79770')))</define>
+  <define property="true" evaluateNow="true">#skin.movietilenav:#(cint(iif(not(#skin.movie.swap), '77766', '77779')))</define>
+  <define property="true" evaluateNow="true">#skin.movietilenav2:#(cint(iif(not(#skin.movie.swap), '76673', '76672')))</define>
+  <define property="true" evaluateNow="true">#skin.rec1.nav:#(cint(iif(not(#skin.movie.swap), '91919991', '15991')))</define>
+  <define property="true" evaluateNow="true">#skin.rec2.nav:#(cint(iif(not(#skin.movie.swap), '91919992', '15992')))</define>
+  <define property="true" evaluateNow="true">#skin.rec3.nav:#(cint(iif(not(#skin.movie.swap), '91919993', '15993')))</define>
+  
+  <!--     *******************************************************************************************  -->
+  <!--     ***************************  HYPERLINK DEFINES FOR PLUGINS  *******************************  -->
+  <!--     *******************************************************************************************  -->
+  
+  <define property="true" evaluateNow="true">#tile1.hyperlink:#(cint(switch( eq(#tile1plugin.hyperlink,'Imdb+'),31415, eq(1,1),0)))</define>
+  <define property="true" evaluateNow="true">#tile2.hyperlink:#(cint(switch( eq(#tile2plugin.hyperlink,'Infoservice'),16000, eq(#tile2plugin.hyperlink,'Playdisc'),3001, eq(#tile2plugin.hyperlink,'Trakt'),87258, eq(#tile2plugin.hyperlink,'Rockstar'),47286, eq(#tile2plugin.hyperlink,'Radiotime'),25650, eq(#tile2plugin.hyperlink,'Extensions'),801, eq(#tile2plugin.hyperlink,'Globalmusic'),30885, eq(#tile2plugin.hyperlink,'MyLyrics'),90478, eq(#tile2plugin.hyperlink,'Wikipedia'),4711, eq(1,1),0)))</define>
+  <define property="true" evaluateNow="true">#tile3.hyperlink:#(cint(switch( eq(#tile3plugin.hyperlink,'Infoservice'),16000, eq(#tile3plugin.hyperlink,'Playdisc'),3001, eq(#tile3plugin.hyperlink,'Trakt'),87258, eq(#tile3plugin.hyperlink,'Rockstar'),47286, eq(#tile3plugin.hyperlink,'Radiotime'),25650, eq(#tile3plugin.hyperlink,'Extensions'),801, eq(#tile3plugin.hyperlink,'Globalmusic'),30885, eq(#tile3plugin.hyperlink,'MyLyrics'),90478, eq(#tile3plugin.hyperlink,'Wikipedia'),4711, eq(1,1),0)))</define>
+  <define property="true" evaluateNow="true">#tile4.hyperlink:#(cint(switch( eq(#tile4plugin.hyperlink,'Subcentral'),84623, eq(1,1),0)))</define>
+  <define property="true" evaluateNow="true">#tile5.hyperlink:#(cint(switch( eq(#tile5plugin.hyperlink,'Infoservice'),16000, eq(#tile5plugin.hyperlink,'Playdisc'),3001, eq(#tile5plugin.hyperlink,'Trakt'),87258, eq(#tile5plugin.hyperlink,'Rockstar'),47286, eq(#tile5plugin.hyperlink,'Radiotime'),25650, eq(#tile5plugin.hyperlink,'Extensions'),801, eq(#tile5plugin.hyperlink,'Globalmusic'),30885, eq(#tile5plugin.hyperlink,'MyLyrics'),90478, eq(#tile5plugin.hyperlink,'Wikipedia'),4711, eq(1,1),0)))</define>
+  <define property="true" evaluateNow="true">#tile6.hyperlink:#(cint(switch( eq(#tile6plugin.hyperlink,'Infoservice'),16000, eq(#tile6plugin.hyperlink,'Playdisc'),3001, eq(#tile6plugin.hyperlink,'Trakt'),87258, eq(#tile6plugin.hyperlink,'Rockstar'),47286, eq(#tile6plugin.hyperlink,'Radiotime'),25650, eq(#tile6plugin.hyperlink,'Extensions'),801, eq(#tile6plugin.hyperlink,'Globalmusic'),30885, eq(#tile6plugin.hyperlink,'MyLyrics'),90478, eq(#tile6plugin.hyperlink,'Wikipedia'),4711, eq(1,1),0)))</define>
+  <define property="true" evaluateNow="true">#tile7.hyperlink:#(cint(switch( eq(#tile7plugin.hyperlink,'Imdb+'),31415, eq(#tile7plugin.hyperlink,'NoPlugin'),35, eq(1,1),0)))</define>
+  <define property="true" evaluateNow="true">#tile8.hyperlink:#(cint(switch( eq(#tile8plugin.hyperlink,'Infoservice'),16000, eq(#tile8plugin.hyperlink,'Playdisc'),3001, eq(#tile8plugin.hyperlink,'Trakt'),87258, eq(#tile8plugin.hyperlink,'Rockstar'),47286, eq(#tile8plugin.hyperlink,'Radiotime'),25650, eq(#tile8plugin.hyperlink,'Extensions'),801, eq(#tile8plugin.hyperlink,'Globalmusic'),30885, eq(#tile8plugin.hyperlink,'MyLyrics'),90478, eq(#tile8plugin.hyperlink,'Wikipedia'),4711, eq(1,1),0)))</define>
+  <define property="true" evaluateNow="true">#tile9.hyperlink:#(cint(switch( eq(#tile9plugin.hyperlink,'Infoservice'),16000, eq(#tile9plugin.hyperlink,'Playdisc'),3001, eq(#tile9plugin.hyperlink,'Trakt'),87258, eq(#tile9plugin.hyperlink,'Rockstar'),47286, eq(#tile9plugin.hyperlink,'Radiotime'),25650, eq(#tile9plugin.hyperlink,'Extensions'),801, eq(#tile9plugin.hyperlink,'Globalmusic'),30885, eq(#tile9plugin.hyperlink,'MyLyrics'),90478, eq(#tile9plugin.hyperlink,'Wikipedia'),4711, eq(1,1),0)))</define>
+  <define property="true" evaluateNow="true">#tile10.hyperlink:#(cint(switch( eq(#tile10plugin.hyperlink,'Subcentral'),84623, eq(#tile10plugin.hyperlink,'NoPlugin'),35, eq(1,1),0)))</define>
+  <define property="true" evaluateNow="true">#tile11.hyperlink:#(cint(switch( eq(#tile11plugin.hyperlink,'Infoservice'),16000, eq(#tile11plugin.hyperlink,'Playdisc'),3001, eq(#tile11plugin.hyperlink,'Trakt'),87258, eq(#tile11plugin.hyperlink,'Rockstar'),47286, eq(#tile11plugin.hyperlink,'Radiotime'),25650, eq(#tile11plugin.hyperlink,'Extensions'),801, eq(#tile11plugin.hyperlink,'Globalmusic'),30885, eq(#tile11plugin.hyperlink,'MyLyrics'),90478, eq(#tile11plugin.hyperlink,'Wikipedia'),4711, eq(1,1),0)))</define>
+  <define property="true" evaluateNow="true">#tile12.hyperlink:#(cint(switch( eq(#tile12plugin.hyperlink,'Infoservice'),16000, eq(#tile12plugin.hyperlink,'Playdisc'),3001, eq(#tile12plugin.hyperlink,'Trakt'),87258, eq(#tile12plugin.hyperlink,'Rockstar'),47286, eq(#tile12plugin.hyperlink,'Radiotime'),25650, eq(#tile12plugin.hyperlink,'Extensions'),801, eq(#tile12plugin.hyperlink,'Globalmusic'),30885, eq(#tile12plugin.hyperlink,'MyLyrics'),90478, eq(#tile12plugin.hyperlink,'Wikipedia'),4711, eq(1,1),0)))</define>
+  
+  <!--     *******************************************************************************************  -->
+  <!--     ***************** TEXTURE DEFINES FOR PLUGINS IS HYPERLINK ABOVE +.JPG ********************  -->
+  <!--     ********************************EG.#tile1plugin.hyperlink.jpg *****************************  -->
+
+  <controls>
+  </controls>
+</window>

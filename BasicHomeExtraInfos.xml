@@ -101,11 +101,12 @@
         <posY>145</posY>
 		<height>400</height>
 		<width>630</width>
-		<textureFocus mask="series_tile_mask.png">radio_focus.jpg</textureFocus>
-		<textureNoFocus mask="series_tile_mask.png">radio_nofocus.jpg</textureNoFocus>
-		<label></label>
-		<align>left</align>
-		<textYOff>240</textYOff>
+		<font>fontL2</font>
+		<textureFocus mask="series_tile_mask.png" overlay="edge_overlay.png">radio.jpg</textureFocus>
+		<textureNoFocus mask="series_tile_mask.png">radio.jpg</textureNoFocus>
+		<label>#tile.label9</label>
+		<textalign>center</textalign>
+		<textYOff>110</textYOff>
 		<textcolorNoFocus>ffffffff</textcolorNoFocus>
 		<textcolor>ffffffff</textcolor>
 		<onup>5</onup>
@@ -129,11 +130,12 @@
         <posY>567</posY>
 		<height>400</height>
 		<width>630</width>
-		<textureFocus mask="series_tile_mask.png">music_focus.jpg</textureFocus>
-		<textureNoFocus mask="series_tile_mask.png">music_nofocus.jpg</textureNoFocus>
-		<label></label>
-		<align>left</align>
-		<textYOff>240</textYOff>
+		<font>fontL2</font>
+		<textureFocus mask="series_tile_mask.png" overlay="edge_overlay.png">music.jpg</textureFocus>
+		<textureNoFocus mask="series_tile_mask.png">music.jpg</textureNoFocus>
+		<label>#tile.label10</label>
+		<textalign>center</textalign>
+		<textYOff>110</textYOff>
 		<textcolorNoFocus>ffffffff</textcolorNoFocus>
 		<textcolor>ffffffff</textcolor>
 		<onup>53</onup>
@@ -157,13 +159,14 @@
 		<hyperlink>14</hyperlink>
 		<height>825</height>
 		<width>450</width>
-		<align>left</align>
-		<textYOff>562</textYOff>
+		<font>fontL2</font>
+		<textalign>center</textalign>
+		<textYOff>330</textYOff>
 		<textcolorNoFocus>ffffffff</textcolorNoFocus>
 		<textcolor>ffffffff</textcolor>
-		<textureFocus mask="musicmask.png">musicsettingsfocus.jpg</textureFocus>
-		<textureNoFocus mask="musicmask.png">musicsettings1.jpg</textureNoFocus>
-		<label></label>
+		<textureFocus mask="musicmask.png" overlay="musictilemask.png">musictile.jpg</textureFocus>
+		<textureNoFocus mask="musicmask.png">musictile.jpg</textureNoFocus>
+		<label>#tile.label11</label>
 		<onup>5</onup>
 		<onleft>77768</onleft>
 		<onright>5005</onright>

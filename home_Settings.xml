@@ -2,6 +2,40 @@
 <window>
   <controls>
   
+  <control>
+      <description>background</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>0</posX>
+      <posY>110</posY>
+      <height>890</height>
+      <width>3000</width>
+      <texture>black.png</texture>
+      <colordiffuse>50ffffff</colordiffuse>
+	  <visible allowhiddenfocus="true">control.hasfocus(0011223)|control.hasfocus(0011224)|control.hasfocus(0011225)|control.hasfocus(0011226)|control.hasfocus(0011227)|control.hasfocus(0011228)|control.hasfocus(226)|control.hasfocus(227)|control.hasfocus(228)|control.hasfocus(229)|control.hasfocus(230)|control.hasfocus(231)|control.hasfocus(232)|control.hasfocus(234)|control.hasfocus(235)|control.hasfocus(236)|control.hasfocus(237)|control.hasfocus(238)|control.hasfocus(239)|control.hasfocus(240)</visible>
+	  <animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
+      <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
+      <animation effect="fade" delay="0" time="700">visible</animation>
+      <animation effect="fade" time="100" delay="0">hidden</animation>
+      </control>
+	  
+	  <control>
+      <description>background</description>
+      <type>image</type>
+      <id>1</id>
+      <posX>0</posX>
+      <posY>110</posY>
+      <height>890</height>
+      <width>3000</width>
+      <texture>black.png</texture>
+      <colordiffuse>50ffffff</colordiffuse>
+	  <visible allowhiddenfocus="true">control.hasfocus(241)|control.hasfocus(242)|control.hasfocus(243)|control.hasfocus(244)|control.hasfocus(245)|control.hasfocus(246)|control.hasfocus(247)|control.hasfocus(248)|control.hasfocus(249)|control.hasfocus(250)|control.hasfocus(251)</visible>
+	  <animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
+      <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
+      <animation effect="fade" delay="0" time="700">visible</animation>
+      <animation effect="fade" time="100" delay="0">hidden</animation>
+      </control>
+  
        <control>
         <description>next menu</description>
         <type>image</type>
@@ -13,7 +47,7 @@
         <texture>right.png</texture>
         <align>left</align>
         <font>font10</font>
-        <visible>control.hasfocus(0011223)|control.hasfocus(0011224)|control.hasfocus(0011225)|control.hasfocus(0011226)|control.hasfocus(0011227)|control.hasfocus(0011228)|control.hasfocus(226)|control.hasfocus(227)|control.hasfocus(228)|control.hasfocus(229)|control.hasfocus(230)|control.hasfocus(231)|control.hasfocus(232)|control.hasfocus(234)</visible>
+        <visible>control.hasfocus(0011223)|control.hasfocus(0011224)|control.hasfocus(0011225)|control.hasfocus(0011226)|control.hasfocus(0011227)|control.hasfocus(0011228)|control.hasfocus(226)|control.hasfocus(227)|control.hasfocus(228)|control.hasfocus(229)|control.hasfocus(230)|control.hasfocus(231)|control.hasfocus(232)|control.hasfocus(234)|control.hasfocus(235)|control.hasfocus(236)|control.hasfocus(237)|control.hasfocus(238)|control.hasfocus(239)|control.hasfocus(240)</visible>
         <colordiffuse>ffffffff</colordiffuse>
 		<animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
         <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
@@ -32,7 +66,7 @@
         <texture>left.png</texture>
         <align>left</align>
         <font>font10</font>
-        <visible>control.hasfocus(233)|control.hasfocus(235)|control.hasfocus(236)|control.hasfocus(237)|control.hasfocus(238)|control.hasfocus(239)|control.hasfocus(240)</visible>
+        <visible>control.hasfocus(241)|control.hasfocus(242)|control.hasfocus(243)|control.hasfocus(244)|control.hasfocus(245)|control.hasfocus(246)|control.hasfocus(247)|control.hasfocus(248)|control.hasfocus(249)|control.hasfocus(250)|control.hasfocus(251)</visible>
         <colordiffuse>ffffffff</colordiffuse>
 		<animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
         <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
@@ -51,7 +85,7 @@
 	  <valign>middle</valign>
 	  <font>fontL2</font>
 	  <textcolor>eaeaea</textcolor>
-	  <visible>control.hasfocus(0011223)|control.hasfocus(0011224)|control.hasfocus(0011225)|control.hasfocus(0011226)|control.hasfocus(0011227)|control.hasfocus(0011228)|control.hasfocus(226)|control.hasfocus(227)|control.hasfocus(228)|control.hasfocus(229)|control.hasfocus(230)|control.hasfocus(231)|control.hasfocus(232)|control.hasfocus(234)</visible>
+	  <visible>control.hasfocus(0011223)|control.hasfocus(0011224)|control.hasfocus(0011225)|control.hasfocus(0011226)|control.hasfocus(0011227)|control.hasfocus(0011228)|control.hasfocus(226)|control.hasfocus(227)|control.hasfocus(228)|control.hasfocus(229)|control.hasfocus(230)|control.hasfocus(231)|control.hasfocus(232)|control.hasfocus(234)|control.hasfocus(235)|control.hasfocus(236)|control.hasfocus(237)|control.hasfocus(238)|control.hasfocus(239)|control.hasfocus(240)</visible>
 	 </control>
 	  
     <control>
@@ -61,7 +95,7 @@
       <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
       <animation effect="fade" delay="0" time="700">visible</animation>
       <animation effect="fade" time="100" delay="0">hidden</animation>
-	  <visible allowhiddenfocus="true">control.hasfocus(0011223)|control.hasfocus(0011224)|control.hasfocus(0011225)|control.hasfocus(0011226)|control.hasfocus(0011227)|control.hasfocus(0011228)|control.hasfocus(226)|control.hasfocus(227)|control.hasfocus(228)|control.hasfocus(229)|control.hasfocus(230)|control.hasfocus(231)|control.hasfocus(232)|control.hasfocus(234)</visible>
+	  <visible allowhiddenfocus="true">control.hasfocus(0011223)|control.hasfocus(0011224)|control.hasfocus(0011225)|control.hasfocus(0011226)|control.hasfocus(0011227)|control.hasfocus(0011228)|control.hasfocus(226)|control.hasfocus(227)|control.hasfocus(228)|control.hasfocus(229)|control.hasfocus(230)|control.hasfocus(231)|control.hasfocus(232)|control.hasfocus(234)|control.hasfocus(235)|control.hasfocus(236)|control.hasfocus(237)|control.hasfocus(238)|control.hasfocus(239)|control.hasfocus(240)</visible>
       <posX>285</posX>
       <posY>230</posY>
 	  <textalign>left</textalign>
@@ -272,22 +306,7 @@
 
 	  </control>
 	  
-	  <control>
-      <description>background</description>
-      <type>image</type>
-      <id>1</id>
-      <posX>1075</posX>
-      <posY>210</posY>
-      <height>750</height>
-      <width>682</width>
-      <texture>backslide.png</texture>
-      <colordiffuse>50ffffff</colordiffuse>
-	  <visible allowhiddenfocus="true">control.hasfocus(0011223)|control.hasfocus(0011224)|control.hasfocus(0011225)|control.hasfocus(0011226)|control.hasfocus(0011227)|control.hasfocus(0011228)|control.hasfocus(226)|control.hasfocus(227)|control.hasfocus(228)|control.hasfocus(229)|control.hasfocus(230)|control.hasfocus(231)|control.hasfocus(232)|control.hasfocus(234)</visible>
-	  <animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
-      <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
-      <animation effect="fade" delay="0" time="700">visible</animation>
-      <animation effect="fade" time="100" delay="0">hidden</animation>
-      </control>
+	  
 	  
 	  <control>
       <description>buttons</description>
@@ -296,44 +315,46 @@
       <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
       <animation effect="fade" delay="0" time="700">visible</animation>
       <animation effect="fade" time="100" delay="0">hidden</animation>
-	  <visible allowhiddenfocus="true">control.hasfocus(0011223)|control.hasfocus(0011224)|control.hasfocus(0011225)|control.hasfocus(0011226)|control.hasfocus(0011227)|control.hasfocus(0011228)|control.hasfocus(226)|control.hasfocus(227)|control.hasfocus(228)|control.hasfocus(229)|control.hasfocus(230)|control.hasfocus(231)|control.hasfocus(232)|control.hasfocus(234)</visible>
+	  <visible allowhiddenfocus="true">control.hasfocus(0011223)|control.hasfocus(0011224)|control.hasfocus(0011225)|control.hasfocus(0011226)|control.hasfocus(0011227)|control.hasfocus(0011228)|control.hasfocus(226)|control.hasfocus(227)|control.hasfocus(228)|control.hasfocus(229)|control.hasfocus(230)|control.hasfocus(231)|control.hasfocus(232)|control.hasfocus(234)|control.hasfocus(235)|control.hasfocus(236)|control.hasfocus(237)|control.hasfocus(238)|control.hasfocus(239)|control.hasfocus(240)</visible>
       <posX>1100</posX>
       <posY>240</posY>
 	  <textalign>left</textalign>
       <layout>StackLayout(0, Horizontal, True)</layout>
-	  <control>
-	  <id>0</id>
-	  <type>label</type>
-	  <label>  Plugin Tile 1: Imdb+</label>
-	  <width>800</width>
-	  <height>55</height>
-	  <valign>middle</valign>
-	  <font>fontL2</font>
-	  <textcolor>eaeaea</textcolor>
-	  </control>
 	  
 	  <control>
 	  <id>0</id>
 	  <type>label</type>
-	  <label>  Plugin Tile 2:</label>
+	  <label>  Configure your plugins..</label>
 	  <width>800</width>
-	  <height>55</height>
+	  <height>65</height>
 	  <valign>middle</valign>
 	  <font>fontL2</font>
 	  <textcolor>eaeaea</textcolor>
+	 </control>
+	 
+	  <control>
+	  <id>0</id>
+	  <type>label</type>
+	  <label>  Plugin Tile 1: Not Editable</label>
+	  <width>800</width>
+	  <height>55</height>
+	  <valign>middle</valign>
+	  <font>font11</font>
+	  <textcolor>eaeaea</textcolor>
 	  </control>
+
 	  
       	  <control>
 <description>Backgrounds</description>
 <type>menubutton</type>
 <id>234</id>
-<width>625</width>
+<width>425</width>
 <height>45</height>
-<textYoff>-1</textYoff>
+<textYOff>3</textYOff>
 <mode>dialoglist</mode>
 <dialogTitle>Choose a plugin</dialogTitle>
 <valueTextInButton>yes</valueTextInButton>
-<valuePrefixText> Current Plugin: </valuePrefixText>
+<valuePrefixText> Tile 2: </valuePrefixText>
 <onclick>#(skin.setstring('#tile2plugin.hyperlink',#selectedlabel234))</onclick>
 <binding>#tile2plugin.hyperlink</binding>
 <subitems>
@@ -353,32 +374,22 @@
 <onup>15</onup>
 <onleft>0011228</onleft>
 <ondown>226</ondown>
-<onright>233</onright>
+<onright>241</onright>
 <visible>!skin.hastheme(Fade to Gray)</visible>
 </control>
-	  
-	   <control>
-	  <id>0</id>
-	  <type>label</type>
-	  <label>  Plugin Tile 3:</label>
-	  <width>800</width>
-	  <height>55</height>
-	  <valign>middle</valign>
-	  <font>fontL2</font>
-	  <textcolor>eaeaea</textcolor>
-	  </control>
+
 	  
 	  <control>
 <description>Backgrounds</description>
 <type>menubutton</type>
 <id>226</id>
-<width>625</width>
+<width>425</width>
 <height>45</height>
-<textYoff>-1</textYoff>
+<textYOff>3</textYOff>
 <mode>dialoglist</mode>
 <dialogTitle>Choose a plugin</dialogTitle>
 <valueTextInButton>yes</valueTextInButton>
-<valuePrefixText> Current Plugin: </valuePrefixText>
+<valuePrefixText> Tile 3: </valuePrefixText>
 <onclick>#(skin.setstring('#tile3plugin.hyperlink',#selectedlabel226))</onclick>
 <binding>#tile3plugin.hyperlink</binding>
 <subitems>
@@ -398,29 +409,18 @@
 <onup>234</onup>
 <onleft>0011228</onleft>
 <ondown>228</ondown>
-<onright>233</onright>
+<onright>241</onright>
 <visible>!skin.hastheme(Fade to Gray)</visible>
 </control>
 
       <control>
 	  <id>0</id>
 	  <type>label</type>
-	  <label>  Plugin Tile 4: Subcentral</label>
+	  <label>  Plugin Tile 4: Not Editable</label>
 	  <width>800</width>
 	  <height>65</height>
 	  <valign>middle</valign>
-	  <font>fontL2</font>
-	  <textcolor>eaeaea</textcolor>
-	  </control>
-	  
-	  <control>
-	  <id>0</id>
-	  <type>label</type>
-	  <label>  Plugin Tile 5:</label>
-	  <width>800</width>
-	  <height>55</height>
-	  <valign>middle</valign>
-	  <font>fontL2</font>
+	  <font>font11</font>
 	  <textcolor>eaeaea</textcolor>
 	  </control>
 	  
@@ -428,13 +428,13 @@
 <description>Backgrounds</description>
 <type>menubutton</type>
 <id>228</id>
-<width>625</width>
+<width>425</width>
 <height>45</height>
-<textYoff>-1</textYoff>
+<textYOff>3</textYOff>
 <mode>dialoglist</mode>
 <dialogTitle>Choose a plugin</dialogTitle>
 <valueTextInButton>yes</valueTextInButton>
-<valuePrefixText> Current Plugin: </valuePrefixText>
+<valuePrefixText> Tile 5: </valuePrefixText>
 <onclick>#(skin.setstring('#tile5plugin.hyperlink',#selectedlabel228))</onclick>
 <binding>#tile5plugin.hyperlink</binding>
 <subitems>
@@ -454,32 +454,21 @@
 <onup>226</onup>
 <onleft>0011228</onleft>
 <ondown>227</ondown>
-<onright>233</onright>
+<onright>241</onright>
 <visible>!skin.hastheme(Fade to Gray)</visible>
 </control>
-	  
-	  <control>
-	  <id>0</id>
-	  <type>label</type>
-	  <label>  Plugin Tile 6:</label>
-	  <width>800</width>
-	  <height>55</height>
-	  <valign>middle</valign>
-	  <font>fontL2</font>
-	  <textcolor>eaeaea</textcolor>
-	  </control>
-	  
+
 	  <control>
 <description>Backgrounds</description>
 <type>menubutton</type>
 <id>227</id>
-<width>625</width>
+<width>425</width>
 <height>45</height>
-<textYOff>-1</textYOff>
+<textYOff>3</textYOff>
 <mode>dialoglist</mode>
 <dialogTitle>Choose a plugin</dialogTitle>
 <valueTextInButton>yes</valueTextInButton>
-<valuePrefixText> Current Plugin: </valuePrefixText>
+<valuePrefixText> Tile 6: </valuePrefixText>
 <onclick>#(skin.setstring('#tile6plugin.hyperlink',#selectedlabel227))</onclick>
 <binding>#tile6plugin.hyperlink</binding>
 <subitems>
@@ -498,112 +487,22 @@
 <textureNoFocus></textureNoFocus>
 <onup>228</onup>
 <onleft>0011228</onleft>
-<ondown>227</ondown>
-<onright>233</onright>
+<ondown>239</ondown>
+<onright>241</onright>
 <visible>!skin.hastheme(Fade to Gray)</visible>
 </control>
-</control>
-	  
-	  <!--****** Page 2 of skin edit settings *******-->
-	  
-	  <control>
-      <description>buttons</description>
-      <type>group</type>
-      <animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
-      <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
-      <animation effect="fade" delay="0" time="700">visible</animation>
-      <animation effect="fade" time="100" delay="0">hidden</animation>
-	  <visible allowhiddenfocus="true">control.hasfocus(233)|control.hasfocus(235)|control.hasfocus(236)|control.hasfocus(237)|control.hasfocus(238)|control.hasfocus(239)|control.hasfocus(240)</visible>
-      <posX>285</posX>
-      <posY>230</posY>
-	  <textalign>left</textalign>
-      <layout>StackLayout(0, Horizontal, True)</layout>
-	  
-	  <control>
-	  <id>0</id>
-	  <type>label</type>
-	  <label> TEST SETTING:</label>
-	  <width>800</width>
-	  <height>55</height>
-	  <valign>middle</valign>
-	  <font>fontL2</font>
-	  <textcolor>eaeaea</textcolor>
-	  </control>
-	  
-      <control>
-        <description>TEST</description>
-        <type>checkbutton</type>
-        <id>233</id>
-        <width>645</width>
-		<height>45</height>
-        <label>Unused testing button</label>
-		<font>font11</font>
-		<textcolorNoFocus>99ffffff</textcolorNoFocus>
-		<textureFocus>0012_btn.png</textureFocus>
-		<textureNoFocus></textureNoFocus>
-		<!--
-        <selected>#(skin.hassetting('#skin.record.info'))</selected>
-        <onclick>#(skin.togglesetting('#skin.record.info'))</onclick>
-		-->
-		<onleft>226</onleft>
-        <onup>232</onup>
-		<onright>239</onright>
-        <ondown>233</ondown>
-		<visible allowhiddenfocus="true">control.hasfocus(233)|control.hasfocus(235)|control.hasfocus(236)|control.hasfocus(237)|control.hasfocus(238)|control.hasfocus(239)|control.hasfocus(240)</visible>
-      </control>
-	  </control>
-	  
-	  <control>
-      <description>background</description>
-      <type>image</type>
-      <id>1</id>
-      <posX>1075</posX>
-      <posY>210</posY>
-      <height>750</height>
-      <width>682</width>
-      <texture>backslide.png</texture>
-      <colordiffuse>50ffffff</colordiffuse>
-	  <visible allowhiddenfocus="true">control.hasfocus(233)|control.hasfocus(235)|control.hasfocus(236)|control.hasfocus(237)|control.hasfocus(238)|control.hasfocus(239)|control.hasfocus(240)</visible>
-	  <animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
-      <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
-      <animation effect="fade" delay="0" time="700">visible</animation>
-      <animation effect="fade" time="100" delay="0">hidden</animation>
-      </control>
-	  
-	  <control>
-      <description>buttons</description>
-      <type>group</type>
-      <animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
-      <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
-      <animation effect="fade" delay="0" time="700">visible</animation>
-      <animation effect="fade" time="100" delay="0">hidden</animation>
-	  <visible allowhiddenfocus="true">control.hasfocus(233)|control.hasfocus(235)|control.hasfocus(236)|control.hasfocus(237)|control.hasfocus(238)|control.hasfocus(239)|control.hasfocus(240)</visible>
-      <posX>1100</posX>
-      <posY>240</posY>
-	  <textalign>left</textalign>
-      <layout>StackLayout(0, Horizontal, True)</layout>
-	  <control>
-	  <id>0</id>
-	  <type>label</type>
-	  <label>  Plugin Tile 7:</label>
-	  <width>800</width>
-	  <height>55</height>
-	  <valign>middle</valign>
-	  <font>fontL2</font>
-	  <textcolor>eaeaea</textcolor>
-	  </control>
-	  
-	<control>
+
+<control>
 <description>Backgrounds</description>
 <type>menubutton</type>
 <id>239</id>
-<width>625</width>
+<width>425</width>
 <height>45</height>
-<textYoff>-1</textYoff>
+<textYOff>3</textYOff>
 <mode>dialoglist</mode>
 <dialogTitle>Choose a plugin</dialogTitle>
 <valueTextInButton>yes</valueTextInButton>
-<valuePrefixText> Current Plugin: </valuePrefixText>
+<valuePrefixText> Tile 7: </valuePrefixText>
 <onclick>#(skin.setstring('#tile7plugin.hyperlink',#selectedlabel239))</onclick>
 <binding>#tile7plugin.hyperlink</binding>
 <subitems>
@@ -613,34 +512,24 @@
 <textcolorNoFocus>99ffffff</textcolorNoFocus>
 <textureFocus>0012_btn.png</textureFocus>
 <textureNoFocus></textureNoFocus>
-<onup>233</onup>
-<onleft>233</onleft>
+<onup>227</onup>
+<onleft>0011228</onleft>
 <ondown>235</ondown>
+<onright>241</onright>
 <visible>!skin.hastheme(Fade to Gray)</visible>
 </control>
-	  
-	  <control>
-	  <id>0</id>
-	  <type>label</type>
-	  <label>  Plugin Tile 8:</label>
-	  <width>800</width>
-	  <height>55</height>
-	  <valign>middle</valign>
-	  <font>fontL2</font>
-	  <textcolor>eaeaea</textcolor>
-	  </control>
-	  
+
       	  <control>
 <description>Backgrounds</description>
 <type>menubutton</type>
 <id>235</id>
-<width>625</width>
+<width>425</width>
 <height>45</height>
-<textYoff>-1</textYoff>
+<textYOff>3</textYOff>
 <mode>dialoglist</mode>
 <dialogTitle>Choose a plugin</dialogTitle>
 <valueTextInButton>yes</valueTextInButton>
-<valuePrefixText> Current Plugin: </valuePrefixText>
+<valuePrefixText> Tile 8: </valuePrefixText>
 <onclick>#(skin.setstring('#tile8plugin.hyperlink',#selectedlabel235))</onclick>
 <binding>#tile8plugin.hyperlink</binding>
 <subitems>
@@ -658,33 +547,23 @@
 <textureFocus>0012_btn.png</textureFocus>
 <textureNoFocus></textureNoFocus>
 <onup>239</onup>
-<onleft>233</onleft>
+<onleft>0011228</onleft>
 <ondown>236</ondown>
+<onright>241</onright>
 <visible>!skin.hastheme(Fade to Gray)</visible>
 </control>
-	  
-	   <control>
-	  <id>0</id>
-	  <type>label</type>
-	  <label>  Plugin Tile 9:</label>
-	  <width>800</width>
-	  <height>55</height>
-	  <valign>middle</valign>
-	  <font>fontL2</font>
-	  <textcolor>eaeaea</textcolor>
-	  </control>
-	  
+
 	  <control>
 <description>Backgrounds</description>
 <type>menubutton</type>
 <id>236</id>
-<width>625</width>
+<width>425</width>
 <height>45</height>
-<textYoff>-1</textYoff>
+<textYOff>3</textYOff>
 <mode>dialoglist</mode>
 <dialogTitle>Choose a plugin</dialogTitle>
 <valueTextInButton>yes</valueTextInButton>
-<valuePrefixText> Current Plugin: </valuePrefixText>
+<valuePrefixText> Tile 9: </valuePrefixText>
 <onclick>#(skin.setstring('#tile9plugin.hyperlink',#selectedlabel236))</onclick>
 <binding>#tile9plugin.hyperlink</binding>
 <subitems>
@@ -702,33 +581,23 @@
 <textureFocus>0012_btn.png</textureFocus>
 <textureNoFocus></textureNoFocus>
 <onup>235</onup>
-<onleft>233</onleft>
+<onleft>0011228</onleft>
 <ondown>240</ondown>
+<onright>241</onright>
 <visible>!skin.hastheme(Fade to Gray)</visible>
 </control>
-
-      <control>
-	  <id>0</id>
-	  <type>label</type>
-	  <label>  Plugin Tile 10:</label>
-	  <width>800</width>
-	  <height>65</height>
-	  <valign>middle</valign>
-	  <font>fontL2</font>
-	  <textcolor>eaeaea</textcolor>
-	  </control>
 	  
 	  	<control>
 <description>Backgrounds</description>
 <type>menubutton</type>
 <id>240</id>
-<width>625</width>
+<width>425</width>
 <height>45</height>
-<textYoff>-1</textYoff>
+<textYOff>3</textYOff>
 <mode>dialoglist</mode>
 <dialogTitle>Choose a plugin</dialogTitle>
 <valueTextInButton>yes</valueTextInButton>
-<valuePrefixText> Current Plugin: </valuePrefixText>
+<valuePrefixText> Tile 10: </valuePrefixText>
 <onclick>#(skin.setstring('#tile10plugin.hyperlink',#selectedlabel240))</onclick>
 <binding>#tile10plugin.hyperlink</binding>
 <subitems>
@@ -739,34 +608,23 @@
 <textureFocus>0012_btn.png</textureFocus>
 <textureNoFocus></textureNoFocus>
 <onup>236</onup>
-<onleft>233</onleft>
+<onleft>0011228</onleft>
 <ondown>237</ondown>
+<onright>241</onright>
 <visible>!skin.hastheme(Fade to Gray)</visible>
 </control>
 
-	  
-	  <control>
-	  <id>0</id>
-	  <type>label</type>
-	  <label>  Plugin Tile 11:</label>
-	  <width>800</width>
-	  <height>55</height>
-	  <valign>middle</valign>
-	  <font>fontL2</font>
-	  <textcolor>eaeaea</textcolor>
-	  </control>
-	  
 	  <control>
 <description>Backgrounds</description>
 <type>menubutton</type>
 <id>237</id>
-<width>625</width>
+<width>425</width>
 <height>45</height>
-<textYoff>-1</textYoff>
+<textYOff>3</textYOff>
 <mode>dialoglist</mode>
 <dialogTitle>Choose a plugin</dialogTitle>
 <valueTextInButton>yes</valueTextInButton>
-<valuePrefixText> Current Plugin: </valuePrefixText>
+<valuePrefixText> Tile 11: </valuePrefixText>
 <onclick>#(skin.setstring('#tile11plugin.hyperlink',#selectedlabel237))</onclick>
 <binding>#tile11plugin.hyperlink</binding>
 <subitems>
@@ -784,33 +642,23 @@
 <textureFocus>0012_btn.png</textureFocus>
 <textureNoFocus></textureNoFocus>
 <onup>240</onup>
-<onleft>233</onleft>
+<onleft>0011228</onleft>
 <ondown>238</ondown>
+<onright>241</onright>
 <visible>!skin.hastheme(Fade to Gray)</visible>
 </control>
-	  
-	  <control>
-	  <id>0</id>
-	  <type>label</type>
-	  <label>  Plugin Tile 12:</label>
-	  <width>800</width>
-	  <height>55</height>
-	  <valign>middle</valign>
-	  <font>fontL2</font>
-	  <textcolor>eaeaea</textcolor>
-	  </control>
-	  
+
 	  <control>
 <description>Backgrounds</description>
 <type>menubutton</type>
 <id>238</id>
-<width>625</width>
+<width>425</width>
 <height>45</height>
-<textYOff>-1</textYOff>
+<textYOff>3</textYOff>
 <mode>dialoglist</mode>
 <dialogTitle>Choose a plugin</dialogTitle>
 <valueTextInButton>yes</valueTextInButton>
-<valuePrefixText> Current Plugin: </valuePrefixText>
+<valuePrefixText> Tile 12: </valuePrefixText>
 <onclick>#(skin.setstring('#tile12plugin.hyperlink',#selectedlabel238))</onclick>
 <binding>#tile12plugin.hyperlink</binding>
 <subitems>
@@ -828,14 +676,241 @@
 <textureFocus>0012_btn.png</textureFocus>
 <textureNoFocus></textureNoFocus>
 <onup>237</onup>
-<onleft>233</onleft>
+<onleft>0011228</onleft>
 <ondown>238</ondown>
+<onright>241</onright>
 <visible>!skin.hastheme(Fade to Gray)</visible>
 </control>
 </control>
 	  
+	  <!--****** Page 2 of skin edit settings *******-->
 	  
-	 <!-- ***** Overlay ****** -->
+	  
+	  <control>
+      <description>buttons</description>
+      <type>group</type>
+      <animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
+      <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
+      <animation effect="fade" delay="0" time="700">visible</animation>
+      <animation effect="fade" time="100" delay="0">hidden</animation>
+	  <visible allowhiddenfocus="true">control.hasfocus(241)|control.hasfocus(242)|control.hasfocus(243)|control.hasfocus(244)|control.hasfocus(245)|control.hasfocus(246)|control.hasfocus(247)|control.hasfocus(248)|control.hasfocus(249)|control.hasfocus(250)|control.hasfocus(251)</visible>
+      <posX>285</posX>
+      <posY>230</posY>
+	  <textalign>left</textalign>
+      <layout>StackLayout(0, Horizontal, True)</layout>
+	  
+	  <control>
+	  <id>0</id>
+	  <type>label</type>
+	  <label> Configure your Tile Labels:</label>
+	  <width>800</width>
+	  <height>55</height>
+	  <valign>middle</valign>
+	  <font>fontL2</font>
+	  <textcolor>eaeaea</textcolor>
+	  </control>
+	  
+      <control>
+        <description>Label</description>
+        <type>button</type>
+        <id>241</id>
+        <width>645</width>
+		<height>45</height>
+        <label>TVseries: #tile.label1</label>
+		<font>font11</font>
+		<textcolorNoFocus>99ffffff</textcolorNoFocus>
+		<textureFocus>0012_btn.png</textureFocus>
+		<textureNoFocus></textureNoFocus>
+        <onclick>#(skin.setstring('#tile.label1'))</onclick>
+		<onleft>226</onleft>
+        <onup>233</onup>
+		<onright>239</onright>
+        <ondown>242</ondown>
+		<visible allowhiddenfocus="true">control.hasfocus(241)|control.hasfocus(242)|control.hasfocus(243)|control.hasfocus(244)|control.hasfocus(245)|control.hasfocus(246)|control.hasfocus(247)|control.hasfocus(248)|control.hasfocus(249)|control.hasfocus(250)|control.hasfocus(251)</visible>
+      </control>
+	  
+	  <control>
+        <description>Label</description>
+        <type>button</type>
+        <id>242</id>
+        <width>645</width>
+		<height>45</height>
+        <label>MovingPictures: #tile.label2</label>
+		<font>font11</font>
+		<textcolorNoFocus>99ffffff</textcolorNoFocus>
+		<textureFocus>0012_btn.png</textureFocus>
+		<textureNoFocus></textureNoFocus>
+        <onclick>#(skin.setstring('#tile.label2'))</onclick>
+		<onleft>226</onleft>
+        <onup>241</onup>
+		<onright>239</onright>
+        <ondown>243</ondown>
+      </control>
+	  
+	  <control>
+        <description>Label</description>
+        <type>button</type>
+        <id>243</id>
+        <width>645</width>
+		<height>45</height>
+        <label>MyVideos: #tile.label3</label>
+		<font>font11</font>
+		<textcolorNoFocus>99ffffff</textcolorNoFocus>
+		<textureFocus>0012_btn.png</textureFocus>
+		<textureNoFocus></textureNoFocus>
+        <onclick>#(skin.setstring('#tile.label3'))</onclick>
+		<onleft>226</onleft>
+        <onup>242</onup>
+		<onright>239</onright>
+        <ondown>244</ondown>
+      </control>
+	  
+	  <control>
+        <description>Label</description>
+        <type>button</type>
+        <id>244</id>
+        <width>645</width>
+		<height>45</height>
+        <label>OnlineVideos: #tile.label4</label>
+		<font>font11</font>
+		<textcolorNoFocus>99ffffff</textcolorNoFocus>
+		<textureFocus>0012_btn.png</textureFocus>
+		<textureNoFocus></textureNoFocus>
+        <onclick>#(skin.setstring('#tile.label4'))</onclick>
+		<onleft>226</onleft>
+        <onup>243</onup>
+		<onright>239</onright>
+        <ondown>245</ondown>
+      </control>
+	  
+	  <control>
+        <description>Label</description>
+        <type>button</type>
+        <id>245</id>
+        <width>645</width>
+		<height>45</height>
+        <label>TV guide: #tile.label5</label>
+		<font>font11</font>
+		<textcolorNoFocus>99ffffff</textcolorNoFocus>
+		<textureFocus>0012_btn.png</textureFocus>
+		<textureNoFocus></textureNoFocus>
+        <onclick>#(skin.setstring('#tile.label5'))</onclick>
+		<onleft>226</onleft>
+        <onup>244</onup>
+		<onright>239</onright>
+        <ondown>246</ondown>
+      </control>
+	  
+	  <control>
+        <description>Label</description>
+        <type>button</type>
+        <id>246</id>
+        <width>645</width>
+		<height>45</height>
+        <label>TV Home: #tile.label6</label>
+		<font>font11</font>
+		<textcolorNoFocus>99ffffff</textcolorNoFocus>
+		<textureFocus>0012_btn.png</textureFocus>
+		<textureNoFocus></textureNoFocus>
+        <onclick>#(skin.setstring('#tile.label6'))</onclick>
+		<onleft>226</onleft>
+        <onup>245</onup>
+		<onright>239</onright>
+        <ondown>247</ondown>
+      </control>
+	  
+	  <control>
+        <description>Label</description>
+        <type>button</type>
+        <id>247</id>
+        <width>645</width>
+		<height>45</height>
+        <label>Recorded TV: #tile.label7</label>
+		<font>font11</font>
+		<textcolorNoFocus>99ffffff</textcolorNoFocus>
+		<textureFocus>0012_btn.png</textureFocus>
+		<textureNoFocus></textureNoFocus>
+        <onclick>#(skin.setstring('#tile.label7'))</onclick>
+		<onleft>226</onleft>
+        <onup>246</onup>
+		<onright>239</onright>
+        <ondown>248</ondown>
+      </control>
+	  
+	  <control>
+        <description>Label</description>
+        <type>button</type>
+        <id>248</id>
+        <width>645</width>
+		<height>45</height>
+        <label>Sheduled Rec: #tile.label8</label>
+		<font>font11</font>
+		<textcolorNoFocus>99ffffff</textcolorNoFocus>
+		<textureFocus>0012_btn.png</textureFocus>
+		<textureNoFocus></textureNoFocus>
+        <onclick>#(skin.setstring('#tile.label8'))</onclick>
+		<onleft>226</onleft>
+        <onup>247</onup>
+		<onright>239</onright>
+        <ondown>249</ondown>
+      </control>
+	  
+	  <control>
+        <description>Label</description>
+        <type>button</type>
+        <id>249</id>
+        <width>645</width>
+		<height>45</height>
+        <label>Radio: #tile.label9</label>
+		<font>font11</font>
+		<textcolorNoFocus>99ffffff</textcolorNoFocus>
+		<textureFocus>0012_btn.png</textureFocus>
+		<textureNoFocus></textureNoFocus>
+        <onclick>#(skin.setstring('#tile.label9'))</onclick>
+		<onleft>226</onleft>
+        <onup>248</onup>
+		<onright>239</onright>
+        <ondown>250</ondown>
+      </control>
+	  
+	  <control>
+        <description>Label</description>
+        <type>button</type>
+        <id>250</id>
+        <width>645</width>
+		<height>45</height>
+        <label>MyMusic: #tile.label10</label>
+		<font>font11</font>
+		<textcolorNoFocus>99ffffff</textcolorNoFocus>
+		<textureFocus>0012_btn.png</textureFocus>
+		<textureNoFocus></textureNoFocus>
+        <onclick>#(skin.setstring('#tile.label10'))</onclick>
+		<onleft>226</onleft>
+        <onup>249</onup>
+		<onright>239</onright>
+        <ondown>251</ondown>
+      </control>
+	  
+	  <control>
+        <description>Label</description>
+        <type>button</type>
+        <id>251</id>
+        <width>645</width>
+		<height>45</height>
+        <label>Music Settings: #tile.label11</label>
+		<font>font11</font>
+		<textcolorNoFocus>99ffffff</textcolorNoFocus>
+		<textureFocus>0012_btn.png</textureFocus>
+		<textureNoFocus></textureNoFocus>
+        <onclick>#(skin.setstring('#tile.label11'))</onclick>
+		<onleft>226</onleft>
+        <onup>250</onup>
+		<onright>239</onright>
+        <ondown>251</ondown>
+      </control>
+
+	  </control>
+
 
   </controls>
 </window>

@@ -216,14 +216,14 @@
         <width>630</width>
         <height>400</height>
 		<hyperlink>603</hyperlink>
-        <textureFocus mask="series_tile_mask.png">recordtv_focus.jpg</textureFocus>
+        <textureFocus mask="series_tile_mask.png" overlay="edge_overlay.png">recordtv.jpg</textureFocus>
 		<textureNoFocus mask="series_tile_mask.png">recordtv.jpg</textureNoFocus>
-        <label></label>
-		<align>left</align>
-		<textYOff>240</textYOff>
+        <label>#tile.label7</label>
+		<textalign>center</textalign>
+		<textYOff>110</textYOff>
 		<textcolorNoFocus>ffffffff</textcolorNoFocus>
 		<textcolor>ffffffff</textcolor>
-        <font></font>
+        <font>fontL2</font>
 		<onup>42</onup>
 		<onleft>91919985</onleft>
 		<onright>77774</onright>
@@ -246,14 +246,14 @@
         <width>630</width>
         <height>400</height>
 		<hyperlink>600</hyperlink>
-        <textureFocus mask="series_tile_mask.png">guide_focus.png</textureFocus>
-		<textureNoFocus mask="series_tile_mask.png">guide.png</textureNoFocus>
-        <align>left</align>
-		<label></label>
-		<textYOff>240</textYOff>
+        <textureFocus mask="series_tile_mask.png" overlay="edge_overlay.png">guide.jpg</textureFocus>
+		<textureNoFocus mask="series_tile_mask.png">guide.jpg</textureNoFocus>
+        <textalign>center</textalign>
+		<label>#tile.label5</label>
+		<textYOff>110</textYOff>
 		<textcolorNoFocus>ffffffff</textcolorNoFocus>
 		<textcolor>ffffffff</textcolor>
-        <font></font>
+        <font>fontL2</font>
 		<onup>4</onup>
 		<onleft>91919984</onleft>
 		<onright>43</onright>
@@ -276,14 +276,14 @@
         <width>630</width>
         <height>400</height>
 		<hyperlink>1</hyperlink>
-        <textureFocus mask="series_tile_mask.png">tvhome_focus.jpg</textureFocus>
+        <textureFocus mask="series_tile_mask.png" overlay="edge_overlay.png">tvhome.jpg</textureFocus>
 		<textureNoFocus mask="series_tile_mask.png">tvhome.jpg</textureNoFocus>
-        <label></label>
-		<align>left</align>
-		<textYOff>240</textYOff>
+        <label>#tile.label6</label>
+		<textalign>center</textalign>
+		<textYOff>110</textYOff>
 		<textcolorNoFocus>ffffffff</textcolorNoFocus>
 		<textcolor>ffffffff</textcolor>
-        <font></font>
+        <font>fontL2</font>
 		<onup>4</onup>
 		<onleft>42</onleft>
 		<onright>5</onright>
@@ -307,14 +307,14 @@
         <width>630</width>
         <height>400</height>
 		<hyperlink>601</hyperlink>
-        <textureFocus mask="series_tile_mask.png">sheduled_focus.jpg</textureFocus>
+        <textureFocus mask="series_tile_mask.png" overlay="edge_overlay.png">sheduled.jpg</textureFocus>
 		<textureNoFocus mask="series_tile_mask.png">sheduled.jpg</textureNoFocus>
-        <label></label>
-		<align>left</align>
-		<textYOff>240</textYOff>
+        <label>#tile.label8</label>
+		<textalign>center</textalign>
+		<textYOff>110</textYOff>
 		<textcolorNoFocus>ffffffff</textcolorNoFocus>
 		<textcolor>ffffffff</textcolor>
-        <font></font>
+        <font>fontL2</font>
 		<onup>43</onup>
 		<onleft>41</onleft>
 		<onright>5</onright>

@@ -222,19 +222,19 @@
 		<hyperlink>96742</hyperlink>
 		<height>400</height>
 		<width>630</width>
-		<font></font>
-		<textureNoFocus mask="series_tile_mask.png">mpictures.jpg</textureNoFocus>
-		<textureFocus mask="series_tile_mask.png">mpictures_focus.jpg</textureFocus>
-		<label></label>
-		<align>left</align>
-		<textYOff>240</textYOff>
+		<font>fontL2</font>
+		<textureNoFocus mask="series_tile_mask.png">movpics.jpg</textureNoFocus>
+		<textureFocus mask="series_tile_mask.png" overlay="edge_overlay.png">movpics.jpg</textureFocus>
+		<label>#tile.label2</label>
+		<textalign>center</textalign>
+		<textYOff>110</textYOff>
 		<textcolorNoFocus>ffffffff</textcolorNoFocus>
 		<textcolor>ffffffff</textcolor>
 		<onup>77767</onup>
 		<onright>77779</onright>
 		<ondown>77766</ondown>
 		<onleft>91919993</onleft>
-		<visible>[control.hasfocus(91919994) | control.hasfocus(91919991) | control.hasfocus(91919992) | control.hasfocus(91919993) | control.hasfocus(91919994) | control.hasfocus(91919995) | control.hasfocus(91919996) | control.hasfocus(77766) | control.hasfocus(77767) | control.hasfocus(30) | control.hasfocus(330) | control.hasfocus(331)]+!string.equals(#skin.movie.swap,true)</visible>
+		<visible>[control.hasfocus(91919994) | control.hasfocus(91919991) | control.hasfocus(91919992) | control.hasfocus(91919993) | control.hasfocus(91919994) | control.hasfocus(91919995) | control.hasfocus(91919996) | control.hasfocus(77766) | control.hasfocus(77767) | control.hasfocus(30) | control.hasfocus(330) | control.hasfocus(331)]+!string.equals(#skin.movie.swap,true)+!control.hasfocus(91919994)+!control.hasfocus(91919995)+!control.hasfocus(91919996)</visible>
 		<animation effect="zoom" end="102,102" center="0,0" time="200">Focus</animation>
 		<animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
         <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
@@ -393,19 +393,19 @@
 		<hyperlink>9811</hyperlink>
 		<height>400</height>
 		<width>630</width>
-		<font></font>
+		<font>fontL2</font>
 		<textureNoFocus mask="series_tile_mask.png">series.jpg</textureNoFocus>
-		<textureFocus mask="series_tile_mask.png">series_focus.jpg</textureFocus>
-		<label></label>
-		<align>left</align>
-		<textYOff>240</textYOff>
+		<textureFocus mask="series_tile_mask.png" overlay="edge_overlay.png">series.jpg</textureFocus>
+		<label>#tile.label1</label>
+		<textalign>center</textalign>
+		<textYOff>110</textYOff>
 		<textcolorNoFocus>ffffffff</textcolorNoFocus>
 		<textcolor>ffffffff</textcolor>
 		<onup>30</onup>
 		<onright>77773</onright>
 		<onleft>91919996</onleft>
 		<ondown>#skin.movietilenav</ondown>
-		<visible allowhiddenfocus="true">control.hasfocus(91919994) | control.hasfocus(91919991) | control.hasfocus(91919992) | control.hasfocus(91919993) | control.hasfocus(91919994) | control.hasfocus(91919995) | control.hasfocus(91919996) | control.hasfocus(77766) | control.hasfocus(77767) | control.hasfocus(30) | control.hasfocus(77779) | control.hasfocus(15991) | control.hasfocus(15992) | control.hasfocus(15993) | control.hasfocus(330) | control.hasfocus(331)</visible>
+		<visible allowhiddenfocus="true">[control.hasfocus(91919994) | control.hasfocus(91919991) | control.hasfocus(91919992) | control.hasfocus(91919993) | control.hasfocus(91919994) | control.hasfocus(91919995) | control.hasfocus(91919996) | control.hasfocus(77766) | control.hasfocus(77767) | control.hasfocus(30) | control.hasfocus(77779) | control.hasfocus(15991) | control.hasfocus(15992) | control.hasfocus(15993) | control.hasfocus(330) | control.hasfocus(331)]+!control.hasfocus(91919991)+!control.hasfocus(91919992)+!control.hasfocus(91919993)+!control.hasfocus(15991)+!control.hasfocus(15992)+!control.hasfocus(15993)</visible>
 		<animation effect="zoom" end="102,102" center="0,0" time="200">Focus</animation>
 		<animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
         <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
@@ -424,12 +424,12 @@
 		<hyperlink>4755</hyperlink>
 		<height>400</height>
 		<width>630</width>
-		<font></font>
+		<font>fontL2</font>
 		<textureNoFocus mask="series_tile_mask.png">onlinetile.jpg</textureNoFocus>
-		<textureFocus mask="series_tile_mask.png">onlinetile_focus.jpg</textureFocus>
-		<label></label>
-		<align>left</align>
-		<textYOff>240</textYOff>
+		<textureFocus mask="series_tile_mask.png" overlay="edge_overlay.png">onlinetile.jpg</textureFocus>
+		<label>#tile.label4</label>
+		<textalign>center</textalign>
+		<textYOff>110</textYOff>
 		<textcolorNoFocus>ffffffff</textcolorNoFocus>
 		<textcolor>ffffffff</textcolor>
 		<onup>30</onup>
@@ -623,19 +623,19 @@
 		<hyperlink>6</hyperlink>
 		<height>400</height>
 		<width>630</width>
-		<font></font>
-		<textureNoFocus mask="series_tile_mask.png">myvideos.jpg</textureNoFocus>
-		<textureFocus mask="series_tile_mask.png">myvideos_focus.jpg</textureFocus>
-		<label></label>
-		<align>left</align>
-		<textYOff>240</textYOff>
+		<font>fontL2</font>
+		<textureNoFocus mask="series_tile_mask.png">myvid.jpg</textureNoFocus>
+		<textureFocus mask="series_tile_mask.png" overlay="edge_overlay.png">myvid.jpg</textureFocus>
+		<label>#tile.label3</label>
+		<textalign>center</textalign>
+		<textYOff>110</textYOff>
 		<textcolorNoFocus>ffffffff</textcolorNoFocus>
 		<textcolor>ffffffff</textcolor>
 		<onup>77767</onup>
 		<onright>77773</onright>
 		<ondown>77779</ondown>
 		<onleft>15993</onleft>
-		<visible>[control.hasfocus(91919994) | control.hasfocus(15991) | control.hasfocus(15992) | control.hasfocus(15993) | control.hasfocus(91919994) | control.hasfocus(91919995) | control.hasfocus(91919996) | control.hasfocus(77766) | control.hasfocus(77767) | control.hasfocus(30) | control.hasfocus(77779) | control.hasfocus(330) | control.hasfocus(331)]+string.equals(#skin.movie.swap,true)</visible>
+		<visible>[control.hasfocus(91919994) | control.hasfocus(15991) | control.hasfocus(15992) | control.hasfocus(15993) | control.hasfocus(91919994) | control.hasfocus(91919995) | control.hasfocus(91919996) | control.hasfocus(77766) | control.hasfocus(77767) | control.hasfocus(30) | control.hasfocus(77779) | control.hasfocus(330) | control.hasfocus(331)]+string.equals(#skin.movie.swap,true)+!control.hasfocus(91919994)+!control.hasfocus(91919995)+!control.hasfocus(91919996)</visible>
 		<animation effect="zoom" end="102,102" center="0,0" time="200">Focus</animation>
 		<animation effect="slide" start="3000,0" end="0,0" time="300">visible</animation>
         <animation effect="slide" start="0,0" end="-1500,0" time="300">hidden</animation>
@@ -739,7 +739,7 @@
 		<hyperlinkParameter>site:BBC iPlayer</hyperlinkParameter>
 		<font></font>
 		<textureNoFocus mask="tile_Drop1.png">iplayer.jpg</textureNoFocus>
-		<textureFocus mask="tile_Drop1.png">iplayer.jpg</textureFocus>
+		<textureFocus mask="tile_Drop1.png" overlay="edge_overlayside.png">iplayer.jpg</textureFocus>
 		<label></label>
 		<align>left</align>
 		<textYOff>240</textYOff>
@@ -768,12 +768,12 @@
 		<hyperlink>96742</hyperlink>
 		<height>400</height>
 		<width>620</width>
-		<font></font>
-		<textureNoFocus mask="series_tile_mask.png">mpictures.jpg</textureNoFocus>
-		<textureFocus mask="series_tile_mask.png">mpictures_focus.jpg</textureFocus>
-		<label></label>
-		<align>left</align>
-		<textYOff>240</textYOff>
+		<font>fontL2</font>
+		<textureNoFocus mask="series_tile_mask.png">movpics.jpg</textureNoFocus>
+		<textureFocus mask="series_tile_mask.png" overlay="edge_overlay.png">movpics.jpg</textureFocus>
+		<label>#tile.label2</label>
+		<textalign>center</textalign>
+		<textYOff>110</textYOff>
 		<textcolorNoFocus>ffffffff</textcolorNoFocus>
 		<textcolor>ffffffff</textcolor>
 		<onup>30</onup>
@@ -797,12 +797,12 @@
 		<hyperlink>6</hyperlink>
 		<height>400</height>
 		<width>620</width>
-		<font></font>
-		<textureNoFocus mask="series_tile_mask.png">myvideos.jpg</textureNoFocus>
-		<textureFocus mask="series_tile_mask.png">myvideos_focus.jpg</textureFocus>
-		<label></label>
-		<align>left</align>
-		<textYOff>240</textYOff>
+		<font>fontL2</font>
+		<textureNoFocus mask="series_tile_mask.png">myvid.jpg</textureNoFocus>
+		<textureFocus mask="series_tile_mask.png" overlay="edge_overlay.png">myvid.jpg</textureFocus>
+		<label>#tile.label3</label>
+		<textalign>center</textalign>
+		<textYOff>110</textYOff>
 		<textcolorNoFocus>ffffffff</textcolorNoFocus>
 		<textcolor>ffffffff</textcolor>
 		<onup>30</onup>
